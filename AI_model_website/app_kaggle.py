@@ -319,6 +319,206 @@ HTML = """
 </div></body></html>
 """
 
+import paho.mqtt.client as mqtt
+import threading, queue, uuid,json,time
+
+MQTT_HOST, MQTT_PORT="127.0.0.1",1883
+TOPIC_FORWARD="pipeline/forward/{device_id}"
+TOPIC_ACK="device/{device_id}/ack"
+TOPIC_OUTPUT="device/{device_id}/output"
+TOPIC_CRASH="device/{device_id}/crash"
+
+mqttc=mqtt.Client(client_id="web-gateway")
+event_q=queue.Queue(maxsize=1000)
+
+def on_connect(client, userdata, flags, rc):
+    print("MQTT connected:", rc)
+    client.subscribe("device/+/ack",qos=1)
+    client.subscribe("device/+/output",qos=1)
+    client.subscribe("device/+/crash",qos=1)
+
+def on_message(client, userdata,msg):
+    try:
+        payload=msg.payload.decode("utf-8",errors="ignore")
+        data=json.loads(payload)
+    except Exception:
+        data={"raw": msg.payload.hex()}
+    print(f"[MQTT] {msg.topic} -> {data}")
+    event_q.put({"topic": msg.topic, "data": data, "ts": time.time()})
+
+mqttc.on_connect=on_connect
+mqttc.on_message=on_message
+mqttc.connect(MQTT_HOST,MQTT_PORT,keepalive=60)
+threading.Thread(target=mqttc.loop_forever,daemon=True).start()
+
+from flask import jsonify, Response, request, render_template_string
+
+@app.route("/api/infer", methods=["POST"])
+def api_infer():
+    body=request.get_json(silent=True) or {}
+    payload=body.get("payload", "")
+    mode=(body.get("mode") or "th").lower()
+    th=body.get("threshold")
+    eff_th=best_threshold if th is None else float(th)
+    res = infer_once(payload if isinstance(payload,str) else json.dumps(payload),
+                 decision_mode=mode, threshold=eff_th)
+    return jsonify({
+        "is_malicious": bool(res["is_mal"]),
+        "p_malicious": float(res["p_mal"]),
+        "pred_label": res["pred_label"],
+        "threshold": eff_th
+    }), (406 if res["is_mal"] else 200)
+
+def normalize_device_payload(raw):
+    """
+    把前端送來的一個欄位 raw（可能是字串/JSON）→ 統一轉成裝置 payload
+    規則：
+    - 若已是 dict 且含 cmd：直接用
+    - 若是字串且長得像 JSON 並含 cmd：parse 後直接用
+    - 若是字串且像 run_cmd 小語法（ADD/ECHO 開頭）：當成 run_cmd
+    - 其餘字串：當成 echo 的 text
+    """
+    if isinstance(raw, dict) and "cmd" in raw:
+        return raw
+    if isinstance(raw, str):
+        s = raw.strip()
+        # 嘗試把字串當 JSON
+        try:
+            obj = json.loads(s)
+            if isinstance(obj, dict) and "cmd" in obj:
+                return obj
+        except Exception:
+            pass
+        # 小語法判斷
+        up = s.upper()
+        if up.startswith("ADD ") or up.startswith("ECHO "):
+            return {"cmd": "run_cmd", "command": s}
+        # 預設走 echo
+        return {"cmd": "echo", "text": s}
+    # 其他型別 → 變字串 echo
+    return {"cmd": "echo", "text": str(raw)}
+
+# ==== 新增：主入口（AI → MQTT 下發） ====
+@app.route("/api/send_to_device", methods=["POST"])
+def api_send_to_device():
+    body = request.get_json(silent=True) or {}
+
+    device_id  = body.get("device_id") or "esp-lab-01"
+    raw_payload = body.get("payload", "")
+    timeout_ms = int(body.get("timeout_ms", 5000))
+    timeout_ms = max(500, min(timeout_ms, 20000))  # 0.5s ~ 20s 之間
+
+    # 0) 基本驗證
+    if raw_payload is None or (isinstance(raw_payload, str) and not raw_payload.strip()):
+        return jsonify({"accepted": False, "reason": "empty_payload"}), 400
+
+    # 1) 規範化：把單一欄位轉成裝置要吃的 payload
+    device_payload = normalize_device_payload(raw_payload)
+
+    # 2) 先跑 AI 決策（用規範化前或後都可以；這裡用原始字串優先，否則用 JSON）
+    raw_for_ai = raw_payload if isinstance(raw_payload, str) else json.dumps(raw_payload, ensure_ascii=False)
+    res = infer_once(raw_for_ai, decision_mode="th", threshold=best_threshold)
+    if res["is_mal"]:
+        return jsonify({
+            "accepted": False,
+            "reason": "blocked_by_model",
+            "p_malicious": float(res["p_mal"]),
+            "threshold": float(best_threshold)
+        }), 406
+
+    # 3) 檢查 MQTT 是否可用
+    if not mqttc or not mqttc.is_connected():
+        return jsonify({"accepted": False, "reason": "mqtt_unavailable"}), 503
+
+    # 4) 組 forward 並發佈
+    req_id = str(uuid.uuid4())
+    msg = {"req_id": req_id, "payload": device_payload, "exec_hint": {"timeout_ms": timeout_ms}}
+
+    try:
+        info = mqttc.publish(TOPIC_FORWARD.format(device_id=device_id), json.dumps(msg), qos=1)
+        # paho 1.x：wait_for_publish 才能確保送出去（非必要）
+        info.wait_for_publish(timeout=2.0)
+    except Exception as e:
+        return jsonify({"accepted": False, "reason": "mqtt_publish_error", "error": str(e)}), 502
+
+    return jsonify({
+        "accepted": True,
+        "req_id": req_id,
+        "device_id": device_id,
+        "forward": msg,                      # 方便你們在前端/除錯看到實際送出的內容
+        "p_malicious": float(res["p_mal"]),
+        "threshold": float(best_threshold)
+    }), 202
+
+# ==== 新增：SSE 事件流，把裝置回報推到前端 ====
+@app.route("/events")
+def sse_events():
+    def gen():
+        while True:
+            ev=event_q.get()
+            yield "data: "+json.dumps(ev,ensure_ascii=False)+ "\n\n"
+    return Response(gen(), mimetype="text/event-stream") 
+
+
+# ---- 簡易 MQTT 回報頁（即時看 ack / output / crash）----
+REPORT_HTML = """
+<!doctype html><meta charset="utf-8"><title>MQTT Reports</title>
+<style>
+ body{font-family:sans-serif;max-width:1000px;margin:24px auto}
+ #log{background:#0b1220;color:#b6ffb6;border-radius:8px;padding:12px;height:420px;overflow:auto;white-space:pre-wrap}
+ .tag{display:inline-block;padding:2px 8px;border-radius:999px;margin-right:6px;font-size:12px}
+ .ACK{background:#e0f2fe;color:#075985}.OUTPUT{background:#dcfce7;color:#166534}.CRASH{background:#fee2e2;color:#991b1b}
+ .ctl{margin:8px 0}
+</style>
+<h2>MQTT 回報（即時）</h2>
+<div class="ctl">
+  <label><input type="checkbox" id="showAck" checked> 顯示 ACK</label>
+  <label><input type="checkbox" id="showOut" checked> 顯示 OUTPUT</label>
+  <label><input type="checkbox" id="showCrash" checked> 顯示 CRASH</label>
+  <input id="kw" placeholder="關鍵字過濾 (req_id / topic / 內容)" style="width:280px">
+  <button onclick="clearLog()">清空</button>
+</div>
+<pre id="log"></pre>
+
+<script>
+const logEl = document.getElementById('log');
+const showAck = document.getElementById('showAck');
+const showOut = document.getElementById('showOut');
+const showCrash = document.getElementById('showCrash');
+const kw = document.getElementById('kw');
+
+function colorOf(topic){
+  if(topic.includes('/ack')) return 'ACK';
+  if(topic.includes('/output')) return 'OUTPUT';
+  if(topic.includes('/crash')) return 'CRASH';
+  return '';
+}
+
+function pushLine(obj){
+  const t = new Date(obj.ts*1000).toLocaleTimeString();
+  const tag = colorOf(obj.topic);
+  const line = `[${t}] [${obj.topic}] ${JSON.stringify(obj.data)}`;
+  const passKW = !kw.value || line.toLowerCase().includes(kw.value.toLowerCase());
+  const passType = (tag==='ACK' && showAck.checked) || (tag==='OUTPUT' && showOut.checked) || (tag==='CRASH' && showCrash.checked);
+  if(passKW && passType){
+    logEl.textContent += line + "\\n";
+    logEl.scrollTop = logEl.scrollHeight;
+  }
+}
+
+function clearLog(){ logEl.textContent=''; }
+
+const es = new EventSource('/events');
+es.onmessage = (e)=>{ try{ pushLine(JSON.parse(e.data)); }catch(_){ } };
+</script>
+"""
+
+@app.route("/mqtt")
+def mqtt_report():
+    from flask import render_template_string
+    return render_template_string(REPORT_HTML)
+
+
 @app.route("/", methods=["GET","POST"])
 def home():
     txt = request.form.get("payload") if request.method=="POST" else ""
