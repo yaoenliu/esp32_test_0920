@@ -1,4 +1,4 @@
-# make_device_dicts.py
+# make_device_dicts.p
 ## 字典
 - xss:
     - 對應echo
@@ -8,7 +8,10 @@
     - 對應run_cmd
 - temp:
     - 對應溫度感測器
+- 我的AI目前對於cmdi的感測能力較弱，可以優先測
+- temp的內容我並沒有放到dataset裡面，AI應該會炸，等wfuzz之後我再重新train
 *優先使用jsonsave.txt，雖然原始檔案和jsonsave應該差不多*
+
 ## 啟動網站
 ```bash
 # 看到:
