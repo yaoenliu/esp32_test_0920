@@ -1,4 +1,10 @@
 # app_kaggle.py(程式碼可改)
+## 步驟
+- 對 Post /api/send_to_device丟JSON
+- 伺服器用infer_once()先做AI檢查
+- 若AI通過產生id，把payload包成訊息，publish到pipeline/forward/{device_id}
+- 裝置再回報ack/output/crash
+
 ## 目標
 1. 接收前端指令
 2. 先進行AI判斷
@@ -49,5 +55,3 @@
 
 ```
 - 打開 "http://\<server>:5000/mqtt"即時看response
-
-- 接下來是Wfuzz的部分
