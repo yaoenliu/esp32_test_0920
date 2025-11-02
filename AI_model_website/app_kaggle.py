@@ -12,6 +12,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 from flask import Flask, request, render_template_string
+import config
 
 # -------------------------------
 # 常數（需與訓練一致）
@@ -390,7 +391,7 @@ async function sendDirect(){
 import paho.mqtt.client as mqtt
 import threading, queue, uuid,json,time
 
-MQTT_HOST, MQTT_PORT="127.0.0.1",1883
+MQTT_HOST, MQTT_PORT= config.MQTT_HOST, config.MQTT_PORT
 TOPIC_FORWARD="pipeline/forward/{device_id}"
 TOPIC_ACK="device/{device_id}/ack"
 TOPIC_OUTPUT="device/{device_id}/output"
@@ -641,4 +642,4 @@ def debug():
     }
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    app.run(host=config.server_host, port=config.server_port, debug=False)
