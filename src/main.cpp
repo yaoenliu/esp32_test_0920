@@ -1,7 +1,14 @@
 #include <Arduino.h>
 #include <ArduinoJson.h>
-
+#include <PubSubClient.h>
+#include <WiFi.h>
 #include "db.h"
+#include "conf.h"
+
+// Wifi 連線
+WiFiClient espClient;
+// MQTT 客戶端
+PubSubClient client(espClient);
 
 // 定義禁止使用的字元
 const char *FORBIDDEN_CHARS = "|&;`$><";
@@ -17,6 +24,9 @@ void handleTempreportCmd(String interval);
 void sendErrorResponse(const char *msg);
 void sendOkResponse(const String &stdoutMsg);
 
+void callback(char *topic, byte *payload, unsigned int length);
+void reconnect();
+
 void setup()
 {
     // 啟動序列埠，設定鮑率為 115200
@@ -25,92 +35,113 @@ void setup()
     {
         ; // 等待序列埠連接
     }
+
+    WiFi.begin(ssid.c_str(), password.c_str());
+    Serial.println("Connecting to WiFi...");
+    while (WiFi.status() != WL_CONNECTED)
+    {
+        delay(500);
+        Serial.print(".");
+    }
+    Serial.println("\nWiFi connected successfully!");
+    Serial.print("IP address: ");
+    Serial.println(WiFi.localIP());
+
+    client.setServer(mqtt_server.c_str(), 1883);
+    client.setCallback(callback);
 }
 
 void loop()
 {
+    if (!client.connected())
+    {
+        reconnect();
+    }
+    client.loop();
+    return;
     // 如果序列埠有可讀取的資料
     if (Serial.available() > 0)
     {
-        // 讀取一行完整的 JSON 輸入 (直到換行符)
-        String jsonString = Serial.readStringUntil('\n');
-        jsonString.trim(); // 去除前後空白
+    }
+}
+void processMessage(String jsonString)
+{
+    jsonString.trim(); // 去除前後空白
 
-        // 建立一個 JsonDocument 來解析輸入的 JSON
-        // 以動態分配方式創建文件（ArduinoJson v7 建議使用 JsonDocument）
-        JsonDocument doc;
+    // 建立一個 JsonDocument 來解析輸入的 JSON
+    // 以動態分配方式創建文件（ArduinoJson v7 建議使用 JsonDocument）
+    JsonDocument doc;
 
-        // 進行反序列化 (解析 JSON 字串)
-        DeserializationError error = deserializeJson(doc, jsonString);
+    // 進行反序列化 (解析 JSON 字串)
+    DeserializationError error = deserializeJson(doc, jsonString);
 
-        // 檢查解析是否成功
-        if (error)
+    // 檢查解析是否成功
+    if (error)
+    {
+        sendErrorResponse("json_decode_error");
+        return;
+    }
+
+    // 檢查必要的鍵是否存在且格式正確
+    if (!doc.containsKey("cmd") || !doc["cmd"].is<const char *>())
+    {
+        sendErrorResponse("unknown_cmd");
+        return;
+    }
+
+    // 取得 cmd 的值
+    const char *ccmd = doc["cmd"];
+    String cmd = String(ccmd);
+    // 判斷 cmd 是否為 "run_cmd"
+    if (cmd == "run_cmd")
+    {
+        Serial.println("Processing run_cmd...");
+        if (!doc.containsKey("command") || !doc["command"].is<const char *>())
         {
-            sendErrorResponse("json_decode_error");
+            sendErrorResponse("invalid_command_format");
             return;
         }
-
-        // 檢查必要的鍵是否存在且格式正確
-        if (!doc.containsKey("cmd") || !doc["cmd"].is<const char *>())
+        String commandStr = String(doc["command"].as<const char *>());
+        Serial.println("Received command: " + commandStr);
+        handleRunCmd(commandStr);
+    }
+    else if (cmd == "db_query")
+    {
+        Serial.println("Processing db_query...");
+        if (!doc.containsKey("query") || !doc["query"].is<const char *>())
         {
-            sendErrorResponse("unknown_cmd");
+            sendErrorResponse("invalid_query_format");
             return;
         }
+        String queryStr = String(doc["query"].as<const char *>());
+        handleDb_queryCmd(queryStr);
+    }
+    else if (cmd == "echo")
+    {
+        Serial.println("Processing echo...");
+        if (!doc.containsKey("text") || !doc["text"].is<const char *>())
+        {
+            sendErrorResponse("invalid_text_format");
+            return;
+        }
+        String messageStr = String(doc["text"].as<const char *>());
+        handleEchoCmd(messageStr);
+    }
 
-        // 取得 cmd 的值
-        const char *ccmd = doc["cmd"];
-        String cmd = String(ccmd);
-        // 判斷 cmd 是否為 "run_cmd"
-        if (cmd == "run_cmd")
+    else if (cmd == "start_temp_report")
+    {
+        Serial.println("Processing tempreport...");
+        if (!doc.containsKey("interval") || !doc["interval"].is<const char *>())
         {
-            Serial.println("Processing run_cmd...");
-            if (!doc.containsKey("command") || !doc["command"].is<const char *>())
-            {
-                sendErrorResponse("invalid_command_format");
-                return;
-            }
-            String commandStr = String(doc["command"].as<const char *>());
-            Serial.println("Received command: " + commandStr);
-            handleRunCmd(commandStr);
+            sendErrorResponse("invalid_interval_format");
+            return;
         }
-        else if (cmd == "db_query")
-        {
-            Serial.println("Processing db_query...");
-            if (!doc.containsKey("query") || !doc["query"].is<const char *>())
-            {
-                sendErrorResponse("invalid_query_format");
-                return;
-            }
-            String queryStr = String(doc["query"].as<const char *>());
-            handleDb_queryCmd(queryStr);
-        }
-        else if (cmd == "echo")
-        {
-            Serial.println("Processing echo...");
-            if (!doc.containsKey("text") || !doc["text"].is<const char *>())
-            {
-                sendErrorResponse("invalid_text_format");
-                return;
-            }
-            String messageStr = String(doc["text"].as<const char *>());
-            handleEchoCmd(messageStr);
-        }
-
-        else if (cmd == "start_temp_report")
-        {
-            Serial.println("Processing tempreport...");
-            if (!doc.containsKey("interval") || !doc["interval"].is<const char *>())
-            {
-                sendErrorResponse("invalid_interval_format");
-                return;
-            }
-            String intervalStr = String(doc["interval"].as<const char *>());
-            handleTempreportCmd(intervalStr);
-        }
-        else
-        {
-            sendErrorResponse("unknown_cmd");
-        }
+        String intervalStr = String(doc["interval"].as<const char *>());
+        handleTempreportCmd(intervalStr);
+    }
+    else
+    {
+        sendErrorResponse("unknown_cmd");
     }
 }
 
@@ -247,4 +278,39 @@ void sendOkResponse(const String &stdoutMsg)
     String output;
     serializeJson(responseDoc, output);
     Serial.println(output);
+}
+
+// ========== MQTT 回呼 ==========
+void callback(char *topic, byte *payload, unsigned int length)
+{
+    String lastMessage = "";
+    for (unsigned int i = 0; i < length; i++)
+    {
+        lastMessage += (char)payload[i];
+    }
+    Serial.printf("Received message from topic [%s]: %s\n", topic, lastMessage.c_str());
+    processMessage(lastMessage);
+}
+
+// ========== 嘗試連線 MQTT ==========
+void reconnect()
+{
+    while (!client.connected())
+    {
+        Serial.print("Attempting MQTT connection...");
+        String clientId = "ESP32Client-" + String(random(0xffff), HEX);
+        if (client.connect(clientId.c_str()))
+        {
+            Serial.println("Connected to MQTT Broker");
+            client.subscribe(mqtt_topic.c_str());
+            Serial.println("Subscribed to topic: " + mqtt_topic);
+        }
+        else
+        {
+            Serial.print("Failed, rc=");
+            Serial.print(client.state());
+            Serial.println(" Retrying in 5 seconds");
+            delay(5000);
+        }
+    }
 }
