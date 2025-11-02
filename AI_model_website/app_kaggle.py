@@ -12,7 +12,6 @@ import numpy as np
 import torch
 import torch.nn as nn
 from flask import Flask, request, render_template_string
-import config
 
 # -------------------------------
 # 常數（需與訓練一致）
@@ -292,38 +291,106 @@ HTML = """
 <style>
  body{font-family:Arial, sans-serif;margin:40px}
  .card{max-width:960px;margin:0 auto;padding:24px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.05)}
- textarea{width:100%;height:180px;font-family:monospace;font-size:14px;padding:10px;border-radius:8px;border:1px solid #ddd}
+ textarea{width:100%;height:220px;font-family:monospace;font-size:14px;padding:10px;border-radius:8px;border:1px solid #ddd}
  button{padding:10px 16px;background:#111827;color:#fff;border-radius:8px;border:none;cursor:pointer}
+ input[type=text]{padding:8px;border:1px solid #ddd;border-radius:8px}
  .pill{display:inline-block;padding:6px 10px;border-radius:999px;font-weight:bold}
  .mal{background:#fee2e2;color:#991b1b} .ben{background:#dcfce7;color:#166534}
  .meta{font-size:13px;color:#666;margin-top:8px;word-break:break-word}
  pre{background:#f7f7f7;padding:12px;border-radius:8px;overflow-x:auto}
+ .row{display:flex;gap:12px;align-items:center;margin:10px 0}
+ #resp{white-space:pre-wrap;background:#f7f7f7;padding:10px;border-radius:8px;margin-top:8px}
 </style></head><body>
 <div class="card">
-<h2>Payload Detector (Transformer)</h2>
-<form method="POST" action="/" autocomplete="off">
-  <p>請貼上 <b>payload</b>（支援：<code>AA FF 0d</code>、<code>0x41,0x42</code>、十六進位字串或 JSON）：</p>
-  <textarea name="payload">{{ payload or "" }}</textarea>
-  <p style="margin-top:8px"><button type="submit">預測</button></p>
-</form>
+  <h2>Payload Detector (Transformer)</h2>
 
-{% if res %}
-<hr/>
-<p><span class="pill {{ 'mal' if is_mal else 'ben' }}">{{ '惡意 payload' if is_mal else '正常 payload' }}</span></p>
-<div class="meta">p(malicious) = {{ p_mal }} ｜ 阈值 = {{ best_threshold }}</div>
-<div class="meta">類別機率：{{ probs }}</div>
-<h4>十六進位視圖</h4>
-<pre>{{ hex_view }}</pre>
-{% endif %}
+  <div class="row">
+    <label>Device ID：
+      <input id="device_id" type="text" value="esp-lab-01" placeholder="裝置 ID（MQTT topic 用）">
+    </label>
+    <label>
+      <input id="autoSend" type="checkbox" checked>
+      AI 通過就送到裝置
+    </label>
+    <a href="/mqtt" target="_blank">開啟 MQTT 回報頁</a>
+  </div>
 
-<div class="meta" style="margin-top:20px">config={{ cfg }} ｜ extra_cols={{ extra_cols }} ｜ malicious_id={{ malicious_id }}</div>
-</div></body></html>
+  <form id="f" autocomplete="off" onsubmit="return doPredict(event)">
+    <p>請貼上 <b>payload</b>（支援：<code>AA FF 0d</code>、<code>0x41,0x42</code>、十六進位字串或 JSON）：</p>
+    <textarea id="payload" name="payload"></textarea>
+    <p style="margin-top:8px">
+      <button type="submit">預測（通過時可自動送裝置）</button>
+      <button type="button" onclick="sendDirect()">直接送到裝置</button>
+    </p>
+  </form>
+
+  <div id="view"></div>
+  <div id="resp"></div>
+
+  <div class="meta" style="margin-top:20px">
+    config={{ cfg }} ｜ extra_cols={{ extra_cols }} ｜ malicious_id={{ malicious_id }}
+  </div>
+</div>
+
+<script>
+async function doPredict(e){
+  e.preventDefault();
+  const payload = document.getElementById('payload').value;
+  if(!payload.trim()){ alert('請輸入 payload'); return false; }
+  const view = document.getElementById('view');
+  const respBox = document.getElementById('resp');
+  view.innerHTML = '預測中…'; respBox.textContent = '';
+
+  // 1) 先對 /api/infer 做推論
+  const r = await fetch('/api/infer', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({payload: payload, mode: 'th'})
+  });
+  const ok = r.status === 200;
+  const data = await r.json().catch(()=> ({}));
+
+  // 顯示 AI 結果
+  if(ok){
+    view.innerHTML = `<p><span class="pill ben">正常 payload</span></p>
+      <div class="meta">p(malicious) = ${data.p_malicious} ｜ 阈值 = ${data.threshold}</div>`;
+    // 2) 若勾選自動送，就呼叫 /api/send_to_device
+    if(document.getElementById('autoSend').checked){
+      await sendToDevice(payload);
+    }
+  }else{
+    view.innerHTML = `<p><span class="pill mal">惡意 payload</span></p>
+      <div class="meta">p(malicious) = ${data.p_malicious ?? 'N/A'} ｜ 阈值 = ${data.threshold ?? 'N/A'}</div>`;
+  }
+  return false;
+}
+
+async function sendToDevice(payload){
+  const deviceId = document.getElementById('device_id').value || 'esp-lab-01';
+  const respBox = document.getElementById('resp');
+  respBox.textContent = '送裝置中…';
+  const r = await fetch('/api/send_to_device', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({ device_id: deviceId, payload })
+  });
+  const txt = await r.text();
+  respBox.textContent = `HTTP ${r.status}\n` + txt;
+}
+
+async function sendDirect(){
+  const payload = document.getElementById('payload').value;
+  if(!payload.trim()){ alert('請輸入 payload'); return; }
+  await sendToDevice(payload);
+}
+</script>
+</body></html>
 """
 
 import paho.mqtt.client as mqtt
 import threading, queue, uuid,json,time
 
-MQTT_HOST, MQTT_PORT=config.MQTT_HOST, config.MQTT_PORT
+MQTT_HOST, MQTT_PORT="127.0.0.1",1883
 TOPIC_FORWARD="pipeline/forward/{device_id}"
 TOPIC_ACK="device/{device_id}/ack"
 TOPIC_OUTPUT="device/{device_id}/output"
@@ -361,7 +428,8 @@ def api_infer():
     mode=(body.get("mode") or "th").lower()
     th=body.get("threshold")
     eff_th=best_threshold if th is None else float(th)
-    res = infer_once(payload if isinstance(payload,str) else json.dumps(payload),decision_mode=mode, threshold=eff_th)
+    res = infer_once(payload if isinstance(payload,str) else json.dumps(payload),
+                 decision_mode=mode, threshold=eff_th)
     return jsonify({
         "is_malicious": bool(res["is_mal"]),
         "p_malicious": float(res["p_mal"]),
@@ -369,87 +437,100 @@ def api_infer():
         "threshold": eff_th
     }), (406 if res["is_mal"] else 200)
 
-def normalize_device_payload(raw):
-    """
-    把前端送來的一個欄位 raw（可能是字串/JSON）→ 統一轉成裝置 payload
-    規則：
-    - 若已是 dict 且含 cmd：直接用
-    - 若是字串且長得像 JSON 並含 cmd：parse 後直接用
-    - 若是字串且像 run_cmd 小語法（ADD/ECHO 開頭）：當成 run_cmd
-    - 其餘字串：當成 echo 的 text
-    """
-    if isinstance(raw, dict) and "cmd" in raw:
-        return raw
-    if isinstance(raw, str):
-        s = raw.strip()
-        # 嘗試把字串當 JSON
-        try:
-            obj = json.loads(s)
-            if isinstance(obj, dict) and "cmd" in obj:
-                return obj
-        except Exception:
-            pass
-        # 小語法判斷
-        up = s.upper()
-        if up.startswith("ADD ") or up.startswith("ECHO "):
-            return {"cmd": "run_cmd", "command": s}
-        # 預設走 echo
-        return {"cmd": "echo", "text": s}
-    # 其他型別 → 變字串 echo
-    return {"cmd": "echo", "text": str(raw)}
+def _debug_req(prefix=""):
+    try:
+        print(f"[{prefix}] CT={request.headers.get('Content-Type')!r} "
+              f"len={request.content_length} "
+              f"raw[:200]={request.get_data(cache=False)[:200]!r}")
+    except Exception as e:
+        print(f"[{prefix}] debug_err={e}")
 
-# ==== 新增：主入口（AI → MQTT 下發） ====
+def _robust_json():
+    """
+    更耐髒的 JSON 解析：
+      1) Content-Type 是 json → 用 get_json()
+      2) 不行 → 直接用 raw bytes 手動 json.loads
+      3) 再不行 → 試試表單(request.form)
+    回傳 dict (失敗回 {} )
+    """
+    ct = (request.headers.get("Content-Type") or "").lower()
+    body = {}
+    if "application/json" in ct:
+        body = request.get_json(silent=True) or {}
+    if not body:
+        raw = request.get_data(cache=False)
+        if raw:
+            try:
+                body = json.loads(raw.decode("utf-8", errors="ignore")) or {}
+            except Exception:
+                body = {}
+    if not body and request.form:
+        body = request.form.to_dict()
+    return body
+
+def _normalize_device_payload(payload):
+    """
+    允許 payload 是字串或物件；字串自動當 echo。
+    """
+    if isinstance(payload, dict):
+        return payload
+    s = str(payload or "").strip()
+    if not s:
+        return None
+    # 給字串命令一個最小白名單（裝置端自己實作）
+    if s.upper().startswith("ECHO "):
+        return {"cmd": "echo", "text": s[5:].strip()}
+    if s.upper().startswith("ADD "):
+        try:
+            _, a, b = s.split()
+            return {"cmd": "run_cmd", "command": f"ADD {a} {b}"}
+        except Exception:
+            return {"cmd": "run_cmd", "command": s}
+    return {"cmd": "echo", "text": s}  # 其他字串 → 當 echo
+
 @app.route("/api/send_to_device", methods=["POST"])
 def api_send_to_device():
-    body = request.get_json(silent=True) or {}
+      # ← 送一次 debug 到 console，方便你查
+    body = _robust_json()
+    _debug_req("send_to_device")
+    device_id = (body.get("device_id") or "esp-lab-01").strip()
+    payload_in = body.get("payload", "")
 
-    device_id  = body.get("device_id") or "esp-lab-01"
-    raw_payload = body.get("payload", "")
-    timeout_ms = int(body.get("timeout_ms", 5000))
-    timeout_ms = max(500, min(timeout_ms, 20000))  # 0.5s ~ 20s 之間
-
-    # 0) 基本驗證
-    if raw_payload is None or (isinstance(raw_payload, str) and not raw_payload.strip()):
+    # payload 不可空
+    if payload_in is None or (isinstance(payload_in, str) and not payload_in.strip()):
         return jsonify({"accepted": False, "reason": "empty_payload"}), 400
 
-    # 1) 規範化：把單一欄位轉成裝置要吃的 payload
-    device_payload = normalize_device_payload(raw_payload)
+    # 標準化成物件（裝置較好處理）
+    payload_obj = _normalize_device_payload(payload_in)
+    if not payload_obj:
+        return jsonify({"accepted": False, "reason": "empty_payload"}), 400
 
-    # 2) 先跑 AI 決策（用規範化前或後都可以；這裡用原始字串優先，否則用 JSON）
-    raw_for_ai = raw_payload if isinstance(raw_payload, str) else json.dumps(raw_payload, ensure_ascii=False)
+    # 1) 先跑 AI 判斷
+    raw_for_ai = payload_in if isinstance(payload_in, str) else json.dumps(payload_in, ensure_ascii=False)
     res = infer_once(raw_for_ai, decision_mode="th", threshold=best_threshold)
     if res["is_mal"]:
         return jsonify({
-            "accepted": False,
-            "reason": "blocked_by_model",
-            "p_malicious": float(res["p_mal"]),
-            "threshold": float(best_threshold)
+            "accepted": False, "reason": "blocked_by_model",
+            "p_malicious": float(res["p_mal"]), "threshold": float(best_threshold)
         }), 406
 
-    # 3) 檢查 MQTT 是否可用
-    if not mqttc or not mqttc.is_connected():
-        return jsonify({"accepted": False, "reason": "mqtt_unavailable"}), 503
-
-    # 4) 組 forward 並發佈
-    req_id = str(uuid.uuid4())
-    msg = {"req_id": req_id, "payload": device_payload, "exec_hint": {"timeout_ms": timeout_ms}}
+    # 2) 通過 → publish MQTT （就算此刻沒有裝置在線，這步也會照 publish；若 broker 沒連上會 503）
+    if not getattr(mqttc, "is_connected", True):  # 你的版本若沒有 is_connected 可略
+        # 有些 paho 版本沒有 is_connected，可自行以 try/except 判斷
+        pass
 
     try:
-        info = mqttc.publish(TOPIC_FORWARD.format(device_id=device_id), json.dumps(msg), qos=1)
-        # paho 1.x：wait_for_publish 才能確保送出去（非必要）
-        info.wait_for_publish(timeout=2.0)
+        req_id = str(uuid.uuid4())
+        msg = {"req_id": req_id, "payload": payload_obj, "exec_hint": {"timeout_ms": 5000}}
+        mqttc.publish(TOPIC_FORWARD.format(device_id=device_id), json.dumps(msg), qos=1)
     except Exception as e:
-        return jsonify({"accepted": False, "reason": "mqtt_publish_error", "error": str(e)}), 502
+        # broker 沒連上或其它錯誤
+        return jsonify({"accepted": False, "reason": "mqtt_error", "detail": str(e)}), 503
 
     return jsonify({
-        "accepted": True,
-        "req_id": req_id,
-        "device_id": device_id,
-        "forward": msg,                      # 方便你們在前端/除錯看到實際送出的內容
-        "p_malicious": float(res["p_mal"]),
-        "threshold": float(best_threshold)
+        "accepted": True, "req_id": req_id,
+        "p_malicious": float(res["p_mal"]), "threshold": float(best_threshold)
     }), 202
-
 # ==== 新增：SSE 事件流，把裝置回報推到前端 ====
 @app.route("/events")
 def sse_events():
@@ -560,4 +641,4 @@ def debug():
     }
 
 if __name__ == "__main__":
-    app.run(host=config.server_host, port=config.server_port, debug=False)
+    app.run(host="0.0.0.0", port=5000, debug=False)
