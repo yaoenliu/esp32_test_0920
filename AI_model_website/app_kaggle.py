@@ -469,45 +469,60 @@ def _robust_json():
         body = request.form.to_dict()
     return body
 
-def _normalize_device_payload(payload):
+def to_device_json(payload_text: str):
     """
-    允許 payload 是字串或物件；字串自動當 echo。
+    將輸入框的一行字串轉成 target device 期望的 JSON。
+    - 支援：'run_cmd, ADD 1 2' → {"cmd":"run_cmd","command":"ADD 1 2"}
+    - 若本來就是 JSON，且已含 cmd/command，則直接回傳該物件
+    - 其他指令可在這裡擴充（echo、db_query…）
     """
-    if isinstance(payload, dict):
-        return payload
-    s = str(payload or "").strip()
+    s = (payload_text or "").strip()
     if not s:
-        return None
-    # 給字串命令一個最小白名單（裝置端自己實作）
-    if s.upper().startswith("ECHO "):
-        return {"cmd": "echo", "text": s[5:].strip()}
-    if s.upper().startswith("ADD "):
-        try:
-            _, a, b = s.split()
-            return {"cmd": "run_cmd", "command": f"ADD {a} {b}"}
-        except Exception:
-            return {"cmd": "run_cmd", "command": s}
-    return {"cmd": "echo", "text": s}  # 其他字串 → 當 echo
+        return None  # 空 payload
+
+    # 1) 若本來就是 JSON（例如 {"cmd":"run_cmd","command":"ADD 1 2"}）
+    try:
+        obj = json.loads(s)
+        if isinstance(obj, dict) and ("cmd" in obj):
+            return obj  # 已是裝置格式
+    except Exception:
+        pass  # 不是 JSON，就走字串解析
+
+    # 2) 解析「<keyword> , <rest>」型式
+    m = re.match(r'^\s*([A-Za-z_]+)\s*,\s*(.+?)\s*$', s)
+    if not m:
+        # 格式不符，你也可以選擇丟回 None 讓前端顯示錯誤
+        return {"cmd": "raw", "raw": s}
+
+    keyword = m.group(1).lower()
+    rest    = m.group(2)
+
+    # 只針對你目前需求：run_cmd → {"cmd":"run_cmd","command":"..."}
+    if keyword == "run_cmd":
+        return {"cmd": "run_cmd", "command": rest}
+
+    # 你之後若要支援：
+    # echo, hello world  → {"cmd":"echo","text":"hello world"}
+    # db_query, GET user → {"cmd":"db_query","query":"GET user"}
+    # 可以在這裡擴充：
+    if keyword == "echo":
+        return {"cmd": "echo", "text": rest}
+    if keyword == "db_query":
+        return {"cmd": "db_query", "query": rest}
+    if keyword == "start_temp_report":
+        return {"cmd": "start_temp_report", "interval": rest}
+
+    # 不認得的指令：保底
+    return {"cmd": keyword, "args": rest}
 
 @app.route("/api/send_to_device", methods=["POST"])
 def api_send_to_device():
-      # ← 送一次 debug 到 console，方便你查
-    body = _robust_json()
-    _debug_req("send_to_device")
-    device_id = (body.get("device_id") or "esp-lab-01").strip()
-    payload_in = body.get("payload", "")
+    body = request.get_json(silent=True) or {}
+    device_id = body.get("device_id") or "esp-lab-01"
+    payload   = body.get("payload")  # 這裡 payload 仍是「輸入框那一行字串」
 
-    # payload 不可空
-    if payload_in is None or (isinstance(payload_in, str) and not payload_in.strip()):
-        return jsonify({"accepted": False, "reason": "empty_payload"}), 400
-
-    # 標準化成物件（裝置較好處理）
-    payload_obj = _normalize_device_payload(payload_in)
-    if not payload_obj:
-        return jsonify({"accepted": False, "reason": "empty_payload"}), 400
-
-    # 1) 先跑 AI 判斷
-    raw_for_ai = payload_in if isinstance(payload_in, str) else json.dumps(payload_in, ensure_ascii=False)
+    # 1) AI 判斷使用「原始字串」
+    raw_for_ai = payload if isinstance(payload, str) else json.dumps(payload, ensure_ascii=False)
     res = infer_once(raw_for_ai, decision_mode="th", threshold=best_threshold)
     if res["is_mal"]:
         return jsonify({
@@ -515,19 +530,17 @@ def api_send_to_device():
             "p_malicious": float(res["p_mal"]), "threshold": float(best_threshold)
         }), 406
 
-    # 2) 通過 → publish MQTT （就算此刻沒有裝置在線，這步也會照 publish；若 broker 沒連上會 503）
-    if not getattr(mqttc, "is_connected", True):  # 你的版本若沒有 is_connected 可略
-        # 有些 paho 版本沒有 is_connected，可自行以 try/except 判斷
-        pass
+    # 2) 轉成 target device 期望的 JSON 後再送 MQTT
+    dev_msg = to_device_json(payload)
+    if not dev_msg:
+        return jsonify({"accepted": False, "reason": "empty_payload"}), 400
 
-    try:
-        req_id = str(uuid.uuid4())
-        msg = {"req_id": req_id, "payload": payload_obj, "exec_hint": {"timeout_ms": 5000}}
-        mqttc.publish(TOPIC_FORWARD.format(device_id=device_id), json.dumps(msg), qos=1)
-    except Exception as e:
-        # broker 沒連上或其它錯誤
-        return jsonify({"accepted": False, "reason": "mqtt_error", "detail": str(e)}), 503
+    req_id = str(uuid.uuid4())
+    # 你若不想包任何 metadata，只送裝置 JSON 也可以：
+    mqttc.publish(TOPIC_FORWARD.format(device_id=device_id),
+                  json.dumps(dev_msg, ensure_ascii=False), qos=1)
 
+    # 如果你仍想要 req_id，就可以加在 dev_msg 內，或另開一個包裝層
     return jsonify({
         "accepted": True, "req_id": req_id,
         "p_malicious": float(res["p_mal"]), "threshold": float(best_threshold)
