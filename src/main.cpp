@@ -83,64 +83,66 @@ void processMessage(String jsonString)
     }
 
     // 檢查必要的鍵是否存在且格式正確
-    if (!doc.containsKey("cmd") || !doc["cmd"].is<const char *>())
+    if (!doc.containsKey("payload") || !doc["payload"].is<JsonObject>())
     {
-        sendErrorResponse("unknown_cmd");
+        sendErrorResponse("invalid_payload");
         return;
     }
 
+    JsonObject payload = doc["payload"];
+
     // 取得 cmd 的值
-    const char *ccmd = doc["cmd"];
+    const char *ccmd = payload["cmd"];
     String cmd = String(ccmd);
     // 判斷 cmd 是否為 "run_cmd"
     if (cmd == "run_cmd")
     {
         Serial.println("Processing run_cmd...");
-        if (!doc.containsKey("command") || !doc["command"].is<const char *>())
+        if (!payload.containsKey("command") || !payload["command"].is<const char *>())
         {
             sendErrorResponse("invalid_command_format");
             return;
         }
-        String commandStr = String(doc["command"].as<const char *>());
+        String commandStr = String(payload["command"].as<const char *>());
         Serial.println("Received command: " + commandStr);
         handleRunCmd(commandStr);
     }
     else if (cmd == "db_query")
     {
         Serial.println("Processing db_query...");
-        if (!doc.containsKey("query") || !doc["query"].is<const char *>())
+        if (!payload.containsKey("query") || !payload["query"].is<const char *>())
         {
             sendErrorResponse("invalid_query_format");
             return;
         }
-        String queryStr = String(doc["query"].as<const char *>());
+        String queryStr = String(payload["query"].as<const char *>());
         handleDb_queryCmd(queryStr);
     }
     else if (cmd == "echo")
     {
         Serial.println("Processing echo...");
-        if (!doc.containsKey("text") || !doc["text"].is<const char *>())
+        if (!payload.containsKey("text") || !payload["text"].is<const char *>())
         {
             sendErrorResponse("invalid_text_format");
             return;
         }
-        String messageStr = String(doc["text"].as<const char *>());
+        String messageStr = String(payload["text"].as<const char *>());
         handleEchoCmd(messageStr);
     }
-
     else if (cmd == "start_temp_report")
     {
         Serial.println("Processing tempreport...");
-        if (!doc.containsKey("interval") || !doc["interval"].is<const char *>())
+        if (!payload.containsKey("interval") || !payload["interval"].is<const char *>())
         {
             sendErrorResponse("invalid_interval_format");
             return;
         }
-        String intervalStr = String(doc["interval"].as<const char *>());
+        String intervalStr = String(payload["interval"].as<const char *>());
         handleTempreportCmd(intervalStr);
     }
     else
     {
+        Serial.println("Unknown command");
         sendErrorResponse("unknown_cmd");
     }
 }
@@ -266,6 +268,7 @@ void sendErrorResponse(const char *msg)
 
     String output;
     serializeJson(responseDoc, output);
+    client.publish(topic_crash.c_str(), output.c_str());
     Serial.println(output);
 }
 
@@ -277,6 +280,7 @@ void sendOkResponse(const String &stdoutMsg)
 
     String output;
     serializeJson(responseDoc, output);
+    client.publish(topic_output.c_str(), output.c_str());
     Serial.println(output);
 }
 
@@ -289,6 +293,7 @@ void callback(char *topic, byte *payload, unsigned int length)
         lastMessage += (char)payload[i];
     }
     Serial.printf("Received message from topic [%s]: %s\n", topic, lastMessage.c_str());
+    client.publish(topic_ack.c_str(), lastMessage.c_str());
     processMessage(lastMessage);
 }
 
@@ -302,8 +307,8 @@ void reconnect()
         if (client.connect(clientId.c_str()))
         {
             Serial.println("Connected to MQTT Broker");
-            client.subscribe(mqtt_topic.c_str());
-            Serial.println("Subscribed to topic: " + mqtt_topic);
+            client.subscribe(topic_receive.c_str());
+            Serial.println("Subscribed to topic: " + topic_receive);
         }
         else
         {
