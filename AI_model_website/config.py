@@ -3,7 +3,7 @@ import configparser
 
 global MQTT_HOST, MQTT_PORT, server_host, server_port
 
-config = configparser.ConfigParser()
+config = configparser.ConfigParser(inline_comment_prefixes=(';', '#'))
 config.read('config.ini',encoding='utf-8')
 
 MQTT_HOST = config.get('Mqtt', 'broker')
