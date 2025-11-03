@@ -5,4 +5,6 @@ const String password = "YOUR_WIFI_PASSWORD";
 
 // MQTT
 const String mqtt_server = "YOUR_MQTT_SERVER";
-const String mqtt_topic = "YOUR_MQTT_TOPIC";
+const String topic_receive = "YOUR_MQTT_TOPIC_BACKWARD";
+const String topic_crash = "YOUR_MQTT_TOPIC_CRASH";
+const String topic_ack = "YOUR_MQTT_TOPIC_ACK";
