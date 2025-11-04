@@ -403,7 +403,7 @@ def on_connect(client, userdata, flags, rc):
     print("MQTT connected:", rc)
     client.subscribe("device/+/crash",qos=1)
     client.subscribe("device/+/output",qos=1)
-
+    client.subscribe("device/+/ack",qos=1)
 
 def on_message(client, userdata, msg):
     # --- 1) 判斷 topic 類型 ---
