@@ -399,21 +399,44 @@ TOPIC_CRASH="device/{device_id}/crash"
 
 mqttc=mqtt.Client(client_id="web-gateway")
 event_q=queue.Queue(maxsize=1000)
-
 def on_connect(client, userdata, flags, rc):
     print("MQTT connected:", rc)
     client.subscribe("device/+/ack",qos=1)
     client.subscribe("device/+/output",qos=1)
     client.subscribe("device/+/crash",qos=1)
 
-def on_message(client, userdata,msg):
+def on_message(client, userdata, msg):
+    # 判斷 topic 類型
+    if msg.topic.endswith("/ack"):
+        devst = "ack"
+    elif msg.topic.endswith("/output"):
+        devst = "output"
+    elif msg.topic.endswith("/crash"):
+        devst = "crash"
+    else:
+        devst = "unknown"
+
+    # 嘗試解析 JSON
+    raw = msg.payload.decode("utf-8", errors="ignore").strip()
+    norm = None
     try:
-        payload=msg.payload.decode("utf-8",errors="ignore")
-        data=json.loads(payload)
+        obj = json.loads(raw)
+        if isinstance(obj, dict) and ("status" in obj or "stdout" in obj or "msg" in obj):
+            norm = obj
     except Exception:
-        data={"raw": msg.payload.hex()}
-    print(f"[MQTT] {msg.topic} -> {data}")
-    event_q.put({"topic": msg.topic, "data": data, "ts": time.time()})
+        pass
+
+    # 正規化
+    if norm is None:
+        if devst in ("ack", "output"):
+            norm = {"status": "ok", "stdout": raw or "ok"}
+        elif devst == "crash":
+            norm = {"status": "crash", "msg": raw or "crash"}
+        else:
+            norm = {"status": "ok", "stdout": raw}
+
+    # 只推到前端，不寫 DB
+    event_q.put({"topic": msg.topic, "data": norm, "ts": time.time()})
 
 mqttc.on_connect=on_connect
 mqttc.on_message=on_message
