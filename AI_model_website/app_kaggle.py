@@ -401,12 +401,12 @@ mqttc=mqtt.Client(client_id="web-gateway")
 event_q=queue.Queue(maxsize=1000)
 def on_connect(client, userdata, flags, rc):
     print("MQTT connected:", rc)
-    client.subscribe("device/+/ack",qos=1)
-    client.subscribe("device/+/output",qos=1)
     client.subscribe("device/+/crash",qos=1)
+    client.subscribe("device/+/output",qos=1)
+
 
 def on_message(client, userdata, msg):
-    # 判斷 topic 類型
+    # --- 1) 判斷 topic 類型 ---
     if msg.topic.endswith("/ack"):
         devst = "ack"
     elif msg.topic.endswith("/output"):
@@ -416,26 +416,43 @@ def on_message(client, userdata, msg):
     else:
         devst = "unknown"
 
-    # 嘗試解析 JSON
+    # --- 2) 嘗試解析裝置原始 payload ---
     raw = msg.payload.decode("utf-8", errors="ignore").strip()
     norm = None
     try:
         obj = json.loads(raw)
+        # 若已是你要的結構，直接用
         if isinstance(obj, dict) and ("status" in obj or "stdout" in obj or "msg" in obj):
             norm = obj
     except Exception:
         pass
 
-    # 正規化
+    # --- 3) 正規化（不是 JSON 或結構不符 → 轉成你要的格式）---
     if norm is None:
         if devst in ("ack", "output"):
+            # 視為成功輸出；純文字一律放 stdout
             norm = {"status": "ok", "stdout": raw or "ok"}
         elif devst == "crash":
             norm = {"status": "crash", "msg": raw or "crash"}
         else:
             norm = {"status": "ok", "stdout": raw}
 
-    # 只推到前端，不寫 DB
+    # --- 4) 弱標註 ---
+    weak = None
+    if devst == "crash":
+        weak = "malicious"
+    elif devst in ("ack", "output"):
+        weak = "benign"
+
+    # 由於不再使用 req_id，這裡不要從 data 取 req_id
+    # device_id = "device/{id}/..." 的第二段
+    parts = msg.topic.split("/")
+    device_id = parts[1] if len(parts) > 1 else None
+
+    # --- 5) 紀錄到 DB（device_msg 存正規化後的 JSON 字串）---
+    
+
+    # --- 6) 推到前端事件流（/mqtt 頁會看到）---
     event_q.put({"topic": msg.topic, "data": norm, "ts": time.time()})
 
 mqttc.on_connect=on_connect
