@@ -19,13 +19,16 @@ const char *FORBIDDEN_CHARS = "|&;`$><";
 void handleRunCmd(String command);
 void handleEchoCmd(String text);
 void handleDb_queryCmd(String query);
-void handleTempreportCmd(String interval);
+void handleTempreportCmd(bool enable, u8_t interval);
 
 void sendErrorResponse(const char *msg);
 void sendOkResponse(const String &stdoutMsg);
+void sendTempReport(TimerHandle_t xTimer);
 
 void callback(char *topic, byte *payload, unsigned int length);
 void reconnect();
+
+TimerHandle_t tempReportTimer;
 
 void setup()
 {
@@ -70,10 +73,10 @@ void processMessage(String jsonString)
 
     // 建立一個 JsonDocument 來解析輸入的 JSON
     // 以動態分配方式創建文件（ArduinoJson v7 建議使用 JsonDocument）
-    JsonDocument doc;
+    JsonDocument payload;
 
     // 進行反序列化 (解析 JSON 字串)
-    DeserializationError error = deserializeJson(doc, jsonString);
+    DeserializationError error = deserializeJson(payload, jsonString);
 
     // 檢查解析是否成功
     if (error)
@@ -83,13 +86,11 @@ void processMessage(String jsonString)
     }
 
     // 檢查必要的鍵是否存在且格式正確
-    if (!doc.containsKey("payload") || !doc["payload"].is<JsonObject>())
+    if (!payload.containsKey("cmd") || !payload["cmd"].is<String>())
     {
         sendErrorResponse("invalid_payload");
         return;
     }
-
-    JsonObject payload = doc["payload"];
 
     // 取得 cmd 的值
     const char *ccmd = payload["cmd"];
@@ -98,47 +99,52 @@ void processMessage(String jsonString)
     if (cmd == "run_cmd")
     {
         Serial.println("Processing run_cmd...");
-        if (!payload.containsKey("command") || !payload["command"].is<const char *>())
+        if (!payload.containsKey("command") || !payload["command"].is<String>())
         {
             sendErrorResponse("invalid_command_format");
             return;
         }
-        String commandStr = String(payload["command"].as<const char *>());
+        String commandStr = String(payload["command"].as<String>());
         Serial.println("Received command: " + commandStr);
         handleRunCmd(commandStr);
     }
     else if (cmd == "db_query")
     {
         Serial.println("Processing db_query...");
-        if (!payload.containsKey("query") || !payload["query"].is<const char *>())
+        if (!payload.containsKey("query") || !payload["query"].is<String>())
         {
             sendErrorResponse("invalid_query_format");
             return;
         }
-        String queryStr = String(payload["query"].as<const char *>());
+        String queryStr = String(payload["query"].as<String>());
         handleDb_queryCmd(queryStr);
     }
     else if (cmd == "echo")
     {
         Serial.println("Processing echo...");
-        if (!payload.containsKey("text") || !payload["text"].is<const char *>())
+        if (!payload.containsKey("text") || !payload["text"].is<String>())
         {
             sendErrorResponse("invalid_text_format");
             return;
         }
-        String messageStr = String(payload["text"].as<const char *>());
+        String messageStr = String(payload["text"].as<String>());
         handleEchoCmd(messageStr);
     }
     else if (cmd == "start_temp_report")
     {
         Serial.println("Processing tempreport...");
-        if (!payload.containsKey("interval") || !payload["interval"].is<const char *>())
+        if (!payload.containsKey("interval") || !payload["interval"].is<u8_t>())
         {
             sendErrorResponse("invalid_interval_format");
             return;
         }
-        String intervalStr = String(payload["interval"].as<const char *>());
-        handleTempreportCmd(intervalStr);
+        u8_t interval = payload["interval"].as<u8_t>();
+        handleTempreportCmd(true, interval);
+    }
+    else if (cmd == "stop_temp_report")
+    {
+        Serial.println("Processing stop_temp_report...");
+        handleTempreportCmd(false, 0);
     }
     else
     {
@@ -237,11 +243,25 @@ void handleDb_queryCmd(String query)
         return;
     }
     String instruction = query.substring(0, firstSpace);
+    String key_value = query.substring(firstSpace + 1);
 
     if (instruction == "SET")
     {
-        String key = query.substring(firstSpace + 1, query.indexOf(' ', firstSpace + 1));
-        String value = query.substring(query.indexOf(' ', firstSpace + 1) + 1);
+        firstSpace = key_value.indexOf(' ');
+        if (firstSpace == -1)
+        {
+            // 缺少參數，格式錯誤
+            sendErrorResponse("cmd_parse_error");
+            return;
+        }
+        String key = key_value.substring(0, key_value.indexOf(' '));
+        String value = key_value.substring(key_value.indexOf(' ') + 1);
+
+        if (key.length() == 0 || value.length() == 0)
+        {
+            sendErrorResponse("cmd_parse_error");
+            return;
+        }
         saveData(key, value);
         sendOkResponse("Data saved");
     }
@@ -251,12 +271,47 @@ void handleDb_queryCmd(String query)
         String value = getData(key);
         sendOkResponse(value);
     }
+    else if (instruction == "RESET")
+    {
+        removeAll();
+    }
+    else
+    {
+        sendErrorResponse("cmd_parse_error");
+    }
 }
 
-void handleTempreportCmd(String interval)
+void handleTempreportCmd(bool enable, u8_t interval)
 {
+    if (!enable)
+    {
+        // 停止溫度報告
+        if (tempReportTimer != NULL)
+        {
+            xTimerStop(tempReportTimer, 0);
+            xTimerDelete(tempReportTimer, 0);
+            tempReportTimer = NULL;
+        }
+        sendOkResponse("Temperature reporting stopped");
+        return;
+    }
     // 這裡可以加入啟動溫度報告的邏輯
-    String responseMsg = "Temperature reporting started with interval: " + interval;
+    if (interval < 2)
+    {
+        sendErrorResponse("invalid_interval");
+        return;
+    }
+    String responseMsg = "Temperature reporting started with interval: " + String(interval);
+    if(tempReportTimer != NULL)
+    {
+        xTimerStop(tempReportTimer, 0);
+        xTimerDelete(tempReportTimer, 0);
+        tempReportTimer = NULL;
+    }
+    tempReportTimer = xTimerCreate("TempReportTimer", pdMS_TO_TICKS(interval * 1000), pdTRUE, NULL, sendTempReport);
+
+    xTimerStart(tempReportTimer, 0);
+
     sendOkResponse(responseMsg);
 }
 
@@ -280,6 +335,18 @@ void sendOkResponse(const String &stdoutMsg)
 
     String output;
     serializeJson(responseDoc, output);
+    client.publish(topic_output.c_str(), output.c_str());
+    Serial.println(output);
+}
+
+void sendTempReport(TimerHandle_t xTimer)
+{
+    JsonDocument reportDoc;
+    reportDoc["status"] = "ok";
+    reportDoc["sensor"] = "temp";
+    reportDoc["value"] = random(20, 30); // 模擬溫度值，實際應從感測器讀取
+    String output;
+    serializeJson(reportDoc, output);
     client.publish(topic_output.c_str(), output.c_str());
     Serial.println(output);
 }
