@@ -4,8 +4,8 @@ from pathlib import Path
 
 # ===== 1) 輸入資料位置（有哪個就讀哪個） =====
 CANDIDATES = [
-    "payload_log_clean_train.csv",
-    "payload_log_clean_test.csv",
+    "balanced_train.csv",
+    "balanced_test.csv",
     "/mnt/data/payload_log_clean_train.csv",
     "/mnt/data/payload_log_clean_test.csv",
 ]
