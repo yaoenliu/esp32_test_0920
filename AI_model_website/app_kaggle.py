@@ -564,6 +564,7 @@ def api_send_to_device():
     # 1) AI 判斷使用「原始字串」
     raw_for_ai = payload if isinstance(payload, str) else json.dumps(payload, ensure_ascii=False)
     res = infer_once(raw_for_ai, decision_mode="th", threshold=best_threshold)
+    print("[send_to_device] raw_for_ai =", repr(raw_for_ai))
     if res["is_mal"]:
         return jsonify({
             "accepted": False, "reason": "blocked_by_model",
