@@ -235,6 +235,21 @@ void handleDb_queryCmd(String query)
 {
     query.trim(); // 清除前後空白
 
+     if (query == "RESET")
+    {
+        removeAll();
+        sendOkResponse("DB_RESET_done");
+        return;
+    }
+    else if (query == "DUMP")
+    {
+        JsonDocument allData = listAll();
+        String output;
+        serializeJson(allData, output);
+        sendOkResponse(output);
+        return;
+    }
+
     int firstSpace = query.indexOf(' ');
     if (firstSpace == -1)
     {

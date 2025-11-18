@@ -40,13 +40,14 @@ void removeAll()
 
 
 // 列出所有 key/value
-void listAll()
+JsonDocument listAll()
 {
+    JsonDocument doc;
     nvs_iterator_t it = nvs_entry_find("nvs", "kvstore", NVS_TYPE_ANY);
     if (it == nullptr)
     {
         Serial.println("⚠️ 沒有任何資料");
-        return;
+        return doc;
     }
 
     Serial.println("📜 目前儲存內容：");
@@ -60,9 +61,11 @@ void listAll()
         String val = prefs.getString(info.key, "");
         prefs.end();
 
+        doc[info.key] = val;
         Serial.printf("  [%s] = %s\n", info.key, val.c_str());
     }
     nvs_release_iterator(it);
+    return doc;
 }
 
 void processInput(String line)
