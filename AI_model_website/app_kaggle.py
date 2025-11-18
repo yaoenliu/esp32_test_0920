@@ -469,6 +469,9 @@ def api_infer():
     mode=(body.get("mode") or "th").lower()
     th=body.get("threshold")
     eff_th=best_threshold if th is None else float(th)
+
+    print("[infer] payload_raw =", repr(payload))
+    
     res = infer_once(payload if isinstance(payload,str) else json.dumps(payload),
                  decision_mode=mode, threshold=eff_th)
     return jsonify({
@@ -564,7 +567,7 @@ def api_send_to_device():
     # 1) AI 判斷使用「原始字串」
     raw_for_ai = payload if isinstance(payload, str) else json.dumps(payload, ensure_ascii=False)
     res = infer_once(raw_for_ai, decision_mode="th", threshold=best_threshold)
-    print("[send_to_device] raw_for_ai =", repr(raw_for_ai))
+    
     if res["is_mal"]:
         return jsonify({
             "accepted": False, "reason": "blocked_by_model",
