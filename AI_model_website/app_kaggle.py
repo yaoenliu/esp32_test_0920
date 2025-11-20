@@ -461,25 +461,74 @@ mqttc.connect(MQTT_HOST,MQTT_PORT,keepalive=60)
 threading.Thread(target=mqttc.loop_forever,daemon=True).start()
 
 from flask import jsonify, Response, request, render_template_string
+def rule_check(payload: str):
+    s = payload.strip()
+
+    # ---- 合法格式，只看前綴，不檢查內容 ----
+
+    # start_temp_report, 任意內容
+    if re.match(r'^start_temp_report\s*,', s, flags=re.I):
+        return "benign"
+
+    # run_cmd, ADD 任意內容
+    if re.match(r'^run_cmd\s*,\s*ADD\b', s, flags=re.I):
+        return "benign"
+
+    # run_cmd, SUB 任意內容
+    if re.match(r'^run_cmd\s*,\s*SUB\b', s, flags=re.I):
+        return "benign"
+
+    # run_cmd, echo 任意內容
+    if re.match(r'^run_cmd\s*,\s*echo\b', s, flags=re.I):
+        return "benign"
+
+    # echo, 任意內容
+    if re.match(r'^echo\s*,', s, flags=re.I):
+        return "benign"
+
+    # ---- 其他全部都是惡意 ----
+    return "malicious"
 
 @app.route("/api/infer", methods=["POST"])
 def api_infer():
-    body=request.get_json(silent=True) or {}
-    payload=body.get("payload", "")
-    mode=(body.get("mode") or "th").lower()
-    th=body.get("threshold")
-    eff_th=best_threshold if th is None else float(th)
+    body = request.get_json(silent=True) or {}
+    payload = body.get("payload", "")
+    mode = (body.get("mode") or "th").lower()
+    th = body.get("threshold")
+    eff_th = best_threshold if th is None else float(th)
 
-    print("[infer] payload_raw =", repr(payload))
-    
-    res = infer_once(payload if isinstance(payload,str) else json.dumps(payload),
-                 decision_mode=mode, threshold=eff_th)
+    # 統一轉成字串（不管前端丟的是字串還是 JSON）
+    payload_str = payload if isinstance(payload, str) else json.dumps(payload, ensure_ascii=False)
+
+    # ---- 1) 先做 rule-based 格式檢查 ----
+    rule_label = rule_check(payload_str)
+    if rule_label == "malicious":
+        print("[rule-block]", repr(payload_str))
+        return jsonify({
+            "is_malicious": True,
+            "pred_label": "malicious_rule",  # 表示是規則擋下來的
+            "p_malicious": 1.0,              # 代表「一定擋」
+            "threshold": eff_th,
+            "reason": "blocked_by_rule",
+            "source": "rule"                 # 額外標註是 rule 不是 AI
+        }), 406
+
+    # ---- 2) 規則通過 → 才交給 AI ----
+    print("[infer] payload_raw =", repr(payload_str))
+    res = infer_once(
+        payload_str,
+        decision_mode=mode,
+        threshold=eff_th
+    )
+
     return jsonify({
         "is_malicious": bool(res["is_mal"]),
         "p_malicious": float(res["p_mal"]),
         "pred_label": res["pred_label"],
-        "threshold": eff_th
+        "threshold": eff_th,
+        "source": "ai"   # 這次是 AI 做的決策
     }), (406 if res["is_mal"] else 200)
+
 
 def _debug_req(prefix=""):
     try:
