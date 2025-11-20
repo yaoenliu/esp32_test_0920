@@ -462,88 +462,72 @@ threading.Thread(target=mqttc.loop_forever,daemon=True).start()
 
 from flask import jsonify, Response, request, render_template_string
 def normalize_spaces(payload: str) -> str:
-    """
-    把 payload 正規化：
-    - 所有奇怪空白 → 一般空白
-    - 中文逗號 → 英文逗號
-    - 多重空白 → 單一空白
-    - 逗號空白統一
-    - 對 run_cmd / echo / start_temp_report 做「指令 canonical」
-      目標：
-        run_cmd ,   ADD   7   8   → run_cmd,ADD 7 8
-        run_cmd , sub  3 -5      → run_cmd,SUB 3 -5
-    """
     if not isinstance(payload, str):
         return payload
 
     s = str(payload)
 
-    # 1) 空白 / 逗號清理
+    # ----- 基礎清理 -----
     s = re.sub(r'[\u00A0\u2000-\u200B\u3000]', ' ', s)  # 奇怪空白 → space
     s = s.replace("，", ",")
     s = s.replace("\t", " ")
     s = s.replace("\r", " ").replace("\n", " ")
-    s = re.sub(r'\s+', ' ', s)            # 多個空白 → 一個
-    s = re.sub(r'\s*,\s*', ', ', s)       # 逗號前後 → ", "
+    s = re.sub(r'\s+', ' ', s)           # 多空白 → 一空白
+    s = re.sub(r'\s*,\s*', ', ', s)      # 逗號 → ", "
     s = s.strip()
 
-    # 2) canonical：run_cmd, ADD / SUB / echo
+    # ----- run_cmd, (ADD / SUB / echo) -----
     m = re.match(r'^(run_cmd)\s*,\s*(ADD|SUB|echo)\s*(.*)$', s, flags=re.I)
     if m:
         cmd, sub, rest = m.groups()
-        cmd = cmd.lower()         # run_cmd → 小寫
-        sub = sub.upper()         # ADD / SUB / ECHO → 大寫
+        cmd = "run_cmd"                      # run_cmd → 小寫
+
+        # ★ 你要求：ADD / SUB 大寫；echo 小寫
+        if sub.upper() in ("ADD", "SUB"):
+            sub = sub.upper()
+        else:
+            sub = sub.lower()                # echo → 小寫
+
         rest = rest.strip()
         if rest:
-            # ★ 這裡特別把逗號後空白拿掉 → run_cmd,ADD 7 8
             return f"{cmd},{sub} {rest}"
         else:
             return f"{cmd},{sub}"
 
-    # 3) canonical：echo, ...
+    # ----- echo, ... (你要求小寫 echo) -----
     m = re.match(r'^(echo)\s*,\s*(.*)$', s, flags=re.I)
     if m:
         cmd, rest = m.groups()
-        cmd = cmd.lower()
-        rest = rest.strip()
-        return f"{cmd}, {rest}"
+        return f"echo, {rest.strip()}"
 
-    # 4) canonical：start_temp_report, ...
+    # ----- start_temp_report, ... -----
     m = re.match(r'^(start_temp_report)\s*,\s*(.*)$', s, flags=re.I)
     if m:
         cmd, rest = m.groups()
-        cmd = cmd.lower()
-        rest = rest.strip()
-        return f"{cmd}, {rest}"
+        return f"start_temp_report, {rest.strip()}"
 
-    # 5) 其他就用整理後的 s
     return s
+
 
 def rule_check(payload: str):
     s = payload.strip()
 
-    # run_cmd,ADD ...
-    if re.match(r'^run_cmd,ADD\b', s, flags=re.I):
+    # run_cmd,ADD or SUB or echo → 格式合法
+    if re.match(r'^run_cmd,(ADD|SUB|echo)\b', s, flags=re.I):
         return "benign"
 
-    # run_cmd,SUB ...
-    if re.match(r'^run_cmd,SUB\b', s, flags=re.I):
+    # echo,<text> → 合法
+    if re.match(r'^echo,', s, flags=re.I):
         return "benign"
-
-    # run_cmd,echo ...
-    if re.match(r'^run_cmd,echo\b', s, flags=re.I):
-        return "benign"
-
-    # start_temp_report, ...
+    # start_temp_report,<num> → 合法
     if re.match(r'^start_temp_report,', s, flags=re.I):
         return "benign"
 
-    # echo, ...
-    if re.match(r'^echo,', s, flags=re.I):
-        return "benign"
-
-    # 其他全部當惡意
+    # 其他全部格式錯誤 → 視為惡意
     return "malicious"
+
+
+
 
 @app.route("/api/infer", methods=["POST"])
 def api_infer():
@@ -557,29 +541,27 @@ def api_infer():
     payload_str_raw = payload if isinstance(payload, str) else json.dumps(payload, ensure_ascii=False)
     payload_str = normalize_spaces(payload_str_raw)
 
-    # ---- 顯示實際丟給 AI 的字串（後端 log）----
+    # debug 看實際送給 AI 的字串
     print("[DEBUG raw       ]", repr(payload_str_raw))
     print("[DEBUG normalized]", repr(payload_str))
 
-    # ---- 1) 先做 rule-based 格式檢查 ----
-    rule_label = rule_check(payload_str)
+    # 1) 只用 rule_check 判斷「格式是否允許」
+    rule_label = rule_check(payload_str)   # "benign" = 格式OK, "malicious" = 格式錯
 
-    # 規則直接判定「一定惡意」→ 不給 AI，
-    # 直接 406
+    # 1a) 格式不合法 → 直接擋掉，AI 不參與
     if rule_label == "malicious":
-        print("[rule-block]", repr(payload_str))
+        print("[rule-block] format error:", repr(payload_str))
         return jsonify({
             "is_malicious": True,
-            "pred_label": "malicious_rule",
+            "pred_label": "malicious_format",
             "p_malicious": 1.0,
             "threshold": eff_th,
-            "reason": "blocked_by_rule",
+            "reason": "format_error",
             "source": "rule",
-            "normalized_payload": payload_str,   # 回傳給前端看
+            "normalized_payload": payload_str,
         }), 406
 
-    # ---- 2) 規則判定「格式合法」→ 一律視為 benign，
-    #      AI 只負責輸出一個參考機率，不參與擋不擋 ----
+    # 2) 格式合法 → 交給 AI 判斷惡意 / 正常
     res_ai = infer_once(
         payload_str,
         decision_mode=mode,
@@ -587,14 +569,14 @@ def api_infer():
     )
 
     return jsonify({
-        # 決策：因為 rule 說 OK，所以一定回 benign
-        "is_malicious": False,
-        "p_malicious": float(res_ai["p_mal"]),  # 只是參考分數
-        "pred_label": "benign_rule",
+        "is_malicious": bool(res_ai["is_mal"]),         # ✅ 讓 AI 決定
+        "p_malicious": float(res_ai["p_mal"]),
+        "pred_label": res_ai["pred_label"],
         "threshold": eff_th,
-        "source": "rule+ai",
+        "source": "ai",
         "normalized_payload": payload_str,
-    }), 200
+    }), (406 if res_ai["is_mal"] else 200)
+
 
 
 def _debug_req(prefix=""):
