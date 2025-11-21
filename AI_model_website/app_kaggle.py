@@ -538,11 +538,19 @@ def rule_check(payload: str):
         return "benign"
 
     # start_temp_report,<num> → 合法
-    if re.match(r'^start_temp_report,', s, flags=re.I):
-        return "benign"
+    m = re.match(r'^start_temp_report,(-?\w+)$', s, flags=re.I)
+    if m:
+        num_str = m.group(1)
+        num = int(num_str)
+        if num >= 3:
+            return "benign"
+        else:
+            return "malicious"
 
     # 其他全部格式錯誤 → 視為惡意
     return "malicious"
+
+
 
 @app.route("/api/infer", methods=["POST"])
 def api_infer():
