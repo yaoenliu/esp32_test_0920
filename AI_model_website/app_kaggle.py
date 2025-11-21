@@ -461,53 +461,70 @@ mqttc.connect(MQTT_HOST,MQTT_PORT,keepalive=60)
 threading.Thread(target=mqttc.loop_forever,daemon=True).start()
 
 from flask import jsonify, Response, request, render_template_string
+SHELL_CHARS = r'[|&;`$><]'
 def normalize_spaces(payload: str) -> str:
+    """
+    統一格式：
+      run_cmd ,   ADD   7  8   → run_cmd,ADD 7 8
+      run_cmd , sub  3 -5      → run_cmd,SUB 3 -5
+      run_cmd , echo  hi       → run_cmd,echo hi
+      echo,   hello            → echo,hello
+      start_temp_report , 10   → start_temp_report,10
+    """
     if not isinstance(payload, str):
         return payload
 
     s = str(payload)
 
-    # ----- 基礎清理 -----
-    s = re.sub(r'[\u00A0\u2000-\u200B\u3000]', ' ', s)  # 奇怪空白 → space
+    # 1) 各種奇怪空白 → space
+    s = re.sub(r'[\u00A0\u2000-\u200B\u3000]', ' ', s)
     s = s.replace("，", ",")
     s = s.replace("\t", " ")
     s = s.replace("\r", " ").replace("\n", " ")
-    s = re.sub(r'\s+', ' ', s)           # 多空白 → 一空白
-    s = re.sub(r'\s*,\s*', ', ', s)      # 逗號 → ", "
+    s = re.sub(r'\s+', ' ', s)
+    s = re.sub(r'\s*,\s*', ', ', s)
     s = s.strip()
 
-    # ----- run_cmd, (ADD / SUB / echo) -----
+    # 2) run_cmd, ADD / SUB / echo
     m = re.match(r'^(run_cmd)\s*,\s*(ADD|SUB|echo)\s*(.*)$', s, flags=re.I)
     if m:
         cmd, sub, rest = m.groups()
-        cmd = "run_cmd"                      # run_cmd → 小寫
-
-        # ★ 你要求：ADD / SUB 大寫；echo 小寫
-        if sub.upper() in ("ADD", "SUB"):
-            sub = sub.upper()
-        else:
-            sub = sub.lower()                # echo → 小寫
-
+        cmd = cmd.lower()     # run_cmd
+        sub = sub.upper() if sub.lower() in ("add", "sub") else "echo"
         rest = rest.strip()
         if rest:
             return f"{cmd},{sub} {rest}"
         else:
             return f"{cmd},{sub}"
 
-    # ----- echo, ... (你要求小寫 echo) -----
+    # 3) echo, ...
     m = re.match(r'^(echo)\s*,\s*(.*)$', s, flags=re.I)
     if m:
         cmd, rest = m.groups()
-        return f"echo, {rest.strip()}"
+        cmd = cmd.lower()
+        rest = rest.strip()
+        return f"{cmd},{rest}"
 
-    # ----- start_temp_report, ... -----
+    # 4) start_temp_report, ...
     m = re.match(r'^(start_temp_report)\s*,\s*(.*)$', s, flags=re.I)
     if m:
         cmd, rest = m.groups()
-        return f"start_temp_report, {rest.strip()}"
+        cmd = cmd.lower()
+        rest = rest.strip()
+        return f"{cmd},{rest}"
 
     return s
 
+
+
+def has_shell_chars(text: str) -> bool:
+    """檢查有沒有明顯 shell / XSS 符號"""
+    if any(ch in text for ch in SHELL_CHARS):
+        return True
+    tl = text.lower()
+    if "<script" in tl or "onerror=" in tl:
+        return True
+    return False
 
 def rule_check(payload: str):
     s = payload.strip()
@@ -519,15 +536,13 @@ def rule_check(payload: str):
     # echo,<text> → 合法
     if re.match(r'^echo,', s, flags=re.I):
         return "benign"
+
     # start_temp_report,<num> → 合法
     if re.match(r'^start_temp_report,', s, flags=re.I):
         return "benign"
 
     # 其他全部格式錯誤 → 視為惡意
     return "malicious"
-
-
-
 
 @app.route("/api/infer", methods=["POST"])
 def api_infer():
@@ -541,14 +556,12 @@ def api_infer():
     payload_str_raw = payload if isinstance(payload, str) else json.dumps(payload, ensure_ascii=False)
     payload_str = normalize_spaces(payload_str_raw)
 
-    # debug 看實際送給 AI 的字串
     print("[DEBUG raw       ]", repr(payload_str_raw))
     print("[DEBUG normalized]", repr(payload_str))
 
-    # 1) 只用 rule_check 判斷「格式是否允許」
-    rule_label = rule_check(payload_str)   # "benign" = 格式OK, "malicious" = 格式錯
+    # 1) 先用 rule_check 看「格式」對不對
+    rule_label = rule_check(payload_str)
 
-    # 1a) 格式不合法 → 直接擋掉，AI 不參與
     if rule_label == "malicious":
         print("[rule-block] format error:", repr(payload_str))
         return jsonify({
@@ -561,7 +574,66 @@ def api_infer():
             "normalized_payload": payload_str,
         }), 406
 
-    # 2) 格式合法 → 交給 AI 判斷惡意 / 正常
+    # 1.5) ★ 針對 echo 類型，加上「沒有 shell 字元就直接當 benign」的白名單 ★
+    s_lower = payload_str.lower()
+
+    # (a) run_cmd,echo ...
+    m = re.match(r'^run_cmd,echo\s+(.*)$', payload_str, flags=re.I)
+    if m:
+        echo_text = m.group(1).strip()
+        if has_shell_chars(echo_text):
+            # 有 shell 符號 → 直接惡意，不給 AI 決定
+            print("[rule-block] echo shell inj:", repr(payload_str))
+            return jsonify({
+                "is_malicious": True,
+                "pred_label": "malicious_echo",
+                "p_malicious": 1.0,
+                "threshold": eff_th,
+                "reason": "echo_shell_chars",
+                "source": "rule",
+                "normalized_payload": payload_str,
+            }), 406
+        else:
+            # 純 echo 文本 → 直接當 benign，AI 只算參考分數
+            res_ai = infer_once(payload_str, decision_mode=mode, threshold=eff_th)
+            return jsonify({
+                "is_malicious": bool(res_ai["is_mal"]),                 
+                "p_malicious": float(res_ai["p_mal"]),     # 只是顯示用
+                "pred_label": "benign_echo_rule",
+                "threshold": eff_th,
+                "reason": "echo_no_shell_chars",
+                "source": "rule+ai",
+                "normalized_payload": payload_str,
+            }), 200
+
+    # (b) echo, ...
+    m = re.match(r'^echo,(.*)$', payload_str, flags=re.I)
+    if m:
+        echo_text = m.group(1).strip()
+        if has_shell_chars(echo_text):
+            print("[rule-block] echo shell inj:", repr(payload_str))
+            return jsonify({
+                "is_malicious": True,
+                "pred_label": "malicious_echo",
+                "p_malicious": 1.0,
+                "threshold": eff_th,
+                "reason": "echo_shell_chars",
+                "source": "rule",
+                "normalized_payload": payload_str,
+            }), 406
+        else:
+            res_ai = infer_once(payload_str, decision_mode=mode, threshold=eff_th)
+            return jsonify({
+                "is_malicious": bool(res_ai["is_mal"]),
+                "p_malicious": float(res_ai["p_mal"]),
+                "pred_label": "benign_echo_rule",
+                "threshold": eff_th,
+                "reason": "echo_no_shell_chars",
+                "source": "rule+ai",
+                "normalized_payload": payload_str,
+            }), 200
+
+    # 2) 其它類型（ADD / SUB / start_temp_report ...）就交給 AI 決定
     res_ai = infer_once(
         payload_str,
         decision_mode=mode,
@@ -569,7 +641,7 @@ def api_infer():
     )
 
     return jsonify({
-        "is_malicious": bool(res_ai["is_mal"]),         # ✅ 讓 AI 決定
+        "is_malicious": bool(res_ai["is_mal"]),
         "p_malicious": float(res_ai["p_mal"]),
         "pred_label": res_ai["pred_label"],
         "threshold": eff_th,
