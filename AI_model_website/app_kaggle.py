@@ -529,25 +529,30 @@ def has_shell_chars(text: str) -> bool:
 def rule_check(payload: str):
     s = payload.strip()
 
-    # run_cmd,ADD or SUB or echo → 格式合法
+    # run_cmd,ADD / SUB / echo → 格式合法
     if re.match(r'^run_cmd,(ADD|SUB|echo)\b', s, flags=re.I):
         return "benign"
 
-    # echo,<text> → 合法
+    # echo,<text>
     if re.match(r'^echo,', s, flags=re.I):
         return "benign"
 
-    # start_temp_report,<num> → 合法
-    m = re.match(r'^start_temp_report,(-?\w+)$', s, flags=re.I)
+    # start_temp_report,<num>
+    m = re.match(r'^start_temp_report,(\S+)$', s, flags=re.I)
     if m:
         num_str = m.group(1)
-        num = int(num_str)
-        if num >= 3:
-            return "benign"
-        else:
-            return "malicious"
 
-    # 其他全部格式錯誤 → 視為惡意
+        # 不是整數 → 給 AI 判斷
+        if not num_str.lstrip("-").isdigit():
+            return "benign"
+
+        # 是整數 → 檢查大小
+        n = int(num_str)
+        if n <= 2:
+            return "malicious"  # ★ 前處理直接擋
+        return "benign"  # 把 >=3 給 AI
+
+    # 其他全部視為格式錯 → 惡意
     return "malicious"
 
 
