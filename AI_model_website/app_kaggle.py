@@ -461,7 +461,10 @@ mqttc.connect(MQTT_HOST,MQTT_PORT,keepalive=60)
 threading.Thread(target=mqttc.loop_forever,daemon=True).start()
 
 from flask import jsonify, Response, request, render_template_string
-SHELL_CHARS = r'[|&;`$><]'
+
+SHELL_CHARS = r'[|&;`$><]' # 這是明顯shell injection字元，我對AI座前處理，你之後要測WFUZZ再把她清空測
+#AI模型對於沒看過的字串依舊會顯示benign，我已經寫在報告裡了，
+
 def normalize_spaces(payload: str) -> str:
     """
     統一格式：
