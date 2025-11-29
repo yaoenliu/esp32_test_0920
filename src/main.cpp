@@ -179,7 +179,7 @@ void handleRunCmd(String command)
     instruction.toUpperCase(); // 轉換為大寫以方便比對
 
     // 只處理 ADD 指令
-    if (instruction == "ADD")
+    if (instruction == "ADD" || instruction == "SUB")
     {
         // 找到第二個空格，分離出兩個參數
         int secondSpace = command.indexOf(' ', firstSpace + 1);
@@ -206,7 +206,10 @@ void handleRunCmd(String command)
             sendErrorResponse("cmd_parse_error");
             return;
         }
-
+        if (instruction == "SUB")
+        {
+            num2 = -num2;
+        }
         long result = num1 + num2;
         sendOkResponse(String(result));
     }
