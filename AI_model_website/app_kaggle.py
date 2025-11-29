@@ -462,9 +462,9 @@ threading.Thread(target=mqttc.loop_forever,daemon=True).start()
 
 from flask import jsonify, Response, request, render_template_string
 
-SHELL_CHARS = r'[|&;`$><]' # 這是明顯shell injection字元，我對AI座前處理，你之後要測WFUZZ再把她清空測
+#SHELL_CHARS = r'[|&;`$><]' # 這是明顯shell injection字元，我對AI座前處理，你之後要測WFUZZ再把她清空測
 #AI模型對於沒看過的字串依舊會顯示benign，我已經寫在報告裡了，
-
+SHELL_CHARS=""
 def normalize_spaces(payload: str) -> str:
     """
     統一格式：
@@ -748,33 +748,32 @@ def to_device_json(payload_text: str):
 def api_send_to_device():
     body = request.get_json(silent=True) or {}
     device_id = body.get("device_id") or "esp-lab-01"
-    payload   = body.get("payload")  # 這裡 payload 仍是「輸入框那一行字串」
+    payload   = body.get("payload")
 
-    # 1) AI 判斷使用「原始字串」
-    raw_for_ai = payload if isinstance(payload, str) else json.dumps(payload, ensure_ascii=False)
-    res = infer_once(raw_for_ai, decision_mode="th", threshold=best_threshold)
-    
-    if res["is_mal"]:
-        return jsonify({
-            "accepted": False, "reason": "blocked_by_model",
-            "p_malicious": float(res["p_mal"]), "threshold": float(best_threshold)
-        }), 406
-
-    # 2) 轉成 target device 期望的 JSON 後再送 MQTT
-    dev_msg = to_device_json(payload)
-    if not dev_msg:
+    if not payload or not isinstance(payload, str):
         return jsonify({"accepted": False, "reason": "empty_payload"}), 400
 
-    req_id = str(uuid.uuid4())
-    # 你若不想包任何 metadata，只送裝置 JSON 也可以：
-    mqttc.publish(TOPIC_FORWARD.format(device_id=device_id),
-                  json.dumps(dev_msg, ensure_ascii=False), qos=1)
+    # ★ 不再重新跑 AI（infer）, 直接轉裝置格式後送出
+    dev_msg = to_device_json(payload)
+    if not dev_msg:
+        return jsonify({"accepted": False, "reason": "invalid_payload"}), 400
 
-    # 如果你仍想要 req_id，就可以加在 dev_msg 內，或另開一個包裝層
+    req_id = str(uuid.uuid4())
+
+    mqttc.publish(
+        TOPIC_FORWARD.format(device_id=device_id),
+        json.dumps(dev_msg, ensure_ascii=False),
+        qos=1
+    )
+
+    # 回傳 202 表示成功送出
     return jsonify({
-        "accepted": True, "req_id": req_id,
-        "p_malicious": float(res["p_mal"]), "threshold": float(best_threshold)
+        "accepted": True,
+        "req_id": req_id,
+        "normalized_payload": payload,
+        "source": "send_only"
     }), 202
+
 # ==== 新增：SSE 事件流，把裝置回報推到前端 ====
 @app.route("/events")
 def sse_events():
