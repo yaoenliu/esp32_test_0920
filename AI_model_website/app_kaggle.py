@@ -541,6 +541,7 @@ def rule_check(payload: str):
         return "benign"
 
     # start_temp_report,<num>
+    """
     m = re.match(r'^start_temp_report,(\S+)$', s, flags=re.I)
     if m:
         num_str = m.group(1)
@@ -554,7 +555,10 @@ def rule_check(payload: str):
         if n <= 2:
             return "malicious"  # ★ 前處理直接擋
         return "benign"  # 把 >=3 給 AI
-
+    """
+    m = re.match(r'^start_temp_report,(\S+)$', s, flags=re.I)
+    if m:
+        return "benign"
     # 其他全部視為格式錯 → 惡意
     return "malicious"
 
