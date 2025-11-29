@@ -541,7 +541,7 @@ def rule_check(payload: str):
         return "benign"
 
     # start_temp_report,<num>
-    """
+    """ ### 原本的嚴格規則（改成全給 AI 判斷）<=2自動判斷malicious
     m = re.match(r'^start_temp_report,(\S+)$', s, flags=re.I)
     if m:
         num_str = m.group(1)
