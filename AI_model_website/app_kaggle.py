@@ -669,6 +669,54 @@ def api_infer():
         "normalized_payload": payload_str,
     }), (406 if res_ai["is_mal"] else 200)
 
+@app.route("/api/infer_and_send", methods=["POST"])
+def api_infer_and_send():
+    body = request.get_json(silent=True) or {}
+    device_id = body.get("device_id") or "esp-lab-01"
+    payload = body.get("payload", "")
+
+    # 1) normalize
+    payload_str = normalize_spaces(payload)
+
+    # 2) rule_check
+    rule_label = rule_check(payload_str)
+    if rule_label == "malicious":
+        return jsonify({
+            "accepted": False,
+            "is_malicious": True,
+            "reason": "rule_block",
+            "normalized_payload": payload_str,
+        }), 406
+
+    # 3) AI 判斷
+    eff_th = best_threshold
+    res = infer_once(payload_str, decision_mode="th", threshold=eff_th)
+
+    if res["is_mal"]:
+        return jsonify({
+            "accepted": False,
+            "is_malicious": True,
+            "p_malicious": res["p_mal"],
+            "normalized_payload": payload_str,
+            "reason": "blocked_by_ai",
+        }), 406
+
+    # 4) 通過 → 送 MQTT
+    dev_msg = to_device_json(payload_str)
+    req_id = str(uuid.uuid4())
+    mqttc.publish(
+        TOPIC_FORWARD.format(device_id=device_id),
+        json.dumps(dev_msg, ensure_ascii=False),
+        qos=1
+    )
+
+    return jsonify({
+        "accepted": True,
+        "is_malicious": False,
+        "req_id": req_id,
+        "normalized_payload": payload_str,
+        "p_malicious": res["p_mal"],
+    }), 202
 
 
 def _debug_req(prefix=""):
