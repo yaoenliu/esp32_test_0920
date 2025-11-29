@@ -4,18 +4,18 @@ void saveData(const String &key, const String &value)
 {
     if (key.length() > 32)
     {
-        Serial.println("❌ Key 太長（超過 32 字）");
+        Serial.println("Key too long (exceeds 32 characters)");
         return;
     }
     if (value.length() > 256)
     {
-        Serial.println("❌ Value 太長（超過 256 字）");
+        Serial.println("Value too long (exceeds 256 characters)");
         return;
     }
     prefs.begin("kvstore", false);
     prefs.putString(key.c_str(), value);
     prefs.end();
-    Serial.printf("✅ 已儲存: [%s] = %s\n", key.c_str(), value.c_str());
+    Serial.printf("Saved: [%s] = %s\n", key.c_str(), value.c_str());
 }
 
 String getData(const String &key)
@@ -24,9 +24,9 @@ String getData(const String &key)
     String value = prefs.getString(key.c_str(), "");
     prefs.end();
     if (value.isEmpty())
-        Serial.printf("⚠️ 無資料: [%s]\n", key.c_str());
+        Serial.printf("No data: [%s]\n", key.c_str());
     else
-        Serial.printf("📦 讀取: [%s] = %s\n", key.c_str(), value.c_str());
+        Serial.printf("Retrieved: [%s] = %s\n", key.c_str(), value.c_str());
     return value;
 }
 
@@ -35,7 +35,7 @@ void removeAll()
     prefs.begin("kvstore", false);
     prefs.clear();
     prefs.end();
-    Serial.println("🧹 所有資料已刪除");
+    Serial.println("All data removed");
 }
 
 
@@ -46,11 +46,11 @@ JsonDocument listAll()
     nvs_iterator_t it = nvs_entry_find("nvs", "kvstore", NVS_TYPE_ANY);
     if (it == nullptr)
     {
-        Serial.println("⚠️ 沒有任何資料");
+        Serial.println("No data available");
         return doc;
     }
 
-    Serial.println("📜 目前儲存內容：");
+    Serial.println("Current stored data:");
     while (it != nullptr)
     {
         nvs_entry_info_t info;
@@ -98,7 +98,7 @@ void processInput(String line)
         String value = line.substring(spaceIndex + 1);
         if (value.length() == 0)
         {
-            Serial.println("❌ 請輸入要儲存的值");
+            Serial.println("Please enter a value to save");
             return;
         }
         saveData(key, value);
