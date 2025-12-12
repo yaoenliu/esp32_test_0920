@@ -397,16 +397,51 @@ TOPIC_ACK="device/{device_id}/ack"
 TOPIC_OUTPUT="device/{device_id}/output"
 TOPIC_CRASH="device/{device_id}/crash"
 
-mqttc=mqtt.Client(client_id="web-gateway")
-event_q=queue.Queue(maxsize=1000)
+import os, uuid, time, json, queue
+import paho.mqtt.client as mqtt
+
+# ---------- 基本設定 ----------
+MQTT_HOST, MQTT_PORT = config.MQTT_HOST, config.MQTT_PORT
+TOPIC_FORWARD = "pipeline/forward/{device_id}"
+TOPIC_ACK     = "device/{device_id}/ack"
+TOPIC_OUTPUT  = "device/{device_id}/output"
+TOPIC_CRASH   = "device/{device_id}/crash"
+
+# 事件佇列（SSE 用）
+event_q = queue.Queue(maxsize=10000)
+
+# 唯一 client_id，避免多進程/重載互踢
+client_id = f"web-gateway-{os.getpid()}-{uuid.uuid4().hex[:6]}"
+mqttc = mqtt.Client(client_id=client_id)
+
+# 一定要在 connect() 之前設定
+mqttc.max_inflight_messages_set(50)   # 預設 20，放寬併發 publish
+mqttc.max_queued_messages_set(0)      # 0=不限制佇列（QoS1 大量發佈時不丟訊息）
+
+# 內建 logger（會輸出到 stdout）
+mqttc.enable_logger()
+
+# 發佈計數觀察
+PUB_OK = 0
+def on_publish(client, userdata, mid):
+    global PUB_OK
+    PUB_OK += 1
+    print(f"[MQTT] published mid={mid}, ok_count={PUB_OK}")
+
 def on_connect(client, userdata, flags, rc):
-    print("MQTT connected:", rc)
-    client.subscribe("device/+/crash",qos=1)
-    client.subscribe("device/+/output",qos=1)
-    client.subscribe("device/+/ack",qos=1)
+    print(f"[MQTT] connected rc={rc} client_id={client_id}")
+    # 訂閱三個回報主題
+    client.subscribe("device/+/ack",    qos=1)
+    client.subscribe("device/+/output", qos=1)
+    client.subscribe("device/+/crash",  qos=1)
+    print("[MQTT] subscribed: device/+/ack | device/+/output | device/+/crash")
+
+def on_disconnect(client, userdata, rc):
+    # rc != 0 表示非正常斷線
+    print(f"[MQTT] disconnected rc={rc}; will auto-reconnect")
 
 def on_message(client, userdata, msg):
-    # --- 1) 判斷 topic 類型 ---
+    # 1) 判斷 topic 類型
     if msg.topic.endswith("/ack"):
         devst = "ack"
     elif msg.topic.endswith("/output"):
@@ -416,49 +451,46 @@ def on_message(client, userdata, msg):
     else:
         devst = "unknown"
 
-    # --- 2) 嘗試解析裝置原始 payload ---
+    # 2) 嘗試解析裝置原始 payload
     raw = msg.payload.decode("utf-8", errors="ignore").strip()
     norm = None
     try:
         obj = json.loads(raw)
-        # 若已是你要的結構，直接用
         if isinstance(obj, dict) and ("status" in obj or "stdout" in obj or "msg" in obj):
             norm = obj
     except Exception:
         pass
 
-    # --- 3) 正規化（不是 JSON 或結構不符 → 轉成你要的格式）---
+    # 3) 正規化
     if norm is None:
         if devst in ("ack", "output"):
-            # 視為成功輸出；純文字一律放 stdout
             norm = {"status": "ok", "stdout": raw or "ok"}
         elif devst == "crash":
             norm = {"status": "crash", "msg": raw or "crash"}
         else:
             norm = {"status": "ok", "stdout": raw}
 
-    # --- 4) 弱標註 ---
-    weak = None
-    if devst == "crash":
-        weak = "malicious"
-    elif devst in ("ack", "output"):
-        weak = "benign"
-
-    # 由於不再使用 req_id，這裡不要從 data 取 req_id
-    # device_id = "device/{id}/..." 的第二段
-    parts = msg.topic.split("/")
-    device_id = parts[1] if len(parts) > 1 else None
-
-    # --- 5) 紀錄到 DB（device_msg 存正規化後的 JSON 字串）---
     
+    # 5) 推到前端事件流
+    try:
+        event_q.put({"topic": msg.topic, "data": norm, "ts": time.time()}, timeout=0.5)
+    except queue.Full:
+        print("[SSE] event queue full; dropping message")
 
-    # --- 6) 推到前端事件流（/mqtt 頁會看到）---
-    event_q.put({"topic": msg.topic, "data": norm, "ts": time.time()})
+# 回呼掛載
+mqttc.on_connect    = on_connect
+mqttc.on_disconnect = on_disconnect
+mqttc.on_message    = on_message
+mqttc.on_publish    = on_publish
 
-mqttc.on_connect=on_connect
-mqttc.on_message=on_message
-mqttc.connect(MQTT_HOST,MQTT_PORT,keepalive=60)
-threading.Thread(target=mqttc.loop_forever,daemon=True).start()
+# 自動重連 backoff
+mqttc.reconnect_delay_set(min_delay=1, max_delay=8)
+
+# 連線並啟動背景 loop
+mqttc.connect(MQTT_HOST, MQTT_PORT, keepalive=120)
+mqttc.loop_start()
+
+print(f"[MQTT] client ready: {client_id} -> {MQTT_HOST}:{MQTT_PORT}")
 
 from flask import jsonify, Response, request, render_template_string
 
@@ -562,7 +594,37 @@ def rule_check(payload: str):
     # 其他全部視為格式錯 → 惡意
     return "malicious"
 
+def safe_publish(topic: str, payload: str, qos: int = 1, timeout: float = 5.0, retries: int = 3) -> bool:
+    """回傳 True 表示已收到 PUBACK；False 表示重試後仍失敗。"""
+    backoff = 0.2
+    for attempt in range(retries + 1):
+        # 1) 先檢查是否連線；paho 會自動重連，但斷線時直接 publish 可能丟失
+        if not mqttc.is_connected():
+            # 等待自動重連
+            t0 = time.time()
+            while not mqttc.is_connected() and (time.time() - t0) < timeout:
+                time.sleep(0.05)
 
+        # 2) 發佈
+        info = mqttc.publish(topic, payload, qos=qos)
+        # 佇列滿 / 其他錯誤
+        if info.rc not in (mqtt.MQTT_ERR_SUCCESS, ):
+            time.sleep(backoff)
+            backoff = min(backoff * 2, 2.0)
+            continue
+
+        # 3) 等待 PUBACK（QoS1）或送出成功
+        if info.is_published():
+            return True
+        info.wait_for_publish(timeout=timeout)
+        if info.is_published():
+            return True
+
+        # 4) 超時 → 重試
+        time.sleep(backoff)
+        backoff = min(backoff * 2, 2.0)
+
+    return False
 
 @app.route("/api/infer", methods=["POST"])
 def api_infer():
@@ -704,11 +766,18 @@ def api_infer_and_send():
     # 4) 通過 → 送 MQTT
     dev_msg = to_device_json(payload_str)
     req_id = str(uuid.uuid4())
-    mqttc.publish(
-        TOPIC_FORWARD.format(device_id=device_id),
-        json.dumps(dev_msg, ensure_ascii=False),
-        qos=1
+    ok = safe_publish(
+    TOPIC_FORWARD.format(device_id=device_id),
+    json.dumps(dev_msg, ensure_ascii=False),
+    qos=1, timeout=5.0, retries=3
     )
+    if not ok:
+        return jsonify({
+            "accepted": False,
+            "is_malicious": False,
+            "normalized_payload": payload_str,
+            "reason": "mqtt_publish_failed"
+        }), 503
 
     return jsonify({
         "accepted": True,
@@ -812,11 +881,19 @@ def api_send_to_device():
 
     req_id = str(uuid.uuid4())
 
-    mqttc.publish(
-        TOPIC_FORWARD.format(device_id=device_id),
-        json.dumps(dev_msg, ensure_ascii=False),
-        qos=1
-    )
+    ok = safe_publish(
+    TOPIC_FORWARD.format(device_id=device_id),
+    json.dumps(dev_msg, ensure_ascii=False),
+    qos=1, timeout=5.0, retries=3
+)
+    if not ok:
+        return jsonify({
+        "accepted": False,
+        "is_malicious": False,
+        "normalized_payload": payload,
+        "reason": "mqtt_publish_failed"
+        }), 503
+
 
     # 回傳 202 表示成功送出
     return jsonify({
@@ -827,65 +904,104 @@ def api_send_to_device():
     }), 202
 
 # ==== 新增：SSE 事件流，把裝置回報推到前端 ====
+
 @app.route("/events")
 def sse_events():
     def gen():
-        while True:
-            ev=event_q.get()
-            yield "data: "+json.dumps(ev,ensure_ascii=False)+ "\n\n"
-    return Response(gen(), mimetype="text/event-stream") 
+        try:
+            while True:
+                try:
+                    ev = event_q.get(timeout=1.0)  # 避免永久阻塞
+                    yield "data: " + json.dumps(ev, ensure_ascii=False) + "\n\n"
+                except queue.Empty:
+                    # 心跳封包，避免代理/瀏覽器關閉連線
+                    yield ": keep-alive\n\n"
+        except GeneratorExit:
+            return
+        except Exception as e:
+            yield "event: error\n" + "data: " + json.dumps({"msg": str(e)}, ensure_ascii=False) + "\n\n"
+    return Response(gen(), mimetype="text/event-stream")
 
 
 # ---- 簡易 MQTT 回報頁（即時看 ack / output / crash）----
-REPORT_HTML = """
-<!doctype html><meta charset="utf-8"><title>MQTT Reports</title>
+REPORT_HTML = r"""
+<!doctype html><meta charset="utf-8"><title>MQTT 回報（即時）</title>
 <style>
- body{font-family:sans-serif;max-width:1000px;margin:24px auto}
- #log{background:#0b1220;color:#b6ffb6;border-radius:8px;padding:12px;height:420px;overflow:auto;white-space:pre-wrap}
+ body{font-family:system-ui,-apple-system,Segoe UI,Roboto;max-width:1100px;margin:24px auto}
+ #toolbar{display:flex;gap:8px;align-items:center;margin:8px 0;flex-wrap:wrap}
+ #log{background:#0b1220;color:#b6ffb6;border-radius:8px;padding:12px;height:520px;overflow:auto;white-space:pre-wrap}
  .tag{display:inline-block;padding:2px 8px;border-radius:999px;margin-right:6px;font-size:12px}
  .ACK{background:#e0f2fe;color:#075985}.OUTPUT{background:#dcfce7;color:#166534}.CRASH{background:#fee2e2;color:#991b1b}
- .ctl{margin:8px 0}
+ .pill{padding:2px 8px;border:1px solid #ddd;border-radius:999px}
+ input,select,button{padding:6px 10px;border:1px solid #ddd;border-radius:8px;background:#fff}
+ button.primary{background:#111827;color:#fff;border:none}
+ .muted{color:#888}
 </style>
+
 <h2>MQTT 回報（即時）</h2>
-<div class="ctl">
+<div id="toolbar">
   <label><input type="checkbox" id="showAck" checked> 顯示 ACK</label>
   <label><input type="checkbox" id="showOut" checked> 顯示 OUTPUT</label>
   <label><input type="checkbox" id="showCrash" checked> 顯示 CRASH</label>
-  <input id="kw" placeholder="關鍵字過濾 (req_id / topic / 內容)" style="width:280px">
-  <button onclick="clearLog()">清空</button>
+  <input id="dev" placeholder="只顯示某 device_id（選填）" style="width:240px">
+  <input id="kw" placeholder="關鍵字過濾 (topic / 內容)" style="width:280px">
+  <label class="pill"><input type="checkbox" id="autoscroll" checked> 自動卷軸</label>
+  <button id="btnPause">暫停</button>
+  <button id="btnClear">清空</button>
+  <span class="muted" id="stats">ACK:0 | OUT:0 | CRASH:0 | SSE:連線中…</span>
 </div>
 <pre id="log"></pre>
 
 <script>
-const logEl = document.getElementById('log');
-const showAck = document.getElementById('showAck');
-const showOut = document.getElementById('showOut');
-const showCrash = document.getElementById('showCrash');
-const kw = document.getElementById('kw');
+let paused=false, stats={ack:0,out:0,crash:0}, es=null;
 
-function colorOf(topic){
-  if(topic.includes('/ack')) return 'ACK';
-  if(topic.includes('/output')) return 'OUTPUT';
-  if(topic.includes('/crash')) return 'CRASH';
+function typeOf(topic){
+  if(topic.endsWith('/ack')) return 'ACK';
+  if(topic.endsWith('/output')) return 'OUTPUT';
+  if(topic.endsWith('/crash')) return 'CRASH';
   return '';
 }
+function setStats(s){ document.getElementById('stats').textContent =
+  `ACK:${s.ack} | OUT:${s.out} | CRASH:${s.crash} | SSE:${s.state}`; }
 
-function pushLine(obj){
-  const t = new Date(obj.ts*1000).toLocaleTimeString();
-  const tag = colorOf(obj.topic);
-  const line = `[${t}] [${obj.topic}] ${JSON.stringify(obj.data)}`;
-  const passKW = !kw.value || line.toLowerCase().includes(kw.value.toLowerCase());
-  const passType = (tag==='ACK' && showAck.checked) || (tag==='OUTPUT' && showOut.checked) || (tag==='CRASH' && showCrash.checked);
-  if(passKW && passType){
-    logEl.textContent += line + "\\n";
-    logEl.scrollTop = logEl.scrollHeight;
-  }
+function push(ev){
+  const t = new Date(ev.ts*1000).toLocaleTimeString();
+  const tag = typeOf(ev.topic);
+  const dev = (ev.topic.split('/')[1]||'');
+  const line = `[${t}] [${ev.topic}] ${JSON.stringify(ev.data)}`;
+  const wantDev = document.getElementById('dev').value.trim();
+  const kw = document.getElementById('kw').value.trim().toLowerCase();
+  const show = (!wantDev || dev===wantDev)
+             && ((!kw) || line.toLowerCase().includes(kw));
+  if(!show) return;
+  const showAck = document.getElementById('showAck').checked;
+  const showOut = document.getElementById('showOut').checked;
+  const showCrash = document.getElementById('showCrash').checked;
+  if((tag==='ACK'&&!showAck)||(tag==='OUTPUT'&&!showOut)||(tag==='CRASH'&&!showCrash)) return;
+
+  const log = document.getElementById('log');
+  log.textContent += line + "\n";
+  if(document.getElementById('autoscroll').checked) log.scrollTop = log.scrollHeight;
+
+  if(tag==='ACK') stats.ack++; else if(tag==='OUTPUT') stats.out++; else if(tag==='CRASH') stats.crash++;
+  setStats({ ...stats, state: '連線中' });
 }
 
-function clearLog(){ logEl.textContent=''; }
+function bind(){
+  if(es){ try{es.close();}catch(_){} es=null; }
+  es = new EventSource('/events');
+  es.onmessage = (e)=>{ if(!paused){ try{ push(JSON.parse(e.data)); }catch(_){ } } };
+  es.onerror = ()=>{ setStats({ ...stats, state:'重連中…' }); };
+  es.onopen = ()=>{ setStats({ ...stats, state:'連線中' }); };
+}
 
-const es = new EventSource('/events');
-es.onmessage = (e)=>{ try{ pushLine(JSON.parse(e.data)); }catch(_){ } };
+document.getElementById('btnClear').onclick = ()=>{ document.getElementById('log').textContent=''; stats={ack:0,out:0,crash:0}; setStats({ ...stats, state:'連線中' }); };
+document.getElementById('btnPause').onclick = ()=>{
+  paused=!paused;
+  document.getElementById('btnPause').textContent = paused?'繼續':'暫停';
+};
+['showAck','showOut','showCrash','dev','kw'].forEach(id=>document.getElementById(id).oninput=()=>{});
+bind();
 </script>
 """
 
