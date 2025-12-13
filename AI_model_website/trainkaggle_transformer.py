@@ -19,10 +19,10 @@ from sklearn.metrics import accuracy_score, f1_score
 # 固定參數
 # -------------------------------
 #CSV_PATH, TEXT_COLUMN, LABEL_COLUMN = 'payload_log_clean.csv', 'payload', 'label'
-TRAIN_CSV = 'payload_log_clean_train.csv'
-TEST_CSV  = 'payload_log_clean_test.csv'
+TRAIN_CSV = 'train.csv'
+TEST_CSV  = 'test.csv'
 TEXT_COLUMN, LABEL_COLUMN = 'payload', 'label'
-MAX_LEN, BATCH_SIZE, EPOCHS, LR, SEED = 1024, 64, 10, 2e-4, 42
+MAX_LEN, BATCH_SIZE, EPOCHS, LR, SEED = 1024, 64, 20, 2e-4, 42
 D_MODEL, N_HEAD, N_LAYER, DROPOUT = 256, 8, 4, 0.2
 
 random.seed(SEED); np.random.seed(SEED); torch.manual_seed(SEED)

